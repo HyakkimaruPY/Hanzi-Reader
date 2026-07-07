@@ -1,60 +1,318 @@
 # 漢讀 · Hanzi Reader
 
-**Hanzi Reader** is a free Chinese reading tool made for people who want to read Mandarin texts, books, stories and study materials with useful learning support — without needing to pay a monthly subscription for basic reading features.
+> A free, source-available Hanzi reader for studying Chinese through real reading.
+
+**漢讀 · Hanzi Reader** is a Chinese reading tool made for people who want to read Mandarin texts, books, stories and study materials with useful learning support — without needing to pay a monthly subscription for basic reading features.
 
 This project was created because I believe simple tools for reading your own books, adding pinyin, checking words, listening to pronunciation and studying Chinese should be accessible.
+
+---
+
+## Status
+
+```text
+Project type: Source-available
+Main purpose: Chinese reading and study
+Commercial resale: Not allowed
+License: PolyForm Noncommercial License 1.0.0
+Author: Sr. Hell
+```
+
+---
 
 ## Why I made this
 
 I was frustrated with apps that lock very basic reading features behind subscriptions.
 
-Paying monthly just to read my own books, see pinyin, check words or listen to simple pronunciation did not feel right to me. So I started building my own reader — simple, direct and focused on helping Chinese learners.
+Paying monthly just to read my own books, see pinyin, check words or listen to simple pronunciation did not feel right to me.
 
-Hanzi Reader is my attempt to create a practical, free and open tool for studying Chinese through real reading.
+So I started building my own reader — simple, direct and focused on helping Chinese learners.
+
+Hanzi Reader is my attempt to create a practical, free and accessible tool for studying Chinese through real reading.
+
+---
+
+## What Hanzi Reader does
+
+```mermaid
+mindmap
+  root((漢讀 Hanzi Reader))
+    Reading
+      Chinese texts
+      Books
+      Long chapters
+      Clean reader interface
+      Pinyin support
+    Dictionary
+      Word lookup
+      Character lookup
+      Definitions
+      Related words
+      Example sentences
+    Audio
+      Read aloud
+      Chinese voices
+      Browser voices
+      Experimental emotional voice
+    Study
+      Saved words
+      Practice area
+      Flashcards
+      Review
+    Import
+      Manual text
+      URL import
+      PDF support
+      External reading sources
+    Language
+      Portuguese interface
+      English interface
+      Browser language detection
+```
+
+---
 
 ## Main features
 
 - Read Chinese texts with pinyin support
 - Import text manually or from URLs
-- Read books and longer texts in a clean reader interface
+- Read books, chapters and long texts in a clean reader interface
 - Save words while reading
 - Built-in dictionary view
 - Word definitions and automatic translation support
 - Text-to-speech / read aloud support
-- Chinese voice options, including experimental emotional voice modes
+- Chinese voice options
+- Experimental emotional voice modes
 - Practice area for reviewing saved content
-- Interface language support for Portuguese and English
+- Portuguese and English interface support
 - Automatic interface language based on the browser language
 - Local storage for user data inside the browser
+- PDF reading support
+- External source indexing / integration for learning purposes
+
+---
+
+## App flow
+
+```mermaid
+flowchart TD
+    A[Open Hanzi Reader] --> B{Choose input}
+    B --> C[Paste text]
+    B --> D[Import from URL]
+    B --> E[Open PDF]
+    B --> F[Use saved book]
+
+    C --> G[Reader]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H[Read Chinese text]
+    H --> I[Show pinyin]
+    H --> J[Tap word or character]
+    H --> K[Select text]
+
+    J --> L[Dictionary]
+    J --> M[Save word]
+    J --> N[Play audio]
+
+    K --> O[Translate selection]
+    K --> P[Read aloud]
+
+    M --> Q[Practice]
+    Q --> R[Review saved words]
+```
+
+---
+
+## Study workflow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Reader
+    participant Dictionary
+    participant Audio
+    participant Practice
+
+    User->>Reader: Opens a Chinese text
+    Reader->>Reader: Displays Hanzi with pinyin
+    User->>Dictionary: Taps a word or character
+    Dictionary->>User: Shows meaning, pinyin and examples
+    User->>Audio: Plays pronunciation
+    User->>Practice: Saves useful words
+    Practice->>User: Reviews vocabulary later
+```
+
+---
 
 ## Project philosophy
 
 This project is meant to stay simple, useful and accessible.
 
-You can use it, study it, modify it and improve it.
+You can use it, study it, modify it and improve it for personal, educational and non-commercial purposes.
 
 Please do not take this project and resell it as a paid clone.
 
 The goal is to help learners, not to create another paywall.
 
-## Credits and sources
+---
 
-This app uses or depends on free/public resources and browser-accessible services, including:
+## What this project is
 
-- **Microsoft Edge / browser voices** for text-to-speech
-- **Google Translate** for translation support
-- **Chinese voice and language resources**
-- **Pinyin tools**
-- **Stroke order resources**
-- **PDF.js** for PDF reading support
+```mermaid
+graph LR
+    A[Hanzi Reader] --> B[Reader interface]
+    A --> C[Study helper]
+    A --> D[Dictionary layer]
+    A --> E[Audio layer]
+    A --> F[Source indexer]
+    A --> G[Practice tool]
 
-Thanks to all projects and services that make language-learning tools possible.
+    F --> H[Free/public sources]
+    F --> I[External services]
+    F --> J[Learning resources]
+
+    H -.owned by.-> K[Their respective owners]
+    I -.owned by.-> K
+    J -.owned by.-> K
+```
+
+---
+
+## What this project is not
+
+Hanzi Reader is **not** a paid clone.
+
+Hanzi Reader is **not** a commercial product.
+
+Hanzi Reader is **not** claiming ownership over third-party sources, voices, APIs, datasets, websites or learning materials.
+
+Hanzi Reader only provides a reader, interface, study layer, index and integration layer for learning purposes.
+
+---
+
+## Sources and third-party content
+
+This project may index, connect to, reference, or integrate free/public third-party resources and browser-accessible services, including:
+
+- Browser / Microsoft Edge text-to-speech voices
+- Translation services
+- Chinese learning sources
+- Pinyin tools
+- Dictionary data
+- Stroke order resources
+- PDF reading tools
+- Public or free reading sources
+
+I do not claim ownership over third-party sources, services, voices, datasets, APIs, websites, libraries or external content used, referenced, indexed or integrated by the app.
+
+All third-party resources remain the property of their respective owners and are subject to their own licenses, terms of use, usage limits, availability and restrictions.
+
+---
+
+## Source relationship
+
+```mermaid
+flowchart TB
+    A[Third-party free/public sources] --> B[Indexed or accessed by Hanzi Reader]
+    B --> C[Reader interface]
+    B --> D[Study tools]
+    B --> E[Dictionary / audio / translation helpers]
+
+    A --> F[Owned by original authors/providers]
+    C --> G[Used by learner]
+    D --> G
+    E --> G
+
+    H[Hanzi Reader] --> I[Does not sell third-party content]
+    H --> J[Does not claim ownership]
+    H --> K[Provides learning interface only]
+```
+
+---
+
+## Repository structure
+
+```mermaid
+graph TD
+    A[Repository] --> B[README.md]
+    A --> C[LICENSE]
+    A --> D[NOTICE.md]
+    A --> E[index.html]
+    A --> F[assets/]
+    A --> G[docs/]
+
+    B --> B1[Project explanation]
+    C --> C1[PolyForm Noncommercial reference]
+    D --> D1[Third-party source notice]
+    E --> E1[Main app]
+    F --> F1[Icons / images / static files]
+    G --> G1[Extra documentation]
+```
+
+Recommended structure:
+
+```text
+hanzi-reader/
+├── README.md
+├── LICENSE
+├── NOTICE.md
+├── index.html
+├── assets/
+└── docs/
+```
+
+---
+
+## License
+
+This project is released under the **PolyForm Noncommercial License 1.0.0**.
+
+You may use, study, modify and share this project for:
+
+- Personal use
+- Educational use
+- Research
+- Learning
+- Non-commercial modification
+- Non-commercial redistribution with attribution
+
+You may **not**:
+
+- Sell this project
+- Resell modified versions
+- Resell unmodified versions
+- Include it in paid products
+- Offer it as a paid hosted service
+- Put it behind a subscription
+- Use it commercially without explicit written permission from the author
+
+This project is **source-available**, but it is **not licensed for commercial resale**.
+
+See [`LICENSE`](./LICENSE) and [`NOTICE.md`](./NOTICE.md) for details.
+
+---
+
+## NOTICE
+
+Please also read the [`NOTICE.md`](./NOTICE.md) file.
+
+That file explains that Hanzi Reader may index, connect to or integrate free/public third-party resources, but does not claim ownership over them.
+
+Third-party sources remain owned by their respective owners.
+
+---
 
 ## Disclaimer
 
 This is a personal learning project and may contain bugs, limitations or experimental features.
 
-Some services used by the app may depend on browser support, network access or third-party availability. If something stops working, it may be caused by external service changes.
+Some services used by the app may depend on browser support, network access or third-party availability.
+
+If something stops working, it may be caused by external service changes.
+
+---
 
 ## Contributing
 
@@ -62,10 +320,14 @@ Suggestions, improvements and bug reports are welcome.
 
 If you find a problem, have an idea, or want to improve the project, feel free to open an issue or contact me.
 
+Please keep the project non-commercial and accessible.
+
+---
+
 ## Author
 
 Made by **Sr. Hell**.
 
-Free source.
+Free for personal, educational and non-commercial use.
 
-Please do not sell this project. 
+Please do not sell this project.
