@@ -2,18 +2,7 @@
 
 > A free, source-available Hanzi reader for studying Chinese through real reading.
 
-```mermaid
-flowchart LR
-    A["🇺🇸 README in English"] --> B["🇧🇷 Ler em Português Brasileiro"]
-
-    click B "LEIAME-PT-BR.md" "Open Brazilian Portuguese README"
-
-    classDef english fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px,font-weight:bold;
-    classDef translate fill:#238636,color:#ffffff,stroke:#2ea043,stroke-width:2px,font-weight:bold;
-
-    class A english;
-    class B translate;
-```
+[🇧🇷 Ler em Português Brasileiro](./LEIAME-PT-BR.md)
 
 ---
 
