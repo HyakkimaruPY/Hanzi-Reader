@@ -38,6 +38,53 @@ O **Hanzi Reader** é uma tentativa de criar uma ferramenta prática, gratuita e
 
 ---
 
+## O que o Hanzi Reader faz
+
+```mermaid
+flowchart TD
+    A["漢讀 · Hanzi Reader"]
+
+    A --> B["Leitura"]
+    B --> B1["Textos chineses"]
+    B --> B2["Livros"]
+    B --> B3["Capítulos longos"]
+    B --> B4["Interface limpa de leitura"]
+    B --> B5["Suporte a Pinyin"]
+
+    A --> C["Dicionário"]
+    C --> C1["Consulta de palavras"]
+    C --> C2["Consulta de caracteres"]
+    C --> C3["Definições"]
+    C --> C4["Palavras relacionadas"]
+    C --> C5["Frases de exemplo"]
+
+    A --> D["Áudio"]
+    D --> D1["Ler em voz alta"]
+    D --> D2["Vozes chinesas"]
+    D --> D3["Vozes do navegador"]
+    D --> D4["Voz emocional experimental"]
+
+    A --> E["Estudo"]
+    E --> E1["Palavras salvas"]
+    E --> E2["Área de prática"]
+    E --> E3["Cartões de memorização"]
+    E --> E4["Revisão"]
+
+    A --> F["Importação"]
+    F --> F1["Texto manual"]
+    F --> F2["Importação por URL"]
+    F --> F3["Suporte a PDF"]
+    F --> F4["Fontes externas de leitura"]
+
+    A --> G["Idioma e tradução"]
+    G --> G1["Interface em português brasileiro"]
+    G --> G2["Interface em inglês"]
+    G --> G3["Detecção pelo idioma do navegador"]
+    G --> G4["Tradução automática"]
+```
+
+---
+
 ## Principais recursos
 
 - Leitura de textos em chinês com suporte a Pinyin.
@@ -70,44 +117,112 @@ O Hanzi Reader possui suporte para tradução automática de palavras, definiç�
 
 A ideia é ajudar estudantes que estão lendo chinês, mas ainda precisam de apoio em português brasileiro para compreender melhor o conteúdo.
 
+```mermaid
+flowchart TD
+    A["Usuário seleciona um trecho em chinês"] --> B["Hanzi Reader detecta o texto selecionado"]
+    B --> C["O app solicita uma tradução automática"]
+    C --> D["A tradução é exibida ao usuário"]
+    D --> E["O usuário continua lendo com mais contexto"]
+
+    classDef start fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px;
+    classDef process fill:#161b22,color:#ffffff,stroke:#8b949e,stroke-width:1px;
+    classDef result fill:#238636,color:#ffffff,stroke:#2ea043,stroke-width:2px;
+
+    class A start;
+    class B,C process;
+    class D,E result;
+```
+
 A tradução funciona como apoio de estudo. Ela pode conter erros, limitações ou diferenças de sentido dependendo do contexto da frase.
 
 ---
 
-## Fluxo básico de uso
+## Fluxo de uso do app
 
-```text
-Abrir Hanzi Reader
-        ↓
-Adicionar texto, URL, PDF ou abrir livro salvo
-        ↓
-Ler o conteúdo em chinês
-        ↓
-Consultar palavras, ouvir pronúncia ou traduzir trechos
-        ↓
-Salvar palavras importantes
-        ↓
-Revisar depois na área de prática
+```mermaid
+flowchart TD
+    A["Abrir Hanzi Reader"] --> B{"Escolher entrada"}
+
+    B --> C["Colar texto"]
+    B --> D["Importar de URL"]
+    B --> E["Abrir PDF"]
+    B --> F["Abrir livro salvo"]
+
+    C --> G["Leitor"]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H["Ler texto em chinês"]
+    H --> I["Visualizar Pinyin"]
+    H --> J["Tocar em palavra ou caractere"]
+    H --> K["Selecionar trecho"]
+
+    J --> L["Abrir dicionário"]
+    J --> M["Salvar palavra"]
+    J --> N["Reproduzir áudio"]
+
+    K --> O["Traduzir trecho"]
+    K --> P["Ler trecho em voz alta"]
+
+    M --> Q["Área de prática"]
+    Q --> R["Revisar palavras salvas"]
+
+    classDef input fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px;
+    classDef reader fill:#8250df,color:#ffffff,stroke:#d2a8ff,stroke-width:2px;
+    classDef action fill:#161b22,color:#ffffff,stroke:#8b949e,stroke-width:1px;
+    classDef study fill:#238636,color:#ffffff,stroke:#2ea043,stroke-width:2px;
+
+    class A,B,C,D,E,F input;
+    class G,H,I reader;
+    class J,K,L,M,N,O,P action;
+    class Q,R study;
 ```
 
 ---
 
-## Como o estudo acontece
+## Fluxo de estudo
 
-```text
-Ler texto real
-        ↓
-Encontrar palavra nova
-        ↓
-Consultar significado
-        ↓
-Ouvir pronúncia
-        ↓
-Salvar palavra
-        ↓
-Revisar depois
-        ↓
-Ler com mais fluidez
+```mermaid
+flowchart LR
+    A["Ler texto real"] --> B["Encontrar palavra nova"]
+    B --> C["Consultar significado"]
+    C --> D["Ouvir pronúncia"]
+    D --> E["Salvar palavra"]
+    E --> F["Revisar depois"]
+    F --> G["Ler com mais fluidez"]
+
+    classDef read fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px;
+    classDef learn fill:#8250df,color:#ffffff,stroke:#d2a8ff,stroke-width:2px;
+    classDef review fill:#238636,color:#ffffff,stroke:#2ea043,stroke-width:2px;
+
+    class A read;
+    class B,C,D,E learn;
+    class F,G review;
+```
+
+---
+
+## Jornada do usuário
+
+```mermaid
+sequenceDiagram
+    participant Usuario as Usuário
+    participant Leitor as Leitor
+    participant Dicionario as Dicionário
+    participant Audio as Áudio
+    participant Traducao as Tradução
+    participant Pratica as Prática
+
+    Usuario->>Leitor: Abre um texto em chinês
+    Leitor->>Usuario: Mostra Hanzi com Pinyin
+    Usuario->>Dicionario: Toca em uma palavra ou caractere
+    Dicionario->>Usuario: Mostra significado, Pinyin e exemplos
+    Usuario->>Audio: Reproduz a pronúncia
+    Usuario->>Traducao: Seleciona um trecho para traduzir
+    Traducao->>Usuario: Exibe apoio em português brasileiro
+    Usuario->>Pratica: Salva palavras importantes
+    Pratica->>Usuario: Permite revisar depois
 ```
 
 ---
@@ -126,16 +241,34 @@ O objetivo é ajudar estudantes, não criar mais uma barreira paga para quem est
 
 ## O que este projeto é
 
-O Hanzi Reader é:
+```mermaid
+graph LR
+    A["Hanzi Reader"] --> B["Interface de leitura"]
+    A --> C["Ferramenta de estudo"]
+    A --> D["Camada de dicionário"]
+    A --> E["Camada de áudio"]
+    A --> F["Indexador de fontes"]
+    A --> G["Área de prática"]
+    A --> H["Apoio de tradução"]
 
-- Uma interface de leitura.
-- Uma ferramenta de estudo.
-- Uma camada de dicionário.
-- Uma camada de áudio.
-- Uma camada de tradução.
-- Um indexador de fontes públicas ou gratuitas.
-- Uma área de prática para revisão.
-- Um projeto pessoal, educacional e não comercial.
+    F --> I["Fontes gratuitas ou públicas"]
+    F --> J["Serviços externos"]
+    F --> K["Recursos de aprendizagem"]
+
+    I -. "pertencem aos" .-> L["respectivos donos"]
+    J -. "pertencem aos" .-> L
+    K -. "pertencem aos" .-> L
+
+    classDef app fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px;
+    classDef layer fill:#161b22,color:#ffffff,stroke:#8b949e,stroke-width:1px;
+    classDef external fill:#6e40c9,color:#ffffff,stroke:#d2a8ff,stroke-width:2px;
+    classDef owner fill:#da3633,color:#ffffff,stroke:#ff7b72,stroke-width:2px;
+
+    class A app;
+    class B,C,D,E,F,G,H layer;
+    class I,J,K external;
+    class L owner;
+```
 
 ---
 
@@ -173,14 +306,32 @@ Todos os recursos de terceiros continuam pertencendo aos seus respectivos donos 
 
 ## Relação com fontes externas
 
-```text
-Fontes gratuitas ou públicas de terceiros
-        ↓
-São indexadas ou acessadas pelo Hanzi Reader
-        ↓
-Aparecem como apoio de leitura, estudo, áudio, dicionário ou tradução
-        ↓
-Continuam pertencendo aos autores e provedores originais
+```mermaid
+flowchart TB
+    A["Fontes gratuitas ou públicas de terceiros"] --> B["Indexadas ou acessadas pelo Hanzi Reader"]
+    B --> C["Interface de leitura"]
+    B --> D["Ferramentas de estudo"]
+    B --> E["Dicionário, áudio e tradução"]
+
+    A --> F["Pertencem aos autores ou provedores originais"]
+
+    C --> G["Usado pelo estudante"]
+    D --> G
+    E --> G
+
+    H["Hanzi Reader"] --> I["Não vende conteúdo de terceiros"]
+    H --> J["Não reivindica propriedade"]
+    H --> K["Fornece apenas uma camada de estudo"]
+
+    classDef source fill:#6e40c9,color:#ffffff,stroke:#d2a8ff,stroke-width:2px;
+    classDef app fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px;
+    classDef learner fill:#238636,color:#ffffff,stroke:#2ea043,stroke-width:2px;
+    classDef warning fill:#da3633,color:#ffffff,stroke:#ff7b72,stroke-width:2px;
+
+    class A,F source;
+    class B,C,D,E,H app;
+    class G learner;
+    class I,J,K warning;
 ```
 
 O Hanzi Reader:
@@ -195,6 +346,35 @@ O Hanzi Reader:
 
 ## Estrutura recomendada do repositório
 
+```mermaid
+graph TD
+    A["Repositório"] --> B["README.md"]
+    A --> C["LEIAME-PT-BR.md"]
+    A --> D["LICENSE"]
+    A --> E["NOTICE.md"]
+    A --> F["index.html"]
+    A --> G["assets/"]
+    A --> H["docs/"]
+
+    B --> B1["Explicação principal em inglês"]
+    C --> C1["Explicação em português brasileiro"]
+    D --> D1["Licença PolyForm Noncommercial"]
+    E --> E1["Aviso sobre fontes de terceiros"]
+    F --> F1["Aplicativo principal"]
+    G --> G1["Ícones, imagens e arquivos estáticos"]
+    H --> H1["Documentação extra"]
+
+    classDef repo fill:#0969da,color:#ffffff,stroke:#58a6ff,stroke-width:2px;
+    classDef file fill:#161b22,color:#ffffff,stroke:#8b949e,stroke-width:1px;
+    classDef doc fill:#238636,color:#ffffff,stroke:#2ea043,stroke-width:2px;
+
+    class A repo;
+    class B,C,D,E,F,G,H file;
+    class B1,C1,D1,E1,F1,G1,H1 doc;
+```
+
+Estrutura recomendada:
+
 ```text
 hanzi-reader/
 ├── README.md
@@ -204,18 +384,6 @@ hanzi-reader/
 ├── index.html
 ├── assets/
 └── docs/
-```
-
-### Função de cada arquivo
-
-```text
-README.md        → Explicação principal em inglês.
-LEIAME-PT-BR.md  → Explicação em português brasileiro.
-LICENSE          → Licença do projeto.
-NOTICE.md        → Aviso sobre fontes, serviços e conteúdos de terceiros.
-index.html       → Aplicativo principal.
-assets/          → Ícones, imagens e arquivos estáticos.
-docs/            → Documentação extra, se necessário.
 ```
 
 ---
