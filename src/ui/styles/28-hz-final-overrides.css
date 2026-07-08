@@ -1,0 +1,25 @@
+
+/* Layout raiz travado na viewport: a página nunca rola; cada tela rola por dentro,
+   então o rodapé de navegação fica SEMPRE visível e na mesma posição em todos os modos */
+html,body{height:100%!important;max-height:100%!important;overflow:hidden!important;overscroll-behavior:none}
+.screen{position:absolute!important;inset:0!important;height:auto!important}
+.screen>.bnav{flex-shrink:0}
+#sl .bc,#sp .bc,#spf .bc{min-height:0}
+
+/* Overrides finais (último na cascata): busca só ocupa espaço quando aberta */
+#sl .v43-search-wrap:not(.open):not(.vis){display:none!important}
+#sl .v43-search-wrap.open,#sl .v43-search-wrap.vis{display:flex!important;padding:2px 12px 8px!important}
+#sl .app-shell{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important}
+#sl .app-shell .app-head{flex:0 0 auto!important}
+#sl #bc{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important}
+#sl .app-shell .bnav{flex-shrink:0!important}
+.app-head{gap:6px!important;padding-bottom:7px!important}
+#sl #bc{padding-top:6px!important}
+.lib-tools{padding-top:4px!important;margin-top:0!important}
+/* "Leitura simples/Livros + Importar" fixa no topo; o conteúdo rola por baixo */
+#sl .lib-tools{position:sticky;top:0;z-index:6;background:linear-gradient(180deg,rgba(4,4,4,.97),rgba(4,4,4,.88));backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);margin:0 calc(-1*max(var(--gx,18px),env(safe-area-inset-left,0px))) 6px!important;padding:9px max(var(--gx,18px),env(safe-area-inset-right,0px)) 9px max(var(--gx,18px),env(safe-area-inset-left,0px))!important;border-bottom:1px solid rgba(255,255,255,.05)}
+
+
+/* v4.9.1 deploy fix: prevent Chrome/Google Translate from mutating Chinese reader DOM. */
+.notranslate,[translate="no"],#sr,#rscroll,#rtext,.rtext,.wunit,.hzrow,.hzch,.pt,.ptc{translate:no;}
+#rtext,.rtext,.wunit,.hzrow,.hzch{font-family:var(--rf)!important;}
