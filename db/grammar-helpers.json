@@ -1,0 +1,5763 @@
+{
+  "version": "2026.07-v2-lowercase-db-massive",
+  "schema": "grammar-helpers-v2",
+  "description": "扩展语法辅助库：常用、进阶、书面、古风/高级结构、补语、量词、连接词与近义结构。路径 db/grammar-helpers.json。",
+  "patterns": [
+    {
+      "trigger": "了",
+      "level": "HSK 1",
+      "title": "了: conclusão ou mudança",
+      "pattern": "Verbo + 了 / Frase + 了",
+      "explanation": "Marca ação concluída ou mudança de estado. Não é simplesmente passado.",
+      "example": "我买了三本书。",
+      "exampleTr": "Comprei três livros.",
+      "aliases": [
+        "了",
+        "Verbo"
+      ]
+    },
+    {
+      "trigger": "的",
+      "level": "HSK 1",
+      "title": "的: posse e modificação",
+      "pattern": "Modificador + 的 + Nome",
+      "explanation": "Liga posse, descrição ou oração relativa ao substantivo.",
+      "example": "这是我朋友的手机。",
+      "exampleTr": "Este é o celular do meu amigo.",
+      "aliases": [
+        "的",
+        "Modificador"
+      ]
+    },
+    {
+      "trigger": "吗",
+      "level": "HSK 1",
+      "title": "吗: pergunta sim/não",
+      "pattern": "Frase afirmativa + 吗",
+      "explanation": "Transforma uma frase declarativa em pergunta de sim ou não.",
+      "example": "你喜欢喝茶吗？",
+      "exampleTr": "Você gosta de beber chá?",
+      "aliases": [
+        "吗",
+        "Frase"
+      ]
+    },
+    {
+      "trigger": "呢",
+      "level": "HSK 1",
+      "title": "呢: continuidade ou pergunta de retorno",
+      "pattern": "A 呢？ / Verbo + 呢",
+      "explanation": "Pede continuação, localização ou devolve a pergunta ao interlocutor.",
+      "example": "我很好，你呢？",
+      "exampleTr": "Estou bem, e você?",
+      "aliases": [
+        "呢",
+        "A"
+      ]
+    },
+    {
+      "trigger": "在",
+      "level": "HSK 1",
+      "title": "在: localização ou ação em curso",
+      "pattern": "在 + Lugar / 正在 + Verbo",
+      "explanation": "Indica onde algo está ou que uma ação está acontecendo agora.",
+      "example": "他正在看书。",
+      "exampleTr": "Ele está lendo.",
+      "aliases": [
+        "在"
+      ]
+    },
+    {
+      "trigger": "过",
+      "level": "HSK 2",
+      "title": "过: experiência",
+      "pattern": "Verbo + 过",
+      "explanation": "Indica experiência vivida pelo menos uma vez.",
+      "example": "我去过北京。",
+      "exampleTr": "Eu já fui a Pequim.",
+      "aliases": [
+        "过",
+        "Verbo"
+      ]
+    },
+    {
+      "trigger": "比",
+      "level": "HSK 2",
+      "title": "比: comparação",
+      "pattern": "A + 比 + B + Adj",
+      "explanation": "Compara duas coisas.",
+      "example": "今天比昨天热。",
+      "exampleTr": "Hoje está mais quente que ontem.",
+      "aliases": [
+        "比",
+        "A"
+      ]
+    },
+    {
+      "trigger": "因为",
+      "level": "HSK 2",
+      "title": "因为...所以...",
+      "pattern": "因为 + causa，所以 + resultado",
+      "explanation": "Liga causa e consequência.",
+      "example": "因为下雨，所以我们没出去。",
+      "exampleTr": "Porque choveu, não saímos.",
+      "aliases": [
+        "因为",
+        "因为所以"
+      ]
+    },
+    {
+      "trigger": "虽然",
+      "level": "HSK 3",
+      "title": "虽然...但是...",
+      "pattern": "虽然 + A，但是 + B",
+      "explanation": "Expressa concessão seguida de contraste.",
+      "example": "虽然很累，但是他继续学习。",
+      "exampleTr": "Embora estivesse cansado, continuou estudando.",
+      "aliases": [
+        "虽然",
+        "虽然但是"
+      ]
+    },
+    {
+      "trigger": "如果",
+      "level": "HSK 3",
+      "title": "如果...就...",
+      "pattern": "如果 + condição，就 + resultado",
+      "explanation": "Expressa condição e consequência.",
+      "example": "如果明天有空，我就来。",
+      "exampleTr": "Se eu tiver tempo amanhã, venho.",
+      "aliases": [
+        "如果",
+        "如果就"
+      ]
+    },
+    {
+      "trigger": "把",
+      "level": "HSK 3",
+      "title": "把: objeto afetado",
+      "pattern": "S + 把 + Objeto + Verbo + Complemento",
+      "explanation": "Coloca o objeto antes do verbo quando ele é afetado ou deslocado.",
+      "example": "他把门打开了。",
+      "exampleTr": "Ele abriu a porta.",
+      "aliases": [
+        "把",
+        "S"
+      ]
+    },
+    {
+      "trigger": "被",
+      "level": "HSK 3",
+      "title": "被: voz passiva",
+      "pattern": "Paciente + 被 + Agente + Verbo",
+      "explanation": "Marca que o sujeito recebeu a ação.",
+      "example": "窗户被风吹开了。",
+      "exampleTr": "A janela foi aberta pelo vento.",
+      "aliases": [
+        "被",
+        "Paciente"
+      ]
+    },
+    {
+      "trigger": "一边",
+      "level": "HSK 3",
+      "title": "一边...一边...",
+      "pattern": "一边 + ação A，一边 + ação B",
+      "explanation": "Duas ações simultâneas.",
+      "example": "她一边听音乐一边写作业。",
+      "exampleTr": "Ela ouve música enquanto faz a lição.",
+      "aliases": [
+        "一边",
+        "一边一边"
+      ]
+    },
+    {
+      "trigger": "越来越",
+      "level": "HSK 3",
+      "title": "越来越: cada vez mais",
+      "pattern": "越来越 + Adj/Verbo",
+      "explanation": "Mudança progressiva de grau.",
+      "example": "中文越来越有意思。",
+      "exampleTr": "O chinês está cada vez mais interessante.",
+      "aliases": [
+        "越来越"
+      ]
+    },
+    {
+      "trigger": "除了",
+      "level": "HSK 4",
+      "title": "除了...以外",
+      "pattern": "除了 + A + 以外，也/都 + B",
+      "explanation": "Pode indicar inclusão ou exclusão, dependendo do contexto.",
+      "example": "除了中文以外，他还学日语。",
+      "exampleTr": "Além de chinês, ele estuda japonês.",
+      "aliases": [
+        "除了",
+        "除了以外"
+      ]
+    },
+    {
+      "trigger": "只有",
+      "level": "HSK 4",
+      "title": "只有...才...",
+      "pattern": "只有 + condição，才 + resultado",
+      "explanation": "Condição necessária.",
+      "example": "只有认真练习，才能进步。",
+      "exampleTr": "Só praticando seriamente se melhora.",
+      "aliases": [
+        "只有",
+        "只有才"
+      ]
+    },
+    {
+      "trigger": "只要",
+      "level": "HSK 4",
+      "title": "只要...就...",
+      "pattern": "只要 + condição，就 + resultado",
+      "explanation": "Condição suficiente.",
+      "example": "只要你愿意，我就帮你。",
+      "exampleTr": "Se você quiser, eu ajudo.",
+      "aliases": [
+        "只要",
+        "只要就"
+      ]
+    },
+    {
+      "trigger": "无论",
+      "level": "HSK 4",
+      "title": "无论...都...",
+      "pattern": "无论 + variável，都 + resultado",
+      "explanation": "Resultado invariável independentemente da condição.",
+      "example": "无论多难，他都不放弃。",
+      "exampleTr": "Não importa quão difícil seja, ele não desiste.",
+      "aliases": [
+        "无论",
+        "无论都"
+      ]
+    },
+    {
+      "trigger": "连",
+      "level": "HSK 4",
+      "title": "连...都/也...",
+      "pattern": "连 + extremo + 都/也",
+      "explanation": "Enfatiza um caso extremo.",
+      "example": "他连一句话都没说。",
+      "exampleTr": "Ele nem disse uma frase.",
+      "aliases": [
+        "连",
+        "连都/也"
+      ]
+    },
+    {
+      "trigger": "即使",
+      "level": "HSK 5",
+      "title": "即使...也...",
+      "pattern": "即使 + hipótese，也 + resultado",
+      "explanation": "Concessão hipotética: mesmo se.",
+      "example": "即使失败，也要再试一次。",
+      "exampleTr": "Mesmo que falhe, deve tentar de novo.",
+      "aliases": [
+        "即使",
+        "即使也"
+      ]
+    },
+    {
+      "trigger": "既然",
+      "level": "HSK 5",
+      "title": "既然...就...",
+      "pattern": "既然 + fato，就 + conclusão",
+      "explanation": "Como algo já é fato, segue uma conclusão.",
+      "example": "既然来了，就坐一会儿吧。",
+      "exampleTr": "Já que veio, sente-se um pouco.",
+      "aliases": [
+        "既然",
+        "既然就"
+      ]
+    },
+    {
+      "trigger": "宁可",
+      "level": "HSK 5",
+      "title": "宁可...也不...",
+      "pattern": "宁可 + A，也不 + B",
+      "explanation": "Preferência forte por A em vez de B.",
+      "example": "他宁可辛苦，也不放弃。",
+      "exampleTr": "Ele prefere sofrer a desistir.",
+      "aliases": [
+        "宁可",
+        "宁可也不"
+      ]
+    },
+    {
+      "trigger": "与其",
+      "level": "HSK 5",
+      "title": "与其...不如...",
+      "pattern": "与其 + A，不如 + B",
+      "explanation": "Escolha comparativa: melhor B do que A.",
+      "example": "与其抱怨，不如行动。",
+      "exampleTr": "Em vez de reclamar, melhor agir.",
+      "aliases": [
+        "与其",
+        "与其不如"
+      ]
+    },
+    {
+      "trigger": "不仅",
+      "level": "HSK 5",
+      "title": "不仅...而且...",
+      "pattern": "不仅 + A，而且 + B",
+      "explanation": "Acrescenta informação mais forte.",
+      "example": "她不仅会说中文，而且写得很好。",
+      "exampleTr": "Ela não só fala chinês, como escreve bem.",
+      "aliases": [
+        "不仅",
+        "不仅而且"
+      ]
+    },
+    {
+      "trigger": "之所以",
+      "level": "HSK 6",
+      "title": "之所以...是因为...",
+      "pattern": "之所以 + resultado，是因为 + causa",
+      "explanation": "Enfatiza a causa de um resultado.",
+      "example": "他之所以成功，是因为坚持。",
+      "exampleTr": "Ele teve sucesso porque persistiu.",
+      "aliases": [
+        "之所以",
+        "之所以是因为"
+      ]
+    },
+    {
+      "trigger": "并非",
+      "level": "HSK 6",
+      "title": "并非: não é que",
+      "pattern": "并非 + afirmação",
+      "explanation": "Negação formal ou enfática.",
+      "example": "这并非偶然。",
+      "exampleTr": "Isso não é acaso.",
+      "aliases": [
+        "并非"
+      ]
+    },
+    {
+      "trigger": "乃至",
+      "level": "HSK 6",
+      "title": "乃至: até mesmo",
+      "pattern": "A，乃至 B",
+      "explanation": "Estende uma ideia a um grau maior.",
+      "example": "这影响个人，乃至整个社会。",
+      "exampleTr": "Isso afeta o indivíduo e até a sociedade inteira.",
+      "aliases": [
+        "乃至",
+        "A，乃至"
+      ]
+    },
+    {
+      "trigger": "以至于",
+      "level": "HSK 6",
+      "title": "以至于: a ponto de",
+      "pattern": "Causa + 以至于 + consequência",
+      "explanation": "Resultado extremo produzido por uma causa.",
+      "example": "他太忙，以至于忘了吃饭。",
+      "exampleTr": "Ele estava tão ocupado que esqueceu de comer.",
+      "aliases": [
+        "以至于",
+        "Causa"
+      ]
+    },
+    {
+      "trigger": "由此可见",
+      "level": "HSK 7",
+      "title": "由此可见",
+      "pattern": "由此可见 + conclusão",
+      "explanation": "Introduz conclusão derivada do que foi dito.",
+      "example": "由此可见，方法很重要。",
+      "exampleTr": "Daí se vê que o método é importante.",
+      "aliases": [
+        "由此可见"
+      ]
+    },
+    {
+      "trigger": "从某种意义上说",
+      "level": "HSK 7",
+      "title": "从某种意义上说",
+      "pattern": "从某种意义上说 + julgamento",
+      "explanation": "Limita uma afirmação a certa perspectiva.",
+      "example": "从某种意义上说，学习就是重建习惯。",
+      "exampleTr": "Em certo sentido, aprender é reconstruir hábitos.",
+      "aliases": [
+        "从某种意义上说"
+      ]
+    },
+    {
+      "trigger": "在一定程度上",
+      "level": "HSK 7",
+      "title": "在一定程度上",
+      "pattern": "在一定程度上 + avaliação",
+      "explanation": "Suaviza uma afirmação indicando grau parcial.",
+      "example": "这在一定程度上解决了问题。",
+      "exampleTr": "Isso resolveu o problema em certa medida.",
+      "aliases": [
+        "在一定程度上"
+      ]
+    },
+    {
+      "trigger": "换句话说",
+      "level": "HSK 7",
+      "title": "换句话说",
+      "pattern": "Explicação A。换句话说，B",
+      "explanation": "Reformula a ideia com outras palavras.",
+      "example": "换句话说，我们需要新策略。",
+      "exampleTr": "Em outras palavras, precisamos de nova estratégia.",
+      "aliases": [
+        "换句话说",
+        "Explicação"
+      ]
+    },
+    {
+      "trigger": "总而言之",
+      "level": "HSK 7",
+      "title": "总而言之",
+      "pattern": "总而言之 + resumo",
+      "explanation": "Marca conclusão/resumo final.",
+      "example": "总而言之，练习不能少。",
+      "exampleTr": "Em resumo, a prática não pode faltar.",
+      "aliases": [
+        "总而言之"
+      ]
+    },
+    {
+      "trigger": "不可否认",
+      "level": "HSK 8",
+      "title": "不可否认",
+      "pattern": "不可否认 + fato",
+      "explanation": "Admite um fato difícil de negar.",
+      "example": "不可否认，技术改变了学习。",
+      "exampleTr": "É inegável que a tecnologia mudou o aprendizado.",
+      "aliases": [
+        "不可否认"
+      ]
+    },
+    {
+      "trigger": "归根结底",
+      "level": "HSK 8",
+      "title": "归根结底",
+      "pattern": "归根结底 + essência",
+      "explanation": "Indica causa ou essência final.",
+      "example": "归根结底，问题在于方法。",
+      "exampleTr": "No fundo, o problema está no método.",
+      "aliases": [
+        "归根结底"
+      ]
+    },
+    {
+      "trigger": "从长远来看",
+      "level": "HSK 8",
+      "title": "从长远来看",
+      "pattern": "从长远来看 + avaliação",
+      "explanation": "Avaliação sob perspectiva de longo prazo.",
+      "example": "从长远来看，积累更重要。",
+      "exampleTr": "A longo prazo, acumular é mais importante.",
+      "aliases": [
+        "从长远来看"
+      ]
+    },
+    {
+      "trigger": "值得注意的是",
+      "level": "HSK 8",
+      "title": "值得注意的是",
+      "pattern": "值得注意的是 + ponto",
+      "explanation": "Chama atenção para ponto relevante.",
+      "example": "值得注意的是，语境会改变意思。",
+      "exampleTr": "Vale notar que o contexto muda o sentido.",
+      "aliases": [
+        "值得注意的是"
+      ]
+    },
+    {
+      "trigger": "毋庸置疑",
+      "level": "HSK 9",
+      "title": "毋庸置疑",
+      "pattern": "毋庸置疑 + afirmação",
+      "explanation": "Afirmação muito forte: não há dúvida.",
+      "example": "毋庸置疑，语言反映文化。",
+      "exampleTr": "Sem dúvida, a língua reflete cultura.",
+      "aliases": [
+        "毋庸置疑"
+      ]
+    },
+    {
+      "trigger": "从根本上说",
+      "level": "HSK 9",
+      "title": "从根本上说",
+      "pattern": "从根本上说 + essência",
+      "explanation": "Expressa análise de fundamento.",
+      "example": "从根本上说，这是认知问题。",
+      "exampleTr": "Fundamentalmente, é uma questão cognitiva.",
+      "aliases": [
+        "从根本上说"
+      ]
+    },
+    {
+      "trigger": "在此基础上",
+      "level": "HSK 9",
+      "title": "在此基础上",
+      "pattern": "在此基础上 + desenvolvimento",
+      "explanation": "Indica construção lógica sobre base anterior.",
+      "example": "在此基础上，我们提出新模型。",
+      "exampleTr": "Com base nisso, propomos novo modelo.",
+      "aliases": [
+        "在此基础上"
+      ]
+    },
+    {
+      "trigger": "由此引发",
+      "level": "HSK 9",
+      "title": "由此引发",
+      "pattern": "由此引发 + consequência",
+      "explanation": "Mostra consequência desencadeada por um fato.",
+      "example": "由此引发的争论仍在继续。",
+      "exampleTr": "A controvérsia decorrente disso continua.",
+      "aliases": [
+        "由此引发"
+      ]
+    },
+    {
+      "trigger": "了",
+      "level": "HSK 1",
+      "title": "了: 完成、变化、语气",
+      "pattern": "V + 了 / Adj + 了 / 句末了",
+      "explanation": "既可以表示动作完成，也可以表示情况变化或提醒听者注意新状态。",
+      "example": "天黑了，我们回家吧。",
+      "exampleTr": "Escureceu; vamos para casa.",
+      "aliases": [
+        "了",
+        "已经",
+        "变化了",
+        "完成了"
+      ]
+    },
+    {
+      "trigger": "过",
+      "level": "HSK 2",
+      "title": "过: 经历体",
+      "pattern": "V + 过",
+      "explanation": "强调过去是否有某种经历，而不强调具体时间。",
+      "example": "我去过成都两次。",
+      "exampleTr": "Eu já fui a Chengdu duas vezes.",
+      "aliases": [
+        "过",
+        "没去过",
+        "看过",
+        "听说过"
+      ]
+    },
+    {
+      "trigger": "着",
+      "level": "HSK 2",
+      "title": "着: 持续状态",
+      "pattern": "V + 着",
+      "explanation": "表示动作后留下的状态正在持续。",
+      "example": "门开着，灯也亮着。",
+      "exampleTr": "A porta está aberta e a luz está acesa.",
+      "aliases": [
+        "着",
+        "开着",
+        "放着",
+        "坐着"
+      ]
+    },
+    {
+      "trigger": "正在",
+      "level": "HSK 2",
+      "title": "正在: 进行时",
+      "pattern": "正在 + V",
+      "explanation": "强调动作正在发生。",
+      "example": "他们正在讨论新的计划。",
+      "exampleTr": "Eles estão discutindo o novo plano.",
+      "aliases": [
+        "正在",
+        "在",
+        "正",
+        "正要"
+      ]
+    },
+    {
+      "trigger": "把",
+      "level": "HSK 3",
+      "title": "把字句: 处置结构",
+      "pattern": "把 + 宾语 + V + 结果/方向/状态",
+      "explanation": "突出宾语被怎样处理，后面常需要结果、方向或补语。",
+      "example": "请把这段文字读一遍。",
+      "exampleTr": "Por favor, leia este trecho uma vez.",
+      "aliases": [
+        "把",
+        "把字句",
+        "把...放",
+        "把...给"
+      ]
+    },
+    {
+      "trigger": "被",
+      "level": "HSK 4",
+      "title": "被字句: 被动结构",
+      "pattern": "宾语 + 被 + 施事 + V",
+      "explanation": "强调某人/某物受到某动作影响，常见于书面语和叙述。",
+      "example": "他的建议被大家接受了。",
+      "exampleTr": "A sugestão dele foi aceita por todos.",
+      "aliases": [
+        "被",
+        "被动",
+        "被...了",
+        "受到"
+      ]
+    },
+    {
+      "trigger": "没有",
+      "level": "HSK 2",
+      "title": "比较否定: 没有...那么",
+      "pattern": "A 没有 B 那么 Adj",
+      "explanation": "表示 A 不如 B 达到某种程度。",
+      "example": "这篇文章没有上一篇那么长。",
+      "exampleTr": "Este texto não é tão longo quanto o anterior.",
+      "aliases": [
+        "没有",
+        "不如",
+        "没那么",
+        "没有那么"
+      ]
+    },
+    {
+      "trigger": "是...的",
+      "level": "HSK 3",
+      "title": "是...的: 强调信息",
+      "pattern": "是 + 时间/地点/方式/施事 + V + 的",
+      "explanation": "强调已经发生事件中的时间、地点、方式、原因或施事。",
+      "example": "我是昨天晚上看到这个消息的。",
+      "exampleTr": "Foi ontem à noite que vi esta notícia.",
+      "aliases": [
+        "是...的",
+        "是在",
+        "是用",
+        "是谁"
+      ]
+    },
+    {
+      "trigger": "越...越",
+      "level": "HSK 3",
+      "title": "越...越: 递进变化",
+      "pattern": "越 + V/Adj + 越 + Adj/V",
+      "explanation": "表示两个变化同步增强或减弱。",
+      "example": "你练得越多，听力越稳定。",
+      "exampleTr": "Quanto mais você pratica, mais estável fica a escuta.",
+      "aliases": [
+        "越...越",
+        "越来越",
+        "越学越",
+        "越看越"
+      ]
+    },
+    {
+      "trigger": "一边...一边",
+      "level": "HSK 3",
+      "title": "一边...一边: 同时进行",
+      "pattern": "一边 + V1 + 一边 + V2",
+      "explanation": "两个动作同时进行。",
+      "example": "她一边听中文歌，一边写生词。",
+      "exampleTr": "Ela ouve música chinesa enquanto escreve palavras novas.",
+      "aliases": [
+        "一边...一边",
+        "边...边"
+      ]
+    },
+    {
+      "trigger": "一...就",
+      "level": "HSK 3",
+      "title": "一...就: 立即发生",
+      "pattern": "一 + V1 + 就 + V2",
+      "explanation": "表示第一个动作或情况发生后，第二个马上出现。",
+      "example": "他一听到声音就回头。",
+      "exampleTr": "Assim que ouviu o som, ele virou a cabeça.",
+      "aliases": [
+        "一...就",
+        "刚...就",
+        "一旦...就"
+      ]
+    },
+    {
+      "trigger": "刚...就",
+      "level": "HSK 4",
+      "title": "刚...就: 刚发生马上接续",
+      "pattern": "刚 + V1 + 就 + V2",
+      "explanation": "强调前一个动作刚发生，后一个动作立刻出现。",
+      "example": "我刚坐下，电话就响了。",
+      "exampleTr": "Eu mal sentei e o telefone tocou.",
+      "aliases": [
+        "刚...就",
+        "刚一...就"
+      ]
+    },
+    {
+      "trigger": "只要...就",
+      "level": "HSK 4",
+      "title": "只要...就: 充分条件",
+      "pattern": "只要 + 条件 + 就 + 结果",
+      "explanation": "表示只需满足某条件，结果就成立。",
+      "example": "只要坚持每天听，就会越来越熟。",
+      "exampleTr": "Desde que escute todos os dias, ficará cada vez mais familiar.",
+      "aliases": [
+        "只要...就",
+        "只要"
+      ]
+    },
+    {
+      "trigger": "只有...才",
+      "level": "HSK 4",
+      "title": "只有...才: 必要条件",
+      "pattern": "只有 + 条件 + 才 + 结果",
+      "explanation": "强调某条件是结果成立的必要条件。",
+      "example": "只有理解上下文，才不会翻错。",
+      "exampleTr": "Só entendendo o contexto você evita traduzir errado.",
+      "aliases": [
+        "只有...才",
+        "唯有...才"
+      ]
+    },
+    {
+      "trigger": "除非...否则",
+      "level": "HSK 5",
+      "title": "除非...否则: 排除条件",
+      "pattern": "除非 + 条件，否则 + 结果",
+      "explanation": "表示如果不满足唯一例外条件，结果就会发生。",
+      "example": "除非提前准备，否则很难通过考试。",
+      "exampleTr": "A menos que se prepare antes, será difícil passar.",
+      "aliases": [
+        "除非...否则",
+        "除非",
+        "否则"
+      ]
+    },
+    {
+      "trigger": "即使...也",
+      "level": "HSK 5",
+      "title": "即使...也: 让步假设",
+      "pattern": "即使 + 假设，也 + 结果",
+      "explanation": "即便条件成立，结果仍然不变。",
+      "example": "即使句子很长，也要先找主干。",
+      "exampleTr": "Mesmo que a frase seja longa, procure primeiro a estrutura principal.",
+      "aliases": [
+        "即使...也",
+        "就算...也",
+        "哪怕...也"
+      ]
+    },
+    {
+      "trigger": "尽管...还是",
+      "level": "HSK 5",
+      "title": "尽管...还是: 让步事实",
+      "pattern": "尽管 + 事实，还是 + 结果",
+      "explanation": "承认前面的事实，但后面结果仍发生。",
+      "example": "尽管他很累，还是读完了这一章。",
+      "exampleTr": "Embora estivesse cansado, ele leu o capítulo.",
+      "aliases": [
+        "尽管...还是",
+        "虽然...但是",
+        "尽管...仍然"
+      ]
+    },
+    {
+      "trigger": "不但...而且",
+      "level": "HSK 4",
+      "title": "不但...而且: 递进",
+      "pattern": "不但 + A，而且 + B",
+      "explanation": "B 的程度、范围或重要性进一步增加。",
+      "example": "这个工具不但能分词，而且能分析语法。",
+      "exampleTr": "Esta ferramenta não só segmenta, mas também analisa gramática.",
+      "aliases": [
+        "不但...而且",
+        "不仅...而且",
+        "不只...还"
+      ]
+    },
+    {
+      "trigger": "不是...而是",
+      "level": "HSK 4",
+      "title": "不是...而是: 更正判断",
+      "pattern": "不是 + A，而是 + B",
+      "explanation": "否定 A，明确真正情况是 B。",
+      "example": "问题不是汉字简单，而是组合后的词更高级。",
+      "exampleTr": "O problema não é o caractere simples, mas a palavra composta mais avançada.",
+      "aliases": [
+        "不是...而是",
+        "并不是...而是"
+      ]
+    },
+    {
+      "trigger": "既然...就",
+      "level": "HSK 4",
+      "title": "既然...就: 根据事实推论",
+      "pattern": "既然 + 已知事实，就 + 建议/结论",
+      "explanation": "前半句给出已知事实，后半句推出自然结果。",
+      "example": "既然已经部署了，就应该检查日志。",
+      "exampleTr": "Já que foi implantado, deve-se verificar os logs.",
+      "aliases": [
+        "既然...就",
+        "既然"
+      ]
+    },
+    {
+      "trigger": "由于...因此",
+      "level": "HSK 5",
+      "title": "由于...因此: 书面因果",
+      "pattern": "由于 + 原因，因此 + 结果",
+      "explanation": "较正式的因果表达，常见于说明文和新闻。",
+      "example": "由于接口超时，因此需要使用缓存。",
+      "exampleTr": "Como a API expirou, é necessário usar cache.",
+      "aliases": [
+        "由于...因此",
+        "因为...所以",
+        "因而",
+        "因此"
+      ]
+    },
+    {
+      "trigger": "从而",
+      "level": "HSK 5",
+      "title": "从而: 由前推后",
+      "pattern": "前句原因/方式，从而 + 结果",
+      "explanation": "表示前面的做法带来后面的结果，书面语强。",
+      "example": "扩大词库，从而提高分词准确率。",
+      "exampleTr": "Expandir o banco melhora a precisão da segmentação.",
+      "aliases": [
+        "从而",
+        "进而",
+        "因此"
+      ]
+    },
+    {
+      "trigger": "之所以...是因为",
+      "level": "HSK 6",
+      "title": "之所以...是因为: 强因果说明",
+      "pattern": "之所以 + 结果，是因为 + 原因",
+      "explanation": "先说结果，再强调真正原因。",
+      "example": "之所以要扩展词库，是因为复合词会影响隐藏拼音。",
+      "exampleTr": "A razão para expandir o banco é que palavras compostas afetam o pinyin oculto.",
+      "aliases": [
+        "之所以...是因为",
+        "之所以",
+        "是因为"
+      ]
+    },
+    {
+      "trigger": "宁可...也不",
+      "level": "HSK 6",
+      "title": "宁可...也不: 取舍",
+      "pattern": "宁可 + A，也不 + B",
+      "explanation": "宁愿选择 A，也拒绝 B。",
+      "example": "他宁可慢一点，也不愿意误判词级。",
+      "exampleTr": "Ele prefere ser mais lento a julgar errado o nível da palavra.",
+      "aliases": [
+        "宁可...也不",
+        "宁愿...也不"
+      ]
+    },
+    {
+      "trigger": "与其...不如",
+      "level": "HSK 6",
+      "title": "与其...不如: 比较选择",
+      "pattern": "与其 + A，不如 + B",
+      "explanation": "在两个选择中认为 B 更合适。",
+      "example": "与其逐字判断，不如先做最长匹配。",
+      "exampleTr": "Em vez de julgar caractere por caractere, melhor usar maior correspondência.",
+      "aliases": [
+        "与其...不如",
+        "不如"
+      ]
+    },
+    {
+      "trigger": "一方面...另一方面",
+      "level": "HSK 5",
+      "title": "一方面...另一方面: 双方面说明",
+      "pattern": "一方面 + A，另一方面 + B",
+      "explanation": "并列说明两个角度。",
+      "example": "一方面要扩词库，另一方面要保持性能。",
+      "exampleTr": "Por um lado expandir, por outro manter desempenho.",
+      "aliases": [
+        "一方面...另一方面",
+        "另一方面"
+      ]
+    },
+    {
+      "trigger": "无论...都",
+      "level": "HSK 5",
+      "title": "无论...都: 无条件概括",
+      "pattern": "无论 + 条件，都 + 结果",
+      "explanation": "无论前面的变量如何变化，后面结果不变。",
+      "example": "无论词有多长，都先匹配完整词。",
+      "exampleTr": "Não importa o tamanho da palavra, combine primeiro a palavra inteira.",
+      "aliases": [
+        "无论...都",
+        "不管...都",
+        "不论...都"
+      ]
+    },
+    {
+      "trigger": "连...都",
+      "level": "HSK 4",
+      "title": "连...都/也: 强调极端",
+      "pattern": "连 + 极端例子 + 都/也 + 结果",
+      "explanation": "用最不容易发生的例子加强语气。",
+      "example": "连很少见的词也应该能识别。",
+      "exampleTr": "Até palavras raras deveriam ser reconhecidas.",
+      "aliases": [
+        "连...都",
+        "连...也"
+      ]
+    },
+    {
+      "trigger": "差点儿",
+      "level": "HSK 4",
+      "title": "差点儿: 几乎发生",
+      "pattern": "差点儿 + V",
+      "explanation": "表示某事几乎发生；注意肯定/否定语境。",
+      "example": "我差点儿把旧文件删掉。",
+      "exampleTr": "Eu quase apaguei o arquivo antigo.",
+      "aliases": [
+        "差点儿",
+        "差一点",
+        "差点"
+      ]
+    },
+    {
+      "trigger": "免得",
+      "level": "HSK 5",
+      "title": "免得: 避免不良结果",
+      "pattern": "动作/建议 + 免得 + 不良结果",
+      "explanation": "表示为了避免某个不希望的结果。",
+      "example": "先验证数据库，免得出现重复词。",
+      "exampleTr": "Valide o banco antes para evitar duplicatas.",
+      "aliases": [
+        "免得",
+        "省得",
+        "以免"
+      ]
+    },
+    {
+      "trigger": "得",
+      "level": "HSK 2",
+      "title": "程度补语: V 得 Adj",
+      "pattern": "V + 得 + 程度/评价",
+      "explanation": "说明动作做得怎么样。",
+      "example": "他说得很自然。",
+      "exampleTr": "Ele fala de forma natural.",
+      "aliases": [
+        "得",
+        "说得",
+        "读得",
+        "做得"
+      ]
+    },
+    {
+      "trigger": "不",
+      "level": "HSK 2",
+      "title": "可能补语否定: V 不 结果",
+      "pattern": "V + 不 + 结果/方向",
+      "explanation": "表示没有能力或条件达成结果。",
+      "example": "这个词太长，我一下子记不住。",
+      "exampleTr": "A palavra é longa demais, não consigo memorizar de uma vez.",
+      "aliases": [
+        "不",
+        "看不懂",
+        "听不清",
+        "记不住"
+      ]
+    },
+    {
+      "trigger": "得了",
+      "level": "HSK 4",
+      "title": "可能补语: V 得了",
+      "pattern": "V + 得了",
+      "explanation": "表示能够完成或承受。",
+      "example": "这些内容今天学得了。",
+      "exampleTr": "Dá para estudar este conteúdo hoje.",
+      "aliases": [
+        "得了",
+        "吃得了",
+        "受得了"
+      ]
+    },
+    {
+      "trigger": "得起",
+      "level": "HSK 4",
+      "title": "可能补语: V 得起",
+      "pattern": "V + 得起",
+      "explanation": "表示有能力、金钱或资格承受。",
+      "example": "这个价格很多学生付得起。",
+      "exampleTr": "Muitos alunos podem pagar esse preço.",
+      "aliases": [
+        "得起",
+        "买得起",
+        "用得起"
+      ]
+    },
+    {
+      "trigger": "起来",
+      "level": "HSK 3",
+      "title": "趋向/状态: V 起来",
+      "pattern": "V + 起来",
+      "explanation": "可以表示动作开始、收集、评价感觉等。",
+      "example": "这句话听起来很自然。",
+      "exampleTr": "Esta frase soa natural.",
+      "aliases": [
+        "起来",
+        "看起来",
+        "听起来",
+        "说起来"
+      ]
+    },
+    {
+      "trigger": "下去",
+      "level": "HSK 4",
+      "title": "趋向/持续: V 下去",
+      "pattern": "V + 下去",
+      "explanation": "表示动作继续或向下。",
+      "example": "这样练下去会越来越稳。",
+      "exampleTr": "Se continuar praticando assim, ficará cada vez mais estável.",
+      "aliases": [
+        "下去",
+        "继续下去"
+      ]
+    },
+    {
+      "trigger": "出来",
+      "level": "HSK 3",
+      "title": "结果/方向: V 出来",
+      "pattern": "V + 出来",
+      "explanation": "表示从内到外或识别、表达出结果。",
+      "example": "我听出来他说的是普通话。",
+      "exampleTr": "Percebi que ele falava mandarim.",
+      "aliases": [
+        "出来",
+        "看出来",
+        "说出来",
+        "写出来"
+      ]
+    },
+    {
+      "trigger": "上去",
+      "level": "HSK 3",
+      "title": "趋向: V 上去",
+      "pattern": "V + 上去",
+      "explanation": "表示向上、靠近或从表面看。",
+      "example": "这个颜色看上去更清楚。",
+      "exampleTr": "Esta cor parece mais clara.",
+      "aliases": [
+        "上去",
+        "看上去",
+        "走上去"
+      ]
+    },
+    {
+      "trigger": "下来",
+      "level": "HSK 3",
+      "title": "趋向/保留: V 下来",
+      "pattern": "V + 下来",
+      "explanation": "表示向下、停止后保留、记录。",
+      "example": "请把这个词记下来。",
+      "exampleTr": "Anote esta palavra.",
+      "aliases": [
+        "下来",
+        "写下来",
+        "留下来"
+      ]
+    },
+    {
+      "trigger": "上来",
+      "level": "HSK 4",
+      "title": "趋向/状态: V 上来",
+      "pattern": "V + 上来",
+      "explanation": "表示向说话者靠近或状态出现。",
+      "example": "紧张感一下子涌上来。",
+      "exampleTr": "A tensão surgiu de repente.",
+      "aliases": [
+        "上来",
+        "走上来",
+        "涌上来"
+      ]
+    },
+    {
+      "trigger": "开来",
+      "level": "HSK 5",
+      "title": "趋向扩散: V 开来",
+      "pattern": "V + 开来",
+      "explanation": "表示动作或状态向外扩散。",
+      "example": "消息很快传开来。",
+      "exampleTr": "A notícia se espalhou rapidamente.",
+      "aliases": [
+        "开来",
+        "传开来"
+      ]
+    },
+    {
+      "trigger": "起来",
+      "level": "HSK 4",
+      "title": "评价结构: Adj/看起来",
+      "pattern": "看/听/说 + 起来 + Adj",
+      "explanation": "表达主观感受或初步判断。",
+      "example": "这段文字读起来很顺。",
+      "exampleTr": "Este trecho lê de forma fluida.",
+      "aliases": [
+        "起来",
+        "读起来",
+        "用起来"
+      ]
+    },
+    {
+      "trigger": "所",
+      "level": "HSK 5",
+      "title": "所字结构",
+      "pattern": "所 + V + 的 + N",
+      "explanation": "把动词性成分名词化，常见于书面语。",
+      "example": "他所说的内容很重要。",
+      "exampleTr": "O que ele disse é importante.",
+      "aliases": [
+        "所",
+        "所说",
+        "所见",
+        "所谓"
+      ]
+    },
+    {
+      "trigger": "者",
+      "level": "HSK 5",
+      "title": "者: 人或类别",
+      "pattern": "V/Adj + 者",
+      "explanation": "构成书面语名词，表示从事者或具有某性质的人。",
+      "example": "学习者需要稳定的输入。",
+      "exampleTr": "Aprendizes precisam de input estável.",
+      "aliases": [
+        "者",
+        "学习者",
+        "作者",
+        "读者"
+      ]
+    },
+    {
+      "trigger": "其",
+      "level": "HSK 5",
+      "title": "其: 书面代词",
+      "pattern": "其 + 名词",
+      "explanation": "书面语中表示“他的/它的/其中的”。",
+      "example": "该词及其用法都很常见。",
+      "exampleTr": "A palavra e seu uso são comuns.",
+      "aliases": [
+        "其",
+        "其中",
+        "其次",
+        "及其"
+      ]
+    },
+    {
+      "trigger": "为",
+      "level": "HSK 4",
+      "title": "为: 书面原因/目的",
+      "pattern": "为 + 名词/动词短语",
+      "explanation": "可表示为了、因为、替、作为等。",
+      "example": "为提高准确率，我们扩展了数据库。",
+      "exampleTr": "Para melhorar a precisão, expandimos o banco.",
+      "aliases": [
+        "为",
+        "为了",
+        "因为",
+        "作为"
+      ]
+    },
+    {
+      "trigger": "以",
+      "level": "HSK 5",
+      "title": "以: 方式/目的/依据",
+      "pattern": "以 + N/V + 为/来/便",
+      "explanation": "书面连接词，可表示方式、目的或依据。",
+      "example": "以最长匹配为优先。",
+      "exampleTr": "Use a maior correspondência como prioridade.",
+      "aliases": [
+        "以",
+        "以便",
+        "以免",
+        "以...为"
+      ]
+    },
+    {
+      "trigger": "于",
+      "level": "HSK 5",
+      "title": "于: 书面介词",
+      "pattern": "V/Adj + 于 + N",
+      "explanation": "常见于书面语，表示在、到、对、比等。",
+      "example": "该规则适用于长词分割。",
+      "exampleTr": "Esta regra se aplica à segmentação de palavras longas.",
+      "aliases": [
+        "于",
+        "由于",
+        "关于",
+        "属于"
+      ]
+    },
+    {
+      "trigger": "把...给",
+      "level": "HSK 4",
+      "title": "把...给: 口语处置加强",
+      "pattern": "把 + O + 给 + V 了",
+      "explanation": "口语中“给”加强处置感或意外感。",
+      "example": "他把文件给删了。",
+      "exampleTr": "Ele acabou apagando o arquivo.",
+      "aliases": [
+        "把...给",
+        "给删了",
+        "给弄丢了"
+      ]
+    },
+    {
+      "trigger": "被...给",
+      "level": "HSK 5",
+      "title": "被...给: 被动口语加强",
+      "pattern": "被 + 施事 + 给 + V 了",
+      "explanation": "口语中加强被动影响或意外。",
+      "example": "数据被脚本给清理了。",
+      "exampleTr": "Os dados foram limpos pelo script.",
+      "aliases": [
+        "被...给",
+        "被给"
+      ]
+    },
+    {
+      "trigger": "动词重叠",
+      "level": "HSK 2",
+      "title": "动词重叠: 轻松尝试",
+      "pattern": "V 一 V / V V",
+      "explanation": "表示短时间、轻松尝试或语气柔和。",
+      "example": "你先看看这个例子。",
+      "exampleTr": "Olhe primeiro este exemplo.",
+      "aliases": [
+        "动词重叠",
+        "看看",
+        "听听",
+        "想一想"
+      ]
+    },
+    {
+      "trigger": "形容词重叠",
+      "level": "HSK 3",
+      "title": "形容词重叠: 生动描写",
+      "pattern": "AA / AABB",
+      "explanation": "使描写更生动，常带感情色彩。",
+      "example": "房间干干净净的。",
+      "exampleTr": "O quarto está bem limpinho.",
+      "aliases": [
+        "形容词重叠",
+        "干干净净",
+        "清清楚楚"
+      ]
+    },
+    {
+      "trigger": "名词量词",
+      "level": "HSK 1",
+      "title": "量词结构",
+      "pattern": "数词 + 量词 + 名词",
+      "explanation": "中文名词通常需要量词。",
+      "example": "三个人、一本书、两杯茶。",
+      "exampleTr": "Três pessoas, um livro, duas xícaras de chá.",
+      "aliases": [
+        "名词量词",
+        "个",
+        "本",
+        "杯",
+        "条",
+        "张"
+      ]
+    },
+    {
+      "trigger": "比起",
+      "level": "HSK 5",
+      "title": "比起...更/还是",
+      "pattern": "比起 + A，B 更/还是...",
+      "explanation": "用于比较两个对象或做法。",
+      "example": "比起逐字分析，最长匹配更可靠。",
+      "exampleTr": "Comparado à análise por caractere, a maior correspondência é mais confiável.",
+      "aliases": [
+        "比起",
+        "相比",
+        "相较于"
+      ]
+    },
+    {
+      "trigger": "相当于",
+      "level": "HSK 5",
+      "title": "相当于: 等同说明",
+      "pattern": "A 相当于 B",
+      "explanation": "说明某事物在作用、程度或意义上等于另一事物。",
+      "example": "这个缓存相当于本地词典。",
+      "exampleTr": "Esse cache equivale a um dicionário local.",
+      "aliases": [
+        "相当于",
+        "等于",
+        "类似于"
+      ]
+    },
+    {
+      "trigger": "取决于",
+      "level": "HSK 5",
+      "title": "取决于: 条件依赖",
+      "pattern": "A 取决于 B",
+      "explanation": "表示 A 由 B 决定。",
+      "example": "识别结果取决于词库质量。",
+      "exampleTr": "O resultado depende da qualidade do léxico.",
+      "aliases": [
+        "取决于",
+        "依赖于",
+        "由...决定"
+      ]
+    },
+    {
+      "trigger": "在于",
+      "level": "HSK 5",
+      "title": "在于: 关键所在",
+      "pattern": "关键/原因/问题 + 在于 + N/V",
+      "explanation": "指出根本原因或重点。",
+      "example": "问题在于复合词没有被识别。",
+      "exampleTr": "O problema está no não reconhecimento de palavras compostas.",
+      "aliases": [
+        "在于",
+        "关键在于",
+        "原因在于"
+      ]
+    },
+    {
+      "trigger": "导致",
+      "level": "HSK 4",
+      "title": "导致: 引起结果",
+      "pattern": "原因 + 导致 + 结果",
+      "explanation": "常表示不好的或重要结果。",
+      "example": "分词错误会导致拼音隐藏错误。",
+      "exampleTr": "Erro de segmentação causa erro na ocultação de pinyin.",
+      "aliases": [
+        "导致",
+        "造成",
+        "引起"
+      ]
+    },
+    {
+      "trigger": "使得",
+      "level": "HSK 5",
+      "title": "使得: 使结果发生",
+      "pattern": "原因/做法 + 使得 + 结果",
+      "explanation": "书面语中表示导致某结果。",
+      "example": "扩展词库使得识别更准确。",
+      "exampleTr": "Expandir o léxico torna o reconhecimento mais preciso.",
+      "aliases": [
+        "使得",
+        "让",
+        "令"
+      ]
+    },
+    {
+      "trigger": "况且",
+      "level": "HSK 5",
+      "title": "况且: 补充理由",
+      "pattern": "前句观点，况且 + 进一步理由",
+      "explanation": "补充更强或额外的理由。",
+      "example": "这个词不常见，况且还有多种用法。",
+      "exampleTr": "A palavra é rara; além disso, tem vários usos.",
+      "aliases": [
+        "况且"
+      ]
+    },
+    {
+      "trigger": "何况",
+      "level": "HSK 5",
+      "title": "何况: 更进一步",
+      "pattern": "连 A 都...，何况 B",
+      "explanation": "表示 A 已如此，更不用说 B。",
+      "example": "简单词都要识别，何况高级复合词。",
+      "exampleTr": "Se até palavras simples precisam ser reconhecidas, quanto mais compostas avançadas.",
+      "aliases": [
+        "何况"
+      ]
+    },
+    {
+      "trigger": "以至于",
+      "level": "HSK 5",
+      "title": "以至于: 结果程度",
+      "pattern": "原因 + 以至于 + 结果",
+      "explanation": "强调前因造成的程度较强结果。",
+      "example": "词库太小，以至于很多复合词被拆错。",
+      "exampleTr": "O banco era pequeno, a ponto de muitas palavras compostas serem segmentadas errado.",
+      "aliases": [
+        "以至于"
+      ]
+    },
+    {
+      "trigger": "不至于",
+      "level": "HSK 5",
+      "title": "不至于: 不会到某程度",
+      "pattern": "不至于 + V/Adj",
+      "explanation": "表示情况不会严重到某程度。",
+      "example": "即使离线，也不至于完全不能查词。",
+      "exampleTr": "Mesmo offline, não chega a ficar totalmente sem consulta.",
+      "aliases": [
+        "不至于"
+      ]
+    },
+    {
+      "trigger": "未免",
+      "level": "HSK 6",
+      "title": "未免: 评价过度",
+      "pattern": "未免 + 太/有点 + Adj",
+      "explanation": "表示说话人认为程度过分。",
+      "example": "只按单字判断未免太粗糙。",
+      "exampleTr": "Julgar só por caractere é grosseiro demais.",
+      "aliases": [
+        "未免"
+      ]
+    },
+    {
+      "trigger": "不免",
+      "level": "HSK 6",
+      "title": "不免: 难以避免",
+      "pattern": "不免 + V/Adj",
+      "explanation": "表示某情况难以避免。",
+      "example": "词库不全时，不免会误判。",
+      "exampleTr": "Quando o léxico é incompleto, erros são inevitáveis.",
+      "aliases": [
+        "不免"
+      ]
+    },
+    {
+      "trigger": "难免",
+      "level": "HSK 5",
+      "title": "难免: 难以避免",
+      "pattern": "难免 + V/Adj",
+      "explanation": "与“不免”相近，常表示可以理解的小问题。",
+      "example": "刚开始扩展数据库难免有遗漏。",
+      "exampleTr": "No início da expansão é normal haver omissões.",
+      "aliases": [
+        "难免"
+      ]
+    },
+    {
+      "trigger": "大可不必",
+      "level": "HSK 7",
+      "title": "大可不必: 完全没必要",
+      "pattern": "大可不必 + V",
+      "explanation": "较书面/口语的劝阻，表示没必要做某事。",
+      "example": "这个词已经缓存，大可不必再次请求 API。",
+      "exampleTr": "A palavra já está em cache; não há necessidade de chamar a API de novo.",
+      "aliases": [
+        "大可不必"
+      ]
+    },
+    {
+      "trigger": "无非",
+      "level": "HSK 6",
+      "title": "无非: 不过是",
+      "pattern": "无非 + 是/就是 + N/V",
+      "explanation": "表示归结起来不过如此。",
+      "example": "这里的问题无非是路径大小写不一致。",
+      "exampleTr": "O problema aqui é basicamente inconsistência de maiúsculas/minúsculas no caminho.",
+      "aliases": [
+        "无非"
+      ]
+    },
+    {
+      "trigger": "并非",
+      "level": "HSK 5",
+      "title": "并非: 并不是",
+      "pattern": "并非 + N/Adj/V",
+      "explanation": "书面否定，比“不是”更正式。",
+      "example": "并非所有单字都应该单独判断。",
+      "exampleTr": "Nem todo caractere deve ser julgado separadamente.",
+      "aliases": [
+        "并非"
+      ]
+    },
+    {
+      "trigger": "不啻",
+      "level": "HSK 9",
+      "title": "不啻: 不亚于/如同",
+      "pattern": "不啻 + N/V",
+      "explanation": "高阶书面语，表示不亚于或简直像。",
+      "example": "对分词来说，复合词库不啻为核心基础。",
+      "exampleTr": "Para segmentação, o léxico composto é praticamente a base central.",
+      "aliases": [
+        "不啻"
+      ]
+    },
+    {
+      "trigger": "毋宁",
+      "level": "HSK 9",
+      "title": "毋宁: 不如说",
+      "pattern": "与其说 A，毋宁说 B",
+      "explanation": "高阶书面转折，用于重新界定。",
+      "example": "与其说是界面问题，毋宁说是数据问题。",
+      "exampleTr": "Não é tanto uma questão de interface, mas sim de dados.",
+      "aliases": [
+        "毋宁"
+      ]
+    },
+    {
+      "trigger": "诚然",
+      "level": "HSK 8",
+      "title": "诚然: 承认事实",
+      "pattern": "诚然 + 事实，但/不过 + 转折",
+      "explanation": "先承认事实，再提出保留或转折。",
+      "example": "诚然数据库会变大，但查询会更准确。",
+      "exampleTr": "É verdade que o banco ficará maior, mas a consulta será mais precisa.",
+      "aliases": [
+        "诚然"
+      ]
+    },
+    {
+      "trigger": "倘若",
+      "level": "HSK 7",
+      "title": "倘若: 如果",
+      "pattern": "倘若 + 条件，就/则 + 结果",
+      "explanation": "书面假设，相当于如果。",
+      "example": "倘若匹配到长词，就不要再拆成单字。",
+      "exampleTr": "Se uma palavra longa for encontrada, não a quebre em caracteres.",
+      "aliases": [
+        "倘若"
+      ]
+    },
+    {
+      "trigger": "若非",
+      "level": "HSK 8",
+      "title": "若非: 如果不是",
+      "pattern": "若非 + 条件，(就) + 结果",
+      "explanation": "书面条件，表示如果不是某条件。",
+      "example": "若非扩展词库，很多词仍会被误判。",
+      "exampleTr": "Se não expandirmos o léxico, muitas palavras ainda serão julgadas errado.",
+      "aliases": [
+        "若非"
+      ]
+    },
+    {
+      "trigger": "凡是",
+      "level": "HSK 5",
+      "title": "凡是: 所有符合条件的",
+      "pattern": "凡是 + 条件，都 + 结果",
+      "explanation": "概括所有符合条件的对象。",
+      "example": "凡是已经识别为 HSK5 的词，都不应按单字隐藏拼音。",
+      "exampleTr": "Toda palavra reconhecida como HSK5 não deve esconder pinyin por caractere.",
+      "aliases": [
+        "凡是"
+      ]
+    },
+    {
+      "trigger": "凡",
+      "level": "HSK 6",
+      "title": "凡: 书面所有/大凡",
+      "pattern": "凡 + N/V",
+      "explanation": "书面概括，可表示所有。",
+      "example": "凡多音词都要结合上下文。",
+      "exampleTr": "Todos os caracteres polifônicos exigem contexto.",
+      "aliases": [
+        "凡"
+      ]
+    },
+    {
+      "trigger": "但凡",
+      "level": "HSK 7",
+      "title": "但凡: 只要有一点条件",
+      "pattern": "但凡 + 条件，就/都 + 结果",
+      "explanation": "强调只要满足条件。",
+      "example": "但凡词库能命中，就优先使用整词。",
+      "exampleTr": "Sempre que o léxico acertar, priorize a palavra inteira.",
+      "aliases": [
+        "但凡"
+      ]
+    },
+    {
+      "trigger": "固然",
+      "level": "HSK 6",
+      "title": "固然: 承认但转折",
+      "pattern": "A 固然...，但 B...",
+      "explanation": "承认 A，同时指出 B 更重要。",
+      "example": "单字级别固然有用，但复合词级别更关键。",
+      "exampleTr": "O nível do caractere é útil, mas o nível da palavra composta é mais crucial.",
+      "aliases": [
+        "固然"
+      ]
+    },
+    {
+      "trigger": "倒不是",
+      "level": "HSK 6",
+      "title": "倒不是: 让步更正",
+      "pattern": "倒不是 + A，而是 + B",
+      "explanation": "先否定一个可能理解，再说明真正原因。",
+      "example": "倒不是字库太大，而是加载顺序要稳。",
+      "exampleTr": "Não é que o banco seja grande, mas que a ordem de carregamento precisa ser estável.",
+      "aliases": [
+        "倒不是"
+      ]
+    },
+    {
+      "trigger": "姑且",
+      "level": "HSK 7",
+      "title": "姑且: 暂时如此",
+      "pattern": "姑且 + V/认为",
+      "explanation": "表示暂时这样处理或认为。",
+      "example": "无法确定级别时，姑且按最高命中处理。",
+      "exampleTr": "Quando o nível é incerto, trate temporariamente pelo maior nível encontrado.",
+      "aliases": [
+        "姑且"
+      ]
+    },
+    {
+      "trigger": "暂且",
+      "level": "HSK 6",
+      "title": "暂且: 暂时",
+      "pattern": "暂且 + V",
+      "explanation": "暂时采取某做法。",
+      "example": "如果 API 慢，暂且显示本地解释。",
+      "exampleTr": "Se a API estiver lenta, mostre a explicação local por enquanto.",
+      "aliases": [
+        "暂且"
+      ]
+    },
+    {
+      "trigger": "尚且",
+      "level": "HSK 7",
+      "title": "尚且: 连...都",
+      "pattern": "A 尚且...，B 更...",
+      "explanation": "表示 A 都如此，B 更不用说。",
+      "example": "常用词尚且需要上下文，罕见词更需要。",
+      "exampleTr": "Se palavras comuns já precisam de contexto, raras ainda mais.",
+      "aliases": [
+        "尚且"
+      ]
+    },
+    {
+      "trigger": "遑论",
+      "level": "HSK 9",
+      "title": "遑论: 更不用说",
+      "pattern": "A 尚且困难，遑论 B",
+      "explanation": "高阶书面语，表示更不用说。",
+      "example": "短词尚且会误判，遑论成语和古汉语词。",
+      "exampleTr": "Se palavras curtas já dão erro, imagine idioms e termos clássicos.",
+      "aliases": [
+        "遑论"
+      ]
+    },
+    {
+      "trigger": "以致",
+      "level": "HSK 6",
+      "title": "以致: 导致结果",
+      "pattern": "原因 + 以致 + 结果",
+      "explanation": "较正式，常表示负面结果。",
+      "example": "旧词库太小，以致分词不稳定。",
+      "exampleTr": "O léxico antigo era pequeno, causando segmentação instável.",
+      "aliases": [
+        "以致"
+      ]
+    },
+    {
+      "trigger": "看懂",
+      "level": "HSK 4",
+      "title": "看懂: 结果/趋向补语",
+      "pattern": "看 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于看懂了。",
+      "exampleTr": "Finalmente consegui 看懂.",
+      "aliases": [
+        "看懂",
+        "看不懂",
+        "看得懂"
+      ]
+    },
+    {
+      "trigger": "看完",
+      "level": "HSK 4",
+      "title": "看完: 结果/趋向补语",
+      "pattern": "看 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于看完了。",
+      "exampleTr": "Finalmente consegui 看完.",
+      "aliases": [
+        "看完",
+        "看不完",
+        "看得完"
+      ]
+    },
+    {
+      "trigger": "看好",
+      "level": "HSK 4",
+      "title": "看好: 结果/趋向补语",
+      "pattern": "看 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于看好了。",
+      "exampleTr": "Finalmente consegui 看好.",
+      "aliases": [
+        "看好",
+        "看不好",
+        "看得好"
+      ]
+    },
+    {
+      "trigger": "看清楚",
+      "level": "HSK 5",
+      "title": "看清楚: 结果/趋向补语",
+      "pattern": "看 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于看清楚了。",
+      "exampleTr": "Finalmente consegui 看清楚.",
+      "aliases": [
+        "看清楚",
+        "看不清楚",
+        "看得清楚"
+      ]
+    },
+    {
+      "trigger": "看出来",
+      "level": "HSK 5",
+      "title": "看出来: 结果/趋向补语",
+      "pattern": "看 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于看出来了。",
+      "exampleTr": "Finalmente consegui 看出来.",
+      "aliases": [
+        "看出来",
+        "看不出来",
+        "看得出来"
+      ]
+    },
+    {
+      "trigger": "看下去",
+      "level": "HSK 5",
+      "title": "看下去: 结果/趋向补语",
+      "pattern": "看 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于看下去了。",
+      "exampleTr": "Finalmente consegui 看下去.",
+      "aliases": [
+        "看下去",
+        "看不下去",
+        "看得下去"
+      ]
+    },
+    {
+      "trigger": "看起来",
+      "level": "HSK 5",
+      "title": "看起来: 结果/趋向补语",
+      "pattern": "看 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于看起来了。",
+      "exampleTr": "Finalmente consegui 看起来.",
+      "aliases": [
+        "看起来",
+        "看不起来",
+        "看得起来"
+      ]
+    },
+    {
+      "trigger": "看进去",
+      "level": "HSK 5",
+      "title": "看进去: 结果/趋向补语",
+      "pattern": "看 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于看进去了。",
+      "exampleTr": "Finalmente consegui 看进去.",
+      "aliases": [
+        "看进去",
+        "看不进去",
+        "看得进去"
+      ]
+    },
+    {
+      "trigger": "看回来",
+      "level": "HSK 5",
+      "title": "看回来: 结果/趋向补语",
+      "pattern": "看 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于看回来了。",
+      "exampleTr": "Finalmente consegui 看回来.",
+      "aliases": [
+        "看回来",
+        "看不回来",
+        "看得回来"
+      ]
+    },
+    {
+      "trigger": "看住",
+      "level": "HSK 5",
+      "title": "看住: 结果/趋向补语",
+      "pattern": "看 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于看住了。",
+      "exampleTr": "Finalmente consegui 看住.",
+      "aliases": [
+        "看住",
+        "看不住",
+        "看得住"
+      ]
+    },
+    {
+      "trigger": "看到",
+      "level": "HSK 4",
+      "title": "看到: 结果/趋向补语",
+      "pattern": "看 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于看到了。",
+      "exampleTr": "Finalmente consegui 看到.",
+      "aliases": [
+        "看到",
+        "看不到",
+        "看得到"
+      ]
+    },
+    {
+      "trigger": "看成",
+      "level": "HSK 5",
+      "title": "看成: 结果/趋向补语",
+      "pattern": "看 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于看成了。",
+      "exampleTr": "Finalmente consegui 看成.",
+      "aliases": [
+        "看成",
+        "看不成",
+        "看得成"
+      ]
+    },
+    {
+      "trigger": "听懂",
+      "level": "HSK 4",
+      "title": "听懂: 结果/趋向补语",
+      "pattern": "听 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于听懂了。",
+      "exampleTr": "Finalmente consegui 听懂.",
+      "aliases": [
+        "听懂",
+        "听不懂",
+        "听得懂"
+      ]
+    },
+    {
+      "trigger": "听完",
+      "level": "HSK 4",
+      "title": "听完: 结果/趋向补语",
+      "pattern": "听 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于听完了。",
+      "exampleTr": "Finalmente consegui 听完.",
+      "aliases": [
+        "听完",
+        "听不完",
+        "听得完"
+      ]
+    },
+    {
+      "trigger": "听好",
+      "level": "HSK 4",
+      "title": "听好: 结果/趋向补语",
+      "pattern": "听 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于听好了。",
+      "exampleTr": "Finalmente consegui 听好.",
+      "aliases": [
+        "听好",
+        "听不好",
+        "听得好"
+      ]
+    },
+    {
+      "trigger": "听清楚",
+      "level": "HSK 5",
+      "title": "听清楚: 结果/趋向补语",
+      "pattern": "听 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于听清楚了。",
+      "exampleTr": "Finalmente consegui 听清楚.",
+      "aliases": [
+        "听清楚",
+        "听不清楚",
+        "听得清楚"
+      ]
+    },
+    {
+      "trigger": "听出来",
+      "level": "HSK 5",
+      "title": "听出来: 结果/趋向补语",
+      "pattern": "听 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于听出来了。",
+      "exampleTr": "Finalmente consegui 听出来.",
+      "aliases": [
+        "听出来",
+        "听不出来",
+        "听得出来"
+      ]
+    },
+    {
+      "trigger": "听下去",
+      "level": "HSK 5",
+      "title": "听下去: 结果/趋向补语",
+      "pattern": "听 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于听下去了。",
+      "exampleTr": "Finalmente consegui 听下去.",
+      "aliases": [
+        "听下去",
+        "听不下去",
+        "听得下去"
+      ]
+    },
+    {
+      "trigger": "听起来",
+      "level": "HSK 5",
+      "title": "听起来: 结果/趋向补语",
+      "pattern": "听 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于听起来了。",
+      "exampleTr": "Finalmente consegui 听起来.",
+      "aliases": [
+        "听起来",
+        "听不起来",
+        "听得起来"
+      ]
+    },
+    {
+      "trigger": "听进去",
+      "level": "HSK 5",
+      "title": "听进去: 结果/趋向补语",
+      "pattern": "听 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于听进去了。",
+      "exampleTr": "Finalmente consegui 听进去.",
+      "aliases": [
+        "听进去",
+        "听不进去",
+        "听得进去"
+      ]
+    },
+    {
+      "trigger": "听回来",
+      "level": "HSK 5",
+      "title": "听回来: 结果/趋向补语",
+      "pattern": "听 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于听回来了。",
+      "exampleTr": "Finalmente consegui 听回来.",
+      "aliases": [
+        "听回来",
+        "听不回来",
+        "听得回来"
+      ]
+    },
+    {
+      "trigger": "听住",
+      "level": "HSK 5",
+      "title": "听住: 结果/趋向补语",
+      "pattern": "听 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于听住了。",
+      "exampleTr": "Finalmente consegui 听住.",
+      "aliases": [
+        "听住",
+        "听不住",
+        "听得住"
+      ]
+    },
+    {
+      "trigger": "听到",
+      "level": "HSK 4",
+      "title": "听到: 结果/趋向补语",
+      "pattern": "听 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于听到了。",
+      "exampleTr": "Finalmente consegui 听到.",
+      "aliases": [
+        "听到",
+        "听不到",
+        "听得到"
+      ]
+    },
+    {
+      "trigger": "听成",
+      "level": "HSK 5",
+      "title": "听成: 结果/趋向补语",
+      "pattern": "听 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于听成了。",
+      "exampleTr": "Finalmente consegui 听成.",
+      "aliases": [
+        "听成",
+        "听不成",
+        "听得成"
+      ]
+    },
+    {
+      "trigger": "读懂",
+      "level": "HSK 4",
+      "title": "读懂: 结果/趋向补语",
+      "pattern": "读 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于读懂了。",
+      "exampleTr": "Finalmente consegui 读懂.",
+      "aliases": [
+        "读懂",
+        "读不懂",
+        "读得懂"
+      ]
+    },
+    {
+      "trigger": "读完",
+      "level": "HSK 4",
+      "title": "读完: 结果/趋向补语",
+      "pattern": "读 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于读完了。",
+      "exampleTr": "Finalmente consegui 读完.",
+      "aliases": [
+        "读完",
+        "读不完",
+        "读得完"
+      ]
+    },
+    {
+      "trigger": "读好",
+      "level": "HSK 4",
+      "title": "读好: 结果/趋向补语",
+      "pattern": "读 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于读好了。",
+      "exampleTr": "Finalmente consegui 读好.",
+      "aliases": [
+        "读好",
+        "读不好",
+        "读得好"
+      ]
+    },
+    {
+      "trigger": "读清楚",
+      "level": "HSK 5",
+      "title": "读清楚: 结果/趋向补语",
+      "pattern": "读 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于读清楚了。",
+      "exampleTr": "Finalmente consegui 读清楚.",
+      "aliases": [
+        "读清楚",
+        "读不清楚",
+        "读得清楚"
+      ]
+    },
+    {
+      "trigger": "读出来",
+      "level": "HSK 5",
+      "title": "读出来: 结果/趋向补语",
+      "pattern": "读 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于读出来了。",
+      "exampleTr": "Finalmente consegui 读出来.",
+      "aliases": [
+        "读出来",
+        "读不出来",
+        "读得出来"
+      ]
+    },
+    {
+      "trigger": "读下去",
+      "level": "HSK 5",
+      "title": "读下去: 结果/趋向补语",
+      "pattern": "读 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于读下去了。",
+      "exampleTr": "Finalmente consegui 读下去.",
+      "aliases": [
+        "读下去",
+        "读不下去",
+        "读得下去"
+      ]
+    },
+    {
+      "trigger": "读起来",
+      "level": "HSK 5",
+      "title": "读起来: 结果/趋向补语",
+      "pattern": "读 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于读起来了。",
+      "exampleTr": "Finalmente consegui 读起来.",
+      "aliases": [
+        "读起来",
+        "读不起来",
+        "读得起来"
+      ]
+    },
+    {
+      "trigger": "读进去",
+      "level": "HSK 5",
+      "title": "读进去: 结果/趋向补语",
+      "pattern": "读 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于读进去了。",
+      "exampleTr": "Finalmente consegui 读进去.",
+      "aliases": [
+        "读进去",
+        "读不进去",
+        "读得进去"
+      ]
+    },
+    {
+      "trigger": "读回来",
+      "level": "HSK 5",
+      "title": "读回来: 结果/趋向补语",
+      "pattern": "读 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于读回来了。",
+      "exampleTr": "Finalmente consegui 读回来.",
+      "aliases": [
+        "读回来",
+        "读不回来",
+        "读得回来"
+      ]
+    },
+    {
+      "trigger": "读住",
+      "level": "HSK 5",
+      "title": "读住: 结果/趋向补语",
+      "pattern": "读 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于读住了。",
+      "exampleTr": "Finalmente consegui 读住.",
+      "aliases": [
+        "读住",
+        "读不住",
+        "读得住"
+      ]
+    },
+    {
+      "trigger": "读到",
+      "level": "HSK 4",
+      "title": "读到: 结果/趋向补语",
+      "pattern": "读 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于读到了。",
+      "exampleTr": "Finalmente consegui 读到.",
+      "aliases": [
+        "读到",
+        "读不到",
+        "读得到"
+      ]
+    },
+    {
+      "trigger": "读成",
+      "level": "HSK 5",
+      "title": "读成: 结果/趋向补语",
+      "pattern": "读 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于读成了。",
+      "exampleTr": "Finalmente consegui 读成.",
+      "aliases": [
+        "读成",
+        "读不成",
+        "读得成"
+      ]
+    },
+    {
+      "trigger": "写懂",
+      "level": "HSK 4",
+      "title": "写懂: 结果/趋向补语",
+      "pattern": "写 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于写懂了。",
+      "exampleTr": "Finalmente consegui 写懂.",
+      "aliases": [
+        "写懂",
+        "写不懂",
+        "写得懂"
+      ]
+    },
+    {
+      "trigger": "写完",
+      "level": "HSK 4",
+      "title": "写完: 结果/趋向补语",
+      "pattern": "写 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于写完了。",
+      "exampleTr": "Finalmente consegui 写完.",
+      "aliases": [
+        "写完",
+        "写不完",
+        "写得完"
+      ]
+    },
+    {
+      "trigger": "写好",
+      "level": "HSK 4",
+      "title": "写好: 结果/趋向补语",
+      "pattern": "写 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于写好了。",
+      "exampleTr": "Finalmente consegui 写好.",
+      "aliases": [
+        "写好",
+        "写不好",
+        "写得好"
+      ]
+    },
+    {
+      "trigger": "写清楚",
+      "level": "HSK 5",
+      "title": "写清楚: 结果/趋向补语",
+      "pattern": "写 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于写清楚了。",
+      "exampleTr": "Finalmente consegui 写清楚.",
+      "aliases": [
+        "写清楚",
+        "写不清楚",
+        "写得清楚"
+      ]
+    },
+    {
+      "trigger": "写出来",
+      "level": "HSK 5",
+      "title": "写出来: 结果/趋向补语",
+      "pattern": "写 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于写出来了。",
+      "exampleTr": "Finalmente consegui 写出来.",
+      "aliases": [
+        "写出来",
+        "写不出来",
+        "写得出来"
+      ]
+    },
+    {
+      "trigger": "写下去",
+      "level": "HSK 5",
+      "title": "写下去: 结果/趋向补语",
+      "pattern": "写 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于写下去了。",
+      "exampleTr": "Finalmente consegui 写下去.",
+      "aliases": [
+        "写下去",
+        "写不下去",
+        "写得下去"
+      ]
+    },
+    {
+      "trigger": "写起来",
+      "level": "HSK 5",
+      "title": "写起来: 结果/趋向补语",
+      "pattern": "写 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于写起来了。",
+      "exampleTr": "Finalmente consegui 写起来.",
+      "aliases": [
+        "写起来",
+        "写不起来",
+        "写得起来"
+      ]
+    },
+    {
+      "trigger": "写进去",
+      "level": "HSK 5",
+      "title": "写进去: 结果/趋向补语",
+      "pattern": "写 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于写进去了。",
+      "exampleTr": "Finalmente consegui 写进去.",
+      "aliases": [
+        "写进去",
+        "写不进去",
+        "写得进去"
+      ]
+    },
+    {
+      "trigger": "写回来",
+      "level": "HSK 5",
+      "title": "写回来: 结果/趋向补语",
+      "pattern": "写 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于写回来了。",
+      "exampleTr": "Finalmente consegui 写回来.",
+      "aliases": [
+        "写回来",
+        "写不回来",
+        "写得回来"
+      ]
+    },
+    {
+      "trigger": "写住",
+      "level": "HSK 5",
+      "title": "写住: 结果/趋向补语",
+      "pattern": "写 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于写住了。",
+      "exampleTr": "Finalmente consegui 写住.",
+      "aliases": [
+        "写住",
+        "写不住",
+        "写得住"
+      ]
+    },
+    {
+      "trigger": "写到",
+      "level": "HSK 4",
+      "title": "写到: 结果/趋向补语",
+      "pattern": "写 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于写到了。",
+      "exampleTr": "Finalmente consegui 写到.",
+      "aliases": [
+        "写到",
+        "写不到",
+        "写得到"
+      ]
+    },
+    {
+      "trigger": "写成",
+      "level": "HSK 5",
+      "title": "写成: 结果/趋向补语",
+      "pattern": "写 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于写成了。",
+      "exampleTr": "Finalmente consegui 写成.",
+      "aliases": [
+        "写成",
+        "写不成",
+        "写得成"
+      ]
+    },
+    {
+      "trigger": "说懂",
+      "level": "HSK 4",
+      "title": "说懂: 结果/趋向补语",
+      "pattern": "说 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于说懂了。",
+      "exampleTr": "Finalmente consegui 说懂.",
+      "aliases": [
+        "说懂",
+        "说不懂",
+        "说得懂"
+      ]
+    },
+    {
+      "trigger": "说完",
+      "level": "HSK 4",
+      "title": "说完: 结果/趋向补语",
+      "pattern": "说 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于说完了。",
+      "exampleTr": "Finalmente consegui 说完.",
+      "aliases": [
+        "说完",
+        "说不完",
+        "说得完"
+      ]
+    },
+    {
+      "trigger": "说好",
+      "level": "HSK 4",
+      "title": "说好: 结果/趋向补语",
+      "pattern": "说 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于说好了。",
+      "exampleTr": "Finalmente consegui 说好.",
+      "aliases": [
+        "说好",
+        "说不好",
+        "说得好"
+      ]
+    },
+    {
+      "trigger": "说清楚",
+      "level": "HSK 5",
+      "title": "说清楚: 结果/趋向补语",
+      "pattern": "说 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于说清楚了。",
+      "exampleTr": "Finalmente consegui 说清楚.",
+      "aliases": [
+        "说清楚",
+        "说不清楚",
+        "说得清楚"
+      ]
+    },
+    {
+      "trigger": "说出来",
+      "level": "HSK 5",
+      "title": "说出来: 结果/趋向补语",
+      "pattern": "说 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于说出来了。",
+      "exampleTr": "Finalmente consegui 说出来.",
+      "aliases": [
+        "说出来",
+        "说不出来",
+        "说得出来"
+      ]
+    },
+    {
+      "trigger": "说下去",
+      "level": "HSK 5",
+      "title": "说下去: 结果/趋向补语",
+      "pattern": "说 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于说下去了。",
+      "exampleTr": "Finalmente consegui 说下去.",
+      "aliases": [
+        "说下去",
+        "说不下去",
+        "说得下去"
+      ]
+    },
+    {
+      "trigger": "说起来",
+      "level": "HSK 5",
+      "title": "说起来: 结果/趋向补语",
+      "pattern": "说 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于说起来了。",
+      "exampleTr": "Finalmente consegui 说起来.",
+      "aliases": [
+        "说起来",
+        "说不起来",
+        "说得起来"
+      ]
+    },
+    {
+      "trigger": "说进去",
+      "level": "HSK 5",
+      "title": "说进去: 结果/趋向补语",
+      "pattern": "说 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于说进去了。",
+      "exampleTr": "Finalmente consegui 说进去.",
+      "aliases": [
+        "说进去",
+        "说不进去",
+        "说得进去"
+      ]
+    },
+    {
+      "trigger": "说回来",
+      "level": "HSK 5",
+      "title": "说回来: 结果/趋向补语",
+      "pattern": "说 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于说回来了。",
+      "exampleTr": "Finalmente consegui 说回来.",
+      "aliases": [
+        "说回来",
+        "说不回来",
+        "说得回来"
+      ]
+    },
+    {
+      "trigger": "说住",
+      "level": "HSK 5",
+      "title": "说住: 结果/趋向补语",
+      "pattern": "说 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于说住了。",
+      "exampleTr": "Finalmente consegui 说住.",
+      "aliases": [
+        "说住",
+        "说不住",
+        "说得住"
+      ]
+    },
+    {
+      "trigger": "说到",
+      "level": "HSK 4",
+      "title": "说到: 结果/趋向补语",
+      "pattern": "说 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于说到了。",
+      "exampleTr": "Finalmente consegui 说到.",
+      "aliases": [
+        "说到",
+        "说不到",
+        "说得到"
+      ]
+    },
+    {
+      "trigger": "说成",
+      "level": "HSK 5",
+      "title": "说成: 结果/趋向补语",
+      "pattern": "说 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于说成了。",
+      "exampleTr": "Finalmente consegui 说成.",
+      "aliases": [
+        "说成",
+        "说不成",
+        "说得成"
+      ]
+    },
+    {
+      "trigger": "做懂",
+      "level": "HSK 4",
+      "title": "做懂: 结果/趋向补语",
+      "pattern": "做 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于做懂了。",
+      "exampleTr": "Finalmente consegui 做懂.",
+      "aliases": [
+        "做懂",
+        "做不懂",
+        "做得懂"
+      ]
+    },
+    {
+      "trigger": "做完",
+      "level": "HSK 4",
+      "title": "做完: 结果/趋向补语",
+      "pattern": "做 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于做完了。",
+      "exampleTr": "Finalmente consegui 做完.",
+      "aliases": [
+        "做完",
+        "做不完",
+        "做得完"
+      ]
+    },
+    {
+      "trigger": "做好",
+      "level": "HSK 4",
+      "title": "做好: 结果/趋向补语",
+      "pattern": "做 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于做好了。",
+      "exampleTr": "Finalmente consegui 做好.",
+      "aliases": [
+        "做好",
+        "做不好",
+        "做得好"
+      ]
+    },
+    {
+      "trigger": "做清楚",
+      "level": "HSK 5",
+      "title": "做清楚: 结果/趋向补语",
+      "pattern": "做 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于做清楚了。",
+      "exampleTr": "Finalmente consegui 做清楚.",
+      "aliases": [
+        "做清楚",
+        "做不清楚",
+        "做得清楚"
+      ]
+    },
+    {
+      "trigger": "做出来",
+      "level": "HSK 5",
+      "title": "做出来: 结果/趋向补语",
+      "pattern": "做 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于做出来了。",
+      "exampleTr": "Finalmente consegui 做出来.",
+      "aliases": [
+        "做出来",
+        "做不出来",
+        "做得出来"
+      ]
+    },
+    {
+      "trigger": "做下去",
+      "level": "HSK 5",
+      "title": "做下去: 结果/趋向补语",
+      "pattern": "做 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于做下去了。",
+      "exampleTr": "Finalmente consegui 做下去.",
+      "aliases": [
+        "做下去",
+        "做不下去",
+        "做得下去"
+      ]
+    },
+    {
+      "trigger": "做起来",
+      "level": "HSK 5",
+      "title": "做起来: 结果/趋向补语",
+      "pattern": "做 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于做起来了。",
+      "exampleTr": "Finalmente consegui 做起来.",
+      "aliases": [
+        "做起来",
+        "做不起来",
+        "做得起来"
+      ]
+    },
+    {
+      "trigger": "做进去",
+      "level": "HSK 5",
+      "title": "做进去: 结果/趋向补语",
+      "pattern": "做 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于做进去了。",
+      "exampleTr": "Finalmente consegui 做进去.",
+      "aliases": [
+        "做进去",
+        "做不进去",
+        "做得进去"
+      ]
+    },
+    {
+      "trigger": "做回来",
+      "level": "HSK 5",
+      "title": "做回来: 结果/趋向补语",
+      "pattern": "做 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于做回来了。",
+      "exampleTr": "Finalmente consegui 做回来.",
+      "aliases": [
+        "做回来",
+        "做不回来",
+        "做得回来"
+      ]
+    },
+    {
+      "trigger": "做住",
+      "level": "HSK 5",
+      "title": "做住: 结果/趋向补语",
+      "pattern": "做 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于做住了。",
+      "exampleTr": "Finalmente consegui 做住.",
+      "aliases": [
+        "做住",
+        "做不住",
+        "做得住"
+      ]
+    },
+    {
+      "trigger": "做到",
+      "level": "HSK 4",
+      "title": "做到: 结果/趋向补语",
+      "pattern": "做 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于做到了。",
+      "exampleTr": "Finalmente consegui 做到.",
+      "aliases": [
+        "做到",
+        "做不到",
+        "做得到"
+      ]
+    },
+    {
+      "trigger": "做成",
+      "level": "HSK 5",
+      "title": "做成: 结果/趋向补语",
+      "pattern": "做 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于做成了。",
+      "exampleTr": "Finalmente consegui 做成.",
+      "aliases": [
+        "做成",
+        "做不成",
+        "做得成"
+      ]
+    },
+    {
+      "trigger": "学懂",
+      "level": "HSK 4",
+      "title": "学懂: 结果/趋向补语",
+      "pattern": "学 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于学懂了。",
+      "exampleTr": "Finalmente consegui 学懂.",
+      "aliases": [
+        "学懂",
+        "学不懂",
+        "学得懂"
+      ]
+    },
+    {
+      "trigger": "学完",
+      "level": "HSK 4",
+      "title": "学完: 结果/趋向补语",
+      "pattern": "学 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于学完了。",
+      "exampleTr": "Finalmente consegui 学完.",
+      "aliases": [
+        "学完",
+        "学不完",
+        "学得完"
+      ]
+    },
+    {
+      "trigger": "学好",
+      "level": "HSK 4",
+      "title": "学好: 结果/趋向补语",
+      "pattern": "学 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于学好了。",
+      "exampleTr": "Finalmente consegui 学好.",
+      "aliases": [
+        "学好",
+        "学不好",
+        "学得好"
+      ]
+    },
+    {
+      "trigger": "学清楚",
+      "level": "HSK 5",
+      "title": "学清楚: 结果/趋向补语",
+      "pattern": "学 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于学清楚了。",
+      "exampleTr": "Finalmente consegui 学清楚.",
+      "aliases": [
+        "学清楚",
+        "学不清楚",
+        "学得清楚"
+      ]
+    },
+    {
+      "trigger": "学出来",
+      "level": "HSK 5",
+      "title": "学出来: 结果/趋向补语",
+      "pattern": "学 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于学出来了。",
+      "exampleTr": "Finalmente consegui 学出来.",
+      "aliases": [
+        "学出来",
+        "学不出来",
+        "学得出来"
+      ]
+    },
+    {
+      "trigger": "学下去",
+      "level": "HSK 5",
+      "title": "学下去: 结果/趋向补语",
+      "pattern": "学 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于学下去了。",
+      "exampleTr": "Finalmente consegui 学下去.",
+      "aliases": [
+        "学下去",
+        "学不下去",
+        "学得下去"
+      ]
+    },
+    {
+      "trigger": "学起来",
+      "level": "HSK 5",
+      "title": "学起来: 结果/趋向补语",
+      "pattern": "学 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于学起来了。",
+      "exampleTr": "Finalmente consegui 学起来.",
+      "aliases": [
+        "学起来",
+        "学不起来",
+        "学得起来"
+      ]
+    },
+    {
+      "trigger": "学进去",
+      "level": "HSK 5",
+      "title": "学进去: 结果/趋向补语",
+      "pattern": "学 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于学进去了。",
+      "exampleTr": "Finalmente consegui 学进去.",
+      "aliases": [
+        "学进去",
+        "学不进去",
+        "学得进去"
+      ]
+    },
+    {
+      "trigger": "学回来",
+      "level": "HSK 5",
+      "title": "学回来: 结果/趋向补语",
+      "pattern": "学 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于学回来了。",
+      "exampleTr": "Finalmente consegui 学回来.",
+      "aliases": [
+        "学回来",
+        "学不回来",
+        "学得回来"
+      ]
+    },
+    {
+      "trigger": "学住",
+      "level": "HSK 5",
+      "title": "学住: 结果/趋向补语",
+      "pattern": "学 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于学住了。",
+      "exampleTr": "Finalmente consegui 学住.",
+      "aliases": [
+        "学住",
+        "学不住",
+        "学得住"
+      ]
+    },
+    {
+      "trigger": "学到",
+      "level": "HSK 4",
+      "title": "学到: 结果/趋向补语",
+      "pattern": "学 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于学到了。",
+      "exampleTr": "Finalmente consegui 学到.",
+      "aliases": [
+        "学到",
+        "学不到",
+        "学得到"
+      ]
+    },
+    {
+      "trigger": "学成",
+      "level": "HSK 5",
+      "title": "学成: 结果/趋向补语",
+      "pattern": "学 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于学成了。",
+      "exampleTr": "Finalmente consegui 学成.",
+      "aliases": [
+        "学成",
+        "学不成",
+        "学得成"
+      ]
+    },
+    {
+      "trigger": "记懂",
+      "level": "HSK 4",
+      "title": "记懂: 结果/趋向补语",
+      "pattern": "记 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于记懂了。",
+      "exampleTr": "Finalmente consegui 记懂.",
+      "aliases": [
+        "记懂",
+        "记不懂",
+        "记得懂"
+      ]
+    },
+    {
+      "trigger": "记完",
+      "level": "HSK 4",
+      "title": "记完: 结果/趋向补语",
+      "pattern": "记 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于记完了。",
+      "exampleTr": "Finalmente consegui 记完.",
+      "aliases": [
+        "记完",
+        "记不完",
+        "记得完"
+      ]
+    },
+    {
+      "trigger": "记好",
+      "level": "HSK 4",
+      "title": "记好: 结果/趋向补语",
+      "pattern": "记 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于记好了。",
+      "exampleTr": "Finalmente consegui 记好.",
+      "aliases": [
+        "记好",
+        "记不好",
+        "记得好"
+      ]
+    },
+    {
+      "trigger": "记清楚",
+      "level": "HSK 5",
+      "title": "记清楚: 结果/趋向补语",
+      "pattern": "记 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于记清楚了。",
+      "exampleTr": "Finalmente consegui 记清楚.",
+      "aliases": [
+        "记清楚",
+        "记不清楚",
+        "记得清楚"
+      ]
+    },
+    {
+      "trigger": "记出来",
+      "level": "HSK 5",
+      "title": "记出来: 结果/趋向补语",
+      "pattern": "记 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于记出来了。",
+      "exampleTr": "Finalmente consegui 记出来.",
+      "aliases": [
+        "记出来",
+        "记不出来",
+        "记得出来"
+      ]
+    },
+    {
+      "trigger": "记下去",
+      "level": "HSK 5",
+      "title": "记下去: 结果/趋向补语",
+      "pattern": "记 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于记下去了。",
+      "exampleTr": "Finalmente consegui 记下去.",
+      "aliases": [
+        "记下去",
+        "记不下去",
+        "记得下去"
+      ]
+    },
+    {
+      "trigger": "记起来",
+      "level": "HSK 5",
+      "title": "记起来: 结果/趋向补语",
+      "pattern": "记 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于记起来了。",
+      "exampleTr": "Finalmente consegui 记起来.",
+      "aliases": [
+        "记起来",
+        "记不起来",
+        "记得起来"
+      ]
+    },
+    {
+      "trigger": "记进去",
+      "level": "HSK 5",
+      "title": "记进去: 结果/趋向补语",
+      "pattern": "记 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于记进去了。",
+      "exampleTr": "Finalmente consegui 记进去.",
+      "aliases": [
+        "记进去",
+        "记不进去",
+        "记得进去"
+      ]
+    },
+    {
+      "trigger": "记回来",
+      "level": "HSK 5",
+      "title": "记回来: 结果/趋向补语",
+      "pattern": "记 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于记回来了。",
+      "exampleTr": "Finalmente consegui 记回来.",
+      "aliases": [
+        "记回来",
+        "记不回来",
+        "记得回来"
+      ]
+    },
+    {
+      "trigger": "记住",
+      "level": "HSK 5",
+      "title": "记住: 结果/趋向补语",
+      "pattern": "记 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于记住了。",
+      "exampleTr": "Finalmente consegui 记住.",
+      "aliases": [
+        "记住",
+        "记不住",
+        "记得住"
+      ]
+    },
+    {
+      "trigger": "记到",
+      "level": "HSK 4",
+      "title": "记到: 结果/趋向补语",
+      "pattern": "记 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于记到了。",
+      "exampleTr": "Finalmente consegui 记到.",
+      "aliases": [
+        "记到",
+        "记不到",
+        "记得到"
+      ]
+    },
+    {
+      "trigger": "记成",
+      "level": "HSK 5",
+      "title": "记成: 结果/趋向补语",
+      "pattern": "记 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于记成了。",
+      "exampleTr": "Finalmente consegui 记成.",
+      "aliases": [
+        "记成",
+        "记不成",
+        "记得成"
+      ]
+    },
+    {
+      "trigger": "找懂",
+      "level": "HSK 4",
+      "title": "找懂: 结果/趋向补语",
+      "pattern": "找 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于找懂了。",
+      "exampleTr": "Finalmente consegui 找懂.",
+      "aliases": [
+        "找懂",
+        "找不懂",
+        "找得懂"
+      ]
+    },
+    {
+      "trigger": "找完",
+      "level": "HSK 4",
+      "title": "找完: 结果/趋向补语",
+      "pattern": "找 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于找完了。",
+      "exampleTr": "Finalmente consegui 找完.",
+      "aliases": [
+        "找完",
+        "找不完",
+        "找得完"
+      ]
+    },
+    {
+      "trigger": "找好",
+      "level": "HSK 4",
+      "title": "找好: 结果/趋向补语",
+      "pattern": "找 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于找好了。",
+      "exampleTr": "Finalmente consegui 找好.",
+      "aliases": [
+        "找好",
+        "找不好",
+        "找得好"
+      ]
+    },
+    {
+      "trigger": "找清楚",
+      "level": "HSK 5",
+      "title": "找清楚: 结果/趋向补语",
+      "pattern": "找 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于找清楚了。",
+      "exampleTr": "Finalmente consegui 找清楚.",
+      "aliases": [
+        "找清楚",
+        "找不清楚",
+        "找得清楚"
+      ]
+    },
+    {
+      "trigger": "找出来",
+      "level": "HSK 5",
+      "title": "找出来: 结果/趋向补语",
+      "pattern": "找 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于找出来了。",
+      "exampleTr": "Finalmente consegui 找出来.",
+      "aliases": [
+        "找出来",
+        "找不出来",
+        "找得出来"
+      ]
+    },
+    {
+      "trigger": "找下去",
+      "level": "HSK 5",
+      "title": "找下去: 结果/趋向补语",
+      "pattern": "找 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于找下去了。",
+      "exampleTr": "Finalmente consegui 找下去.",
+      "aliases": [
+        "找下去",
+        "找不下去",
+        "找得下去"
+      ]
+    },
+    {
+      "trigger": "找起来",
+      "level": "HSK 5",
+      "title": "找起来: 结果/趋向补语",
+      "pattern": "找 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于找起来了。",
+      "exampleTr": "Finalmente consegui 找起来.",
+      "aliases": [
+        "找起来",
+        "找不起来",
+        "找得起来"
+      ]
+    },
+    {
+      "trigger": "找进去",
+      "level": "HSK 5",
+      "title": "找进去: 结果/趋向补语",
+      "pattern": "找 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于找进去了。",
+      "exampleTr": "Finalmente consegui 找进去.",
+      "aliases": [
+        "找进去",
+        "找不进去",
+        "找得进去"
+      ]
+    },
+    {
+      "trigger": "找回来",
+      "level": "HSK 5",
+      "title": "找回来: 结果/趋向补语",
+      "pattern": "找 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于找回来了。",
+      "exampleTr": "Finalmente consegui 找回来.",
+      "aliases": [
+        "找回来",
+        "找不回来",
+        "找得回来"
+      ]
+    },
+    {
+      "trigger": "找住",
+      "level": "HSK 5",
+      "title": "找住: 结果/趋向补语",
+      "pattern": "找 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于找住了。",
+      "exampleTr": "Finalmente consegui 找住.",
+      "aliases": [
+        "找住",
+        "找不住",
+        "找得住"
+      ]
+    },
+    {
+      "trigger": "找到",
+      "level": "HSK 4",
+      "title": "找到: 结果/趋向补语",
+      "pattern": "找 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于找到了。",
+      "exampleTr": "Finalmente consegui 找到.",
+      "aliases": [
+        "找到",
+        "找不到",
+        "找得到"
+      ]
+    },
+    {
+      "trigger": "找成",
+      "level": "HSK 5",
+      "title": "找成: 结果/趋向补语",
+      "pattern": "找 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于找成了。",
+      "exampleTr": "Finalmente consegui 找成.",
+      "aliases": [
+        "找成",
+        "找不成",
+        "找得成"
+      ]
+    },
+    {
+      "trigger": "买懂",
+      "level": "HSK 4",
+      "title": "买懂: 结果/趋向补语",
+      "pattern": "买 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于买懂了。",
+      "exampleTr": "Finalmente consegui 买懂.",
+      "aliases": [
+        "买懂",
+        "买不懂",
+        "买得懂"
+      ]
+    },
+    {
+      "trigger": "买完",
+      "level": "HSK 4",
+      "title": "买完: 结果/趋向补语",
+      "pattern": "买 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于买完了。",
+      "exampleTr": "Finalmente consegui 买完.",
+      "aliases": [
+        "买完",
+        "买不完",
+        "买得完"
+      ]
+    },
+    {
+      "trigger": "买好",
+      "level": "HSK 4",
+      "title": "买好: 结果/趋向补语",
+      "pattern": "买 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于买好了。",
+      "exampleTr": "Finalmente consegui 买好.",
+      "aliases": [
+        "买好",
+        "买不好",
+        "买得好"
+      ]
+    },
+    {
+      "trigger": "买清楚",
+      "level": "HSK 5",
+      "title": "买清楚: 结果/趋向补语",
+      "pattern": "买 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于买清楚了。",
+      "exampleTr": "Finalmente consegui 买清楚.",
+      "aliases": [
+        "买清楚",
+        "买不清楚",
+        "买得清楚"
+      ]
+    },
+    {
+      "trigger": "买出来",
+      "level": "HSK 5",
+      "title": "买出来: 结果/趋向补语",
+      "pattern": "买 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于买出来了。",
+      "exampleTr": "Finalmente consegui 买出来.",
+      "aliases": [
+        "买出来",
+        "买不出来",
+        "买得出来"
+      ]
+    },
+    {
+      "trigger": "买下去",
+      "level": "HSK 5",
+      "title": "买下去: 结果/趋向补语",
+      "pattern": "买 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于买下去了。",
+      "exampleTr": "Finalmente consegui 买下去.",
+      "aliases": [
+        "买下去",
+        "买不下去",
+        "买得下去"
+      ]
+    },
+    {
+      "trigger": "买起来",
+      "level": "HSK 5",
+      "title": "买起来: 结果/趋向补语",
+      "pattern": "买 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于买起来了。",
+      "exampleTr": "Finalmente consegui 买起来.",
+      "aliases": [
+        "买起来",
+        "买不起来",
+        "买得起来"
+      ]
+    },
+    {
+      "trigger": "买进去",
+      "level": "HSK 5",
+      "title": "买进去: 结果/趋向补语",
+      "pattern": "买 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于买进去了。",
+      "exampleTr": "Finalmente consegui 买进去.",
+      "aliases": [
+        "买进去",
+        "买不进去",
+        "买得进去"
+      ]
+    },
+    {
+      "trigger": "买回来",
+      "level": "HSK 5",
+      "title": "买回来: 结果/趋向补语",
+      "pattern": "买 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于买回来了。",
+      "exampleTr": "Finalmente consegui 买回来.",
+      "aliases": [
+        "买回来",
+        "买不回来",
+        "买得回来"
+      ]
+    },
+    {
+      "trigger": "买住",
+      "level": "HSK 5",
+      "title": "买住: 结果/趋向补语",
+      "pattern": "买 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于买住了。",
+      "exampleTr": "Finalmente consegui 买住.",
+      "aliases": [
+        "买住",
+        "买不住",
+        "买得住"
+      ]
+    },
+    {
+      "trigger": "买到",
+      "level": "HSK 4",
+      "title": "买到: 结果/趋向补语",
+      "pattern": "买 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于买到了。",
+      "exampleTr": "Finalmente consegui 买到.",
+      "aliases": [
+        "买到",
+        "买不到",
+        "买得到"
+      ]
+    },
+    {
+      "trigger": "买成",
+      "level": "HSK 5",
+      "title": "买成: 结果/趋向补语",
+      "pattern": "买 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于买成了。",
+      "exampleTr": "Finalmente consegui 买成.",
+      "aliases": [
+        "买成",
+        "买不成",
+        "买得成"
+      ]
+    },
+    {
+      "trigger": "吃懂",
+      "level": "HSK 4",
+      "title": "吃懂: 结果/趋向补语",
+      "pattern": "吃 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于吃懂了。",
+      "exampleTr": "Finalmente consegui 吃懂.",
+      "aliases": [
+        "吃懂",
+        "吃不懂",
+        "吃得懂"
+      ]
+    },
+    {
+      "trigger": "吃完",
+      "level": "HSK 4",
+      "title": "吃完: 结果/趋向补语",
+      "pattern": "吃 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于吃完了。",
+      "exampleTr": "Finalmente consegui 吃完.",
+      "aliases": [
+        "吃完",
+        "吃不完",
+        "吃得完"
+      ]
+    },
+    {
+      "trigger": "吃好",
+      "level": "HSK 4",
+      "title": "吃好: 结果/趋向补语",
+      "pattern": "吃 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于吃好了。",
+      "exampleTr": "Finalmente consegui 吃好.",
+      "aliases": [
+        "吃好",
+        "吃不好",
+        "吃得好"
+      ]
+    },
+    {
+      "trigger": "吃清楚",
+      "level": "HSK 5",
+      "title": "吃清楚: 结果/趋向补语",
+      "pattern": "吃 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于吃清楚了。",
+      "exampleTr": "Finalmente consegui 吃清楚.",
+      "aliases": [
+        "吃清楚",
+        "吃不清楚",
+        "吃得清楚"
+      ]
+    },
+    {
+      "trigger": "吃出来",
+      "level": "HSK 5",
+      "title": "吃出来: 结果/趋向补语",
+      "pattern": "吃 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于吃出来了。",
+      "exampleTr": "Finalmente consegui 吃出来.",
+      "aliases": [
+        "吃出来",
+        "吃不出来",
+        "吃得出来"
+      ]
+    },
+    {
+      "trigger": "吃下去",
+      "level": "HSK 5",
+      "title": "吃下去: 结果/趋向补语",
+      "pattern": "吃 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于吃下去了。",
+      "exampleTr": "Finalmente consegui 吃下去.",
+      "aliases": [
+        "吃下去",
+        "吃不下去",
+        "吃得下去"
+      ]
+    },
+    {
+      "trigger": "吃起来",
+      "level": "HSK 5",
+      "title": "吃起来: 结果/趋向补语",
+      "pattern": "吃 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于吃起来了。",
+      "exampleTr": "Finalmente consegui 吃起来.",
+      "aliases": [
+        "吃起来",
+        "吃不起来",
+        "吃得起来"
+      ]
+    },
+    {
+      "trigger": "吃进去",
+      "level": "HSK 5",
+      "title": "吃进去: 结果/趋向补语",
+      "pattern": "吃 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于吃进去了。",
+      "exampleTr": "Finalmente consegui 吃进去.",
+      "aliases": [
+        "吃进去",
+        "吃不进去",
+        "吃得进去"
+      ]
+    },
+    {
+      "trigger": "吃回来",
+      "level": "HSK 5",
+      "title": "吃回来: 结果/趋向补语",
+      "pattern": "吃 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于吃回来了。",
+      "exampleTr": "Finalmente consegui 吃回来.",
+      "aliases": [
+        "吃回来",
+        "吃不回来",
+        "吃得回来"
+      ]
+    },
+    {
+      "trigger": "吃住",
+      "level": "HSK 5",
+      "title": "吃住: 结果/趋向补语",
+      "pattern": "吃 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于吃住了。",
+      "exampleTr": "Finalmente consegui 吃住.",
+      "aliases": [
+        "吃住",
+        "吃不住",
+        "吃得住"
+      ]
+    },
+    {
+      "trigger": "吃到",
+      "level": "HSK 4",
+      "title": "吃到: 结果/趋向补语",
+      "pattern": "吃 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于吃到了。",
+      "exampleTr": "Finalmente consegui 吃到.",
+      "aliases": [
+        "吃到",
+        "吃不到",
+        "吃得到"
+      ]
+    },
+    {
+      "trigger": "吃成",
+      "level": "HSK 5",
+      "title": "吃成: 结果/趋向补语",
+      "pattern": "吃 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于吃成了。",
+      "exampleTr": "Finalmente consegui 吃成.",
+      "aliases": [
+        "吃成",
+        "吃不成",
+        "吃得成"
+      ]
+    },
+    {
+      "trigger": "喝懂",
+      "level": "HSK 4",
+      "title": "喝懂: 结果/趋向补语",
+      "pattern": "喝 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于喝懂了。",
+      "exampleTr": "Finalmente consegui 喝懂.",
+      "aliases": [
+        "喝懂",
+        "喝不懂",
+        "喝得懂"
+      ]
+    },
+    {
+      "trigger": "喝完",
+      "level": "HSK 4",
+      "title": "喝完: 结果/趋向补语",
+      "pattern": "喝 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于喝完了。",
+      "exampleTr": "Finalmente consegui 喝完.",
+      "aliases": [
+        "喝完",
+        "喝不完",
+        "喝得完"
+      ]
+    },
+    {
+      "trigger": "喝好",
+      "level": "HSK 4",
+      "title": "喝好: 结果/趋向补语",
+      "pattern": "喝 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于喝好了。",
+      "exampleTr": "Finalmente consegui 喝好.",
+      "aliases": [
+        "喝好",
+        "喝不好",
+        "喝得好"
+      ]
+    },
+    {
+      "trigger": "喝清楚",
+      "level": "HSK 5",
+      "title": "喝清楚: 结果/趋向补语",
+      "pattern": "喝 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于喝清楚了。",
+      "exampleTr": "Finalmente consegui 喝清楚.",
+      "aliases": [
+        "喝清楚",
+        "喝不清楚",
+        "喝得清楚"
+      ]
+    },
+    {
+      "trigger": "喝出来",
+      "level": "HSK 5",
+      "title": "喝出来: 结果/趋向补语",
+      "pattern": "喝 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于喝出来了。",
+      "exampleTr": "Finalmente consegui 喝出来.",
+      "aliases": [
+        "喝出来",
+        "喝不出来",
+        "喝得出来"
+      ]
+    },
+    {
+      "trigger": "喝下去",
+      "level": "HSK 5",
+      "title": "喝下去: 结果/趋向补语",
+      "pattern": "喝 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于喝下去了。",
+      "exampleTr": "Finalmente consegui 喝下去.",
+      "aliases": [
+        "喝下去",
+        "喝不下去",
+        "喝得下去"
+      ]
+    },
+    {
+      "trigger": "喝起来",
+      "level": "HSK 5",
+      "title": "喝起来: 结果/趋向补语",
+      "pattern": "喝 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于喝起来了。",
+      "exampleTr": "Finalmente consegui 喝起来.",
+      "aliases": [
+        "喝起来",
+        "喝不起来",
+        "喝得起来"
+      ]
+    },
+    {
+      "trigger": "喝进去",
+      "level": "HSK 5",
+      "title": "喝进去: 结果/趋向补语",
+      "pattern": "喝 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于喝进去了。",
+      "exampleTr": "Finalmente consegui 喝进去.",
+      "aliases": [
+        "喝进去",
+        "喝不进去",
+        "喝得进去"
+      ]
+    },
+    {
+      "trigger": "喝回来",
+      "level": "HSK 5",
+      "title": "喝回来: 结果/趋向补语",
+      "pattern": "喝 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于喝回来了。",
+      "exampleTr": "Finalmente consegui 喝回来.",
+      "aliases": [
+        "喝回来",
+        "喝不回来",
+        "喝得回来"
+      ]
+    },
+    {
+      "trigger": "喝住",
+      "level": "HSK 5",
+      "title": "喝住: 结果/趋向补语",
+      "pattern": "喝 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于喝住了。",
+      "exampleTr": "Finalmente consegui 喝住.",
+      "aliases": [
+        "喝住",
+        "喝不住",
+        "喝得住"
+      ]
+    },
+    {
+      "trigger": "喝到",
+      "level": "HSK 4",
+      "title": "喝到: 结果/趋向补语",
+      "pattern": "喝 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于喝到了。",
+      "exampleTr": "Finalmente consegui 喝到.",
+      "aliases": [
+        "喝到",
+        "喝不到",
+        "喝得到"
+      ]
+    },
+    {
+      "trigger": "喝成",
+      "level": "HSK 5",
+      "title": "喝成: 结果/趋向补语",
+      "pattern": "喝 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于喝成了。",
+      "exampleTr": "Finalmente consegui 喝成.",
+      "aliases": [
+        "喝成",
+        "喝不成",
+        "喝得成"
+      ]
+    },
+    {
+      "trigger": "拿懂",
+      "level": "HSK 4",
+      "title": "拿懂: 结果/趋向补语",
+      "pattern": "拿 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于拿懂了。",
+      "exampleTr": "Finalmente consegui 拿懂.",
+      "aliases": [
+        "拿懂",
+        "拿不懂",
+        "拿得懂"
+      ]
+    },
+    {
+      "trigger": "拿完",
+      "level": "HSK 4",
+      "title": "拿完: 结果/趋向补语",
+      "pattern": "拿 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于拿完了。",
+      "exampleTr": "Finalmente consegui 拿完.",
+      "aliases": [
+        "拿完",
+        "拿不完",
+        "拿得完"
+      ]
+    },
+    {
+      "trigger": "拿好",
+      "level": "HSK 4",
+      "title": "拿好: 结果/趋向补语",
+      "pattern": "拿 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于拿好了。",
+      "exampleTr": "Finalmente consegui 拿好.",
+      "aliases": [
+        "拿好",
+        "拿不好",
+        "拿得好"
+      ]
+    },
+    {
+      "trigger": "拿清楚",
+      "level": "HSK 5",
+      "title": "拿清楚: 结果/趋向补语",
+      "pattern": "拿 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于拿清楚了。",
+      "exampleTr": "Finalmente consegui 拿清楚.",
+      "aliases": [
+        "拿清楚",
+        "拿不清楚",
+        "拿得清楚"
+      ]
+    },
+    {
+      "trigger": "拿出来",
+      "level": "HSK 5",
+      "title": "拿出来: 结果/趋向补语",
+      "pattern": "拿 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于拿出来了。",
+      "exampleTr": "Finalmente consegui 拿出来.",
+      "aliases": [
+        "拿出来",
+        "拿不出来",
+        "拿得出来"
+      ]
+    },
+    {
+      "trigger": "拿下去",
+      "level": "HSK 5",
+      "title": "拿下去: 结果/趋向补语",
+      "pattern": "拿 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于拿下去了。",
+      "exampleTr": "Finalmente consegui 拿下去.",
+      "aliases": [
+        "拿下去",
+        "拿不下去",
+        "拿得下去"
+      ]
+    },
+    {
+      "trigger": "拿起来",
+      "level": "HSK 5",
+      "title": "拿起来: 结果/趋向补语",
+      "pattern": "拿 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于拿起来了。",
+      "exampleTr": "Finalmente consegui 拿起来.",
+      "aliases": [
+        "拿起来",
+        "拿不起来",
+        "拿得起来"
+      ]
+    },
+    {
+      "trigger": "拿进去",
+      "level": "HSK 5",
+      "title": "拿进去: 结果/趋向补语",
+      "pattern": "拿 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于拿进去了。",
+      "exampleTr": "Finalmente consegui 拿进去.",
+      "aliases": [
+        "拿进去",
+        "拿不进去",
+        "拿得进去"
+      ]
+    },
+    {
+      "trigger": "拿回来",
+      "level": "HSK 5",
+      "title": "拿回来: 结果/趋向补语",
+      "pattern": "拿 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于拿回来了。",
+      "exampleTr": "Finalmente consegui 拿回来.",
+      "aliases": [
+        "拿回来",
+        "拿不回来",
+        "拿得回来"
+      ]
+    },
+    {
+      "trigger": "拿住",
+      "level": "HSK 5",
+      "title": "拿住: 结果/趋向补语",
+      "pattern": "拿 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于拿住了。",
+      "exampleTr": "Finalmente consegui 拿住.",
+      "aliases": [
+        "拿住",
+        "拿不住",
+        "拿得住"
+      ]
+    },
+    {
+      "trigger": "拿到",
+      "level": "HSK 4",
+      "title": "拿到: 结果/趋向补语",
+      "pattern": "拿 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于拿到了。",
+      "exampleTr": "Finalmente consegui 拿到.",
+      "aliases": [
+        "拿到",
+        "拿不到",
+        "拿得到"
+      ]
+    },
+    {
+      "trigger": "拿成",
+      "level": "HSK 5",
+      "title": "拿成: 结果/趋向补语",
+      "pattern": "拿 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于拿成了。",
+      "exampleTr": "Finalmente consegui 拿成.",
+      "aliases": [
+        "拿成",
+        "拿不成",
+        "拿得成"
+      ]
+    },
+    {
+      "trigger": "放懂",
+      "level": "HSK 4",
+      "title": "放懂: 结果/趋向补语",
+      "pattern": "放 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于放懂了。",
+      "exampleTr": "Finalmente consegui 放懂.",
+      "aliases": [
+        "放懂",
+        "放不懂",
+        "放得懂"
+      ]
+    },
+    {
+      "trigger": "放完",
+      "level": "HSK 4",
+      "title": "放完: 结果/趋向补语",
+      "pattern": "放 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于放完了。",
+      "exampleTr": "Finalmente consegui 放完.",
+      "aliases": [
+        "放完",
+        "放不完",
+        "放得完"
+      ]
+    },
+    {
+      "trigger": "放好",
+      "level": "HSK 4",
+      "title": "放好: 结果/趋向补语",
+      "pattern": "放 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于放好了。",
+      "exampleTr": "Finalmente consegui 放好.",
+      "aliases": [
+        "放好",
+        "放不好",
+        "放得好"
+      ]
+    },
+    {
+      "trigger": "放清楚",
+      "level": "HSK 5",
+      "title": "放清楚: 结果/趋向补语",
+      "pattern": "放 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于放清楚了。",
+      "exampleTr": "Finalmente consegui 放清楚.",
+      "aliases": [
+        "放清楚",
+        "放不清楚",
+        "放得清楚"
+      ]
+    },
+    {
+      "trigger": "放出来",
+      "level": "HSK 5",
+      "title": "放出来: 结果/趋向补语",
+      "pattern": "放 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于放出来了。",
+      "exampleTr": "Finalmente consegui 放出来.",
+      "aliases": [
+        "放出来",
+        "放不出来",
+        "放得出来"
+      ]
+    },
+    {
+      "trigger": "放下去",
+      "level": "HSK 5",
+      "title": "放下去: 结果/趋向补语",
+      "pattern": "放 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于放下去了。",
+      "exampleTr": "Finalmente consegui 放下去.",
+      "aliases": [
+        "放下去",
+        "放不下去",
+        "放得下去"
+      ]
+    },
+    {
+      "trigger": "放起来",
+      "level": "HSK 5",
+      "title": "放起来: 结果/趋向补语",
+      "pattern": "放 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于放起来了。",
+      "exampleTr": "Finalmente consegui 放起来.",
+      "aliases": [
+        "放起来",
+        "放不起来",
+        "放得起来"
+      ]
+    },
+    {
+      "trigger": "放进去",
+      "level": "HSK 5",
+      "title": "放进去: 结果/趋向补语",
+      "pattern": "放 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于放进去了。",
+      "exampleTr": "Finalmente consegui 放进去.",
+      "aliases": [
+        "放进去",
+        "放不进去",
+        "放得进去"
+      ]
+    },
+    {
+      "trigger": "放回来",
+      "level": "HSK 5",
+      "title": "放回来: 结果/趋向补语",
+      "pattern": "放 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于放回来了。",
+      "exampleTr": "Finalmente consegui 放回来.",
+      "aliases": [
+        "放回来",
+        "放不回来",
+        "放得回来"
+      ]
+    },
+    {
+      "trigger": "放住",
+      "level": "HSK 5",
+      "title": "放住: 结果/趋向补语",
+      "pattern": "放 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于放住了。",
+      "exampleTr": "Finalmente consegui 放住.",
+      "aliases": [
+        "放住",
+        "放不住",
+        "放得住"
+      ]
+    },
+    {
+      "trigger": "放到",
+      "level": "HSK 4",
+      "title": "放到: 结果/趋向补语",
+      "pattern": "放 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于放到了。",
+      "exampleTr": "Finalmente consegui 放到.",
+      "aliases": [
+        "放到",
+        "放不到",
+        "放得到"
+      ]
+    },
+    {
+      "trigger": "放成",
+      "level": "HSK 5",
+      "title": "放成: 结果/趋向补语",
+      "pattern": "放 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于放成了。",
+      "exampleTr": "Finalmente consegui 放成.",
+      "aliases": [
+        "放成",
+        "放不成",
+        "放得成"
+      ]
+    },
+    {
+      "trigger": "打开懂",
+      "level": "HSK 4",
+      "title": "打开懂: 结果/趋向补语",
+      "pattern": "打开 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于打开懂了。",
+      "exampleTr": "Finalmente consegui 打开懂.",
+      "aliases": [
+        "打开懂",
+        "打开不懂",
+        "打开得懂"
+      ]
+    },
+    {
+      "trigger": "打开完",
+      "level": "HSK 4",
+      "title": "打开完: 结果/趋向补语",
+      "pattern": "打开 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于打开完了。",
+      "exampleTr": "Finalmente consegui 打开完.",
+      "aliases": [
+        "打开完",
+        "打开不完",
+        "打开得完"
+      ]
+    },
+    {
+      "trigger": "打开好",
+      "level": "HSK 4",
+      "title": "打开好: 结果/趋向补语",
+      "pattern": "打开 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于打开好了。",
+      "exampleTr": "Finalmente consegui 打开好.",
+      "aliases": [
+        "打开好",
+        "打开不好",
+        "打开得好"
+      ]
+    },
+    {
+      "trigger": "打开清楚",
+      "level": "HSK 5",
+      "title": "打开清楚: 结果/趋向补语",
+      "pattern": "打开 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于打开清楚了。",
+      "exampleTr": "Finalmente consegui 打开清楚.",
+      "aliases": [
+        "打开清楚",
+        "打开不清楚",
+        "打开得清楚"
+      ]
+    },
+    {
+      "trigger": "打开出来",
+      "level": "HSK 5",
+      "title": "打开出来: 结果/趋向补语",
+      "pattern": "打开 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于打开出来了。",
+      "exampleTr": "Finalmente consegui 打开出来.",
+      "aliases": [
+        "打开出来",
+        "打开不出来",
+        "打开得出来"
+      ]
+    },
+    {
+      "trigger": "打开下去",
+      "level": "HSK 5",
+      "title": "打开下去: 结果/趋向补语",
+      "pattern": "打开 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于打开下去了。",
+      "exampleTr": "Finalmente consegui 打开下去.",
+      "aliases": [
+        "打开下去",
+        "打开不下去",
+        "打开得下去"
+      ]
+    },
+    {
+      "trigger": "打开起来",
+      "level": "HSK 5",
+      "title": "打开起来: 结果/趋向补语",
+      "pattern": "打开 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于打开起来了。",
+      "exampleTr": "Finalmente consegui 打开起来.",
+      "aliases": [
+        "打开起来",
+        "打开不起来",
+        "打开得起来"
+      ]
+    },
+    {
+      "trigger": "打开进去",
+      "level": "HSK 5",
+      "title": "打开进去: 结果/趋向补语",
+      "pattern": "打开 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于打开进去了。",
+      "exampleTr": "Finalmente consegui 打开进去.",
+      "aliases": [
+        "打开进去",
+        "打开不进去",
+        "打开得进去"
+      ]
+    },
+    {
+      "trigger": "打开回来",
+      "level": "HSK 5",
+      "title": "打开回来: 结果/趋向补语",
+      "pattern": "打开 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于打开回来了。",
+      "exampleTr": "Finalmente consegui 打开回来.",
+      "aliases": [
+        "打开回来",
+        "打开不回来",
+        "打开得回来"
+      ]
+    },
+    {
+      "trigger": "打开住",
+      "level": "HSK 5",
+      "title": "打开住: 结果/趋向补语",
+      "pattern": "打开 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于打开住了。",
+      "exampleTr": "Finalmente consegui 打开住.",
+      "aliases": [
+        "打开住",
+        "打开不住",
+        "打开得住"
+      ]
+    },
+    {
+      "trigger": "打开到",
+      "level": "HSK 4",
+      "title": "打开到: 结果/趋向补语",
+      "pattern": "打开 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于打开到了。",
+      "exampleTr": "Finalmente consegui 打开到.",
+      "aliases": [
+        "打开到",
+        "打开不到",
+        "打开得到"
+      ]
+    },
+    {
+      "trigger": "打开成",
+      "level": "HSK 5",
+      "title": "打开成: 结果/趋向补语",
+      "pattern": "打开 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于打开成了。",
+      "exampleTr": "Finalmente consegui 打开成.",
+      "aliases": [
+        "打开成",
+        "打开不成",
+        "打开得成"
+      ]
+    },
+    {
+      "trigger": "关上懂",
+      "level": "HSK 4",
+      "title": "关上懂: 结果/趋向补语",
+      "pattern": "关上 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于关上懂了。",
+      "exampleTr": "Finalmente consegui 关上懂.",
+      "aliases": [
+        "关上懂",
+        "关上不懂",
+        "关上得懂"
+      ]
+    },
+    {
+      "trigger": "关上完",
+      "level": "HSK 4",
+      "title": "关上完: 结果/趋向补语",
+      "pattern": "关上 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于关上完了。",
+      "exampleTr": "Finalmente consegui 关上完.",
+      "aliases": [
+        "关上完",
+        "关上不完",
+        "关上得完"
+      ]
+    },
+    {
+      "trigger": "关上好",
+      "level": "HSK 4",
+      "title": "关上好: 结果/趋向补语",
+      "pattern": "关上 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于关上好了。",
+      "exampleTr": "Finalmente consegui 关上好.",
+      "aliases": [
+        "关上好",
+        "关上不好",
+        "关上得好"
+      ]
+    },
+    {
+      "trigger": "关上清楚",
+      "level": "HSK 5",
+      "title": "关上清楚: 结果/趋向补语",
+      "pattern": "关上 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于关上清楚了。",
+      "exampleTr": "Finalmente consegui 关上清楚.",
+      "aliases": [
+        "关上清楚",
+        "关上不清楚",
+        "关上得清楚"
+      ]
+    },
+    {
+      "trigger": "关上出来",
+      "level": "HSK 5",
+      "title": "关上出来: 结果/趋向补语",
+      "pattern": "关上 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于关上出来了。",
+      "exampleTr": "Finalmente consegui 关上出来.",
+      "aliases": [
+        "关上出来",
+        "关上不出来",
+        "关上得出来"
+      ]
+    },
+    {
+      "trigger": "关上下去",
+      "level": "HSK 5",
+      "title": "关上下去: 结果/趋向补语",
+      "pattern": "关上 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于关上下去了。",
+      "exampleTr": "Finalmente consegui 关上下去.",
+      "aliases": [
+        "关上下去",
+        "关上不下去",
+        "关上得下去"
+      ]
+    },
+    {
+      "trigger": "关上起来",
+      "level": "HSK 5",
+      "title": "关上起来: 结果/趋向补语",
+      "pattern": "关上 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于关上起来了。",
+      "exampleTr": "Finalmente consegui 关上起来.",
+      "aliases": [
+        "关上起来",
+        "关上不起来",
+        "关上得起来"
+      ]
+    },
+    {
+      "trigger": "关上进去",
+      "level": "HSK 5",
+      "title": "关上进去: 结果/趋向补语",
+      "pattern": "关上 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于关上进去了。",
+      "exampleTr": "Finalmente consegui 关上进去.",
+      "aliases": [
+        "关上进去",
+        "关上不进去",
+        "关上得进去"
+      ]
+    },
+    {
+      "trigger": "关上回来",
+      "level": "HSK 5",
+      "title": "关上回来: 结果/趋向补语",
+      "pattern": "关上 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于关上回来了。",
+      "exampleTr": "Finalmente consegui 关上回来.",
+      "aliases": [
+        "关上回来",
+        "关上不回来",
+        "关上得回来"
+      ]
+    },
+    {
+      "trigger": "关上住",
+      "level": "HSK 5",
+      "title": "关上住: 结果/趋向补语",
+      "pattern": "关上 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于关上住了。",
+      "exampleTr": "Finalmente consegui 关上住.",
+      "aliases": [
+        "关上住",
+        "关上不住",
+        "关上得住"
+      ]
+    },
+    {
+      "trigger": "关上到",
+      "level": "HSK 4",
+      "title": "关上到: 结果/趋向补语",
+      "pattern": "关上 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于关上到了。",
+      "exampleTr": "Finalmente consegui 关上到.",
+      "aliases": [
+        "关上到",
+        "关上不到",
+        "关上得到"
+      ]
+    },
+    {
+      "trigger": "关上成",
+      "level": "HSK 5",
+      "title": "关上成: 结果/趋向补语",
+      "pattern": "关上 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于关上成了。",
+      "exampleTr": "Finalmente consegui 关上成.",
+      "aliases": [
+        "关上成",
+        "关上不成",
+        "关上得成"
+      ]
+    },
+    {
+      "trigger": "解释懂",
+      "level": "HSK 4",
+      "title": "解释懂: 结果/趋向补语",
+      "pattern": "解释 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于解释懂了。",
+      "exampleTr": "Finalmente consegui 解释懂.",
+      "aliases": [
+        "解释懂",
+        "解释不懂",
+        "解释得懂"
+      ]
+    },
+    {
+      "trigger": "解释完",
+      "level": "HSK 4",
+      "title": "解释完: 结果/趋向补语",
+      "pattern": "解释 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于解释完了。",
+      "exampleTr": "Finalmente consegui 解释完.",
+      "aliases": [
+        "解释完",
+        "解释不完",
+        "解释得完"
+      ]
+    },
+    {
+      "trigger": "解释好",
+      "level": "HSK 4",
+      "title": "解释好: 结果/趋向补语",
+      "pattern": "解释 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于解释好了。",
+      "exampleTr": "Finalmente consegui 解释好.",
+      "aliases": [
+        "解释好",
+        "解释不好",
+        "解释得好"
+      ]
+    },
+    {
+      "trigger": "解释清楚",
+      "level": "HSK 5",
+      "title": "解释清楚: 结果/趋向补语",
+      "pattern": "解释 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于解释清楚了。",
+      "exampleTr": "Finalmente consegui 解释清楚.",
+      "aliases": [
+        "解释清楚",
+        "解释不清楚",
+        "解释得清楚"
+      ]
+    },
+    {
+      "trigger": "解释出来",
+      "level": "HSK 5",
+      "title": "解释出来: 结果/趋向补语",
+      "pattern": "解释 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于解释出来了。",
+      "exampleTr": "Finalmente consegui 解释出来.",
+      "aliases": [
+        "解释出来",
+        "解释不出来",
+        "解释得出来"
+      ]
+    },
+    {
+      "trigger": "解释下去",
+      "level": "HSK 5",
+      "title": "解释下去: 结果/趋向补语",
+      "pattern": "解释 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于解释下去了。",
+      "exampleTr": "Finalmente consegui 解释下去.",
+      "aliases": [
+        "解释下去",
+        "解释不下去",
+        "解释得下去"
+      ]
+    },
+    {
+      "trigger": "解释起来",
+      "level": "HSK 5",
+      "title": "解释起来: 结果/趋向补语",
+      "pattern": "解释 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于解释起来了。",
+      "exampleTr": "Finalmente consegui 解释起来.",
+      "aliases": [
+        "解释起来",
+        "解释不起来",
+        "解释得起来"
+      ]
+    },
+    {
+      "trigger": "解释进去",
+      "level": "HSK 5",
+      "title": "解释进去: 结果/趋向补语",
+      "pattern": "解释 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于解释进去了。",
+      "exampleTr": "Finalmente consegui 解释进去.",
+      "aliases": [
+        "解释进去",
+        "解释不进去",
+        "解释得进去"
+      ]
+    },
+    {
+      "trigger": "解释回来",
+      "level": "HSK 5",
+      "title": "解释回来: 结果/趋向补语",
+      "pattern": "解释 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于解释回来了。",
+      "exampleTr": "Finalmente consegui 解释回来.",
+      "aliases": [
+        "解释回来",
+        "解释不回来",
+        "解释得回来"
+      ]
+    },
+    {
+      "trigger": "解释住",
+      "level": "HSK 5",
+      "title": "解释住: 结果/趋向补语",
+      "pattern": "解释 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于解释住了。",
+      "exampleTr": "Finalmente consegui 解释住.",
+      "aliases": [
+        "解释住",
+        "解释不住",
+        "解释得住"
+      ]
+    },
+    {
+      "trigger": "解释到",
+      "level": "HSK 4",
+      "title": "解释到: 结果/趋向补语",
+      "pattern": "解释 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于解释到了。",
+      "exampleTr": "Finalmente consegui 解释到.",
+      "aliases": [
+        "解释到",
+        "解释不到",
+        "解释得到"
+      ]
+    },
+    {
+      "trigger": "解释成",
+      "level": "HSK 5",
+      "title": "解释成: 结果/趋向补语",
+      "pattern": "解释 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于解释成了。",
+      "exampleTr": "Finalmente consegui 解释成.",
+      "aliases": [
+        "解释成",
+        "解释不成",
+        "解释得成"
+      ]
+    },
+    {
+      "trigger": "理解懂",
+      "level": "HSK 4",
+      "title": "理解懂: 结果/趋向补语",
+      "pattern": "理解 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于理解懂了。",
+      "exampleTr": "Finalmente consegui 理解懂.",
+      "aliases": [
+        "理解懂",
+        "理解不懂",
+        "理解得懂"
+      ]
+    },
+    {
+      "trigger": "理解完",
+      "level": "HSK 4",
+      "title": "理解完: 结果/趋向补语",
+      "pattern": "理解 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于理解完了。",
+      "exampleTr": "Finalmente consegui 理解完.",
+      "aliases": [
+        "理解完",
+        "理解不完",
+        "理解得完"
+      ]
+    },
+    {
+      "trigger": "理解好",
+      "level": "HSK 4",
+      "title": "理解好: 结果/趋向补语",
+      "pattern": "理解 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于理解好了。",
+      "exampleTr": "Finalmente consegui 理解好.",
+      "aliases": [
+        "理解好",
+        "理解不好",
+        "理解得好"
+      ]
+    },
+    {
+      "trigger": "理解清楚",
+      "level": "HSK 5",
+      "title": "理解清楚: 结果/趋向补语",
+      "pattern": "理解 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于理解清楚了。",
+      "exampleTr": "Finalmente consegui 理解清楚.",
+      "aliases": [
+        "理解清楚",
+        "理解不清楚",
+        "理解得清楚"
+      ]
+    },
+    {
+      "trigger": "理解出来",
+      "level": "HSK 5",
+      "title": "理解出来: 结果/趋向补语",
+      "pattern": "理解 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于理解出来了。",
+      "exampleTr": "Finalmente consegui 理解出来.",
+      "aliases": [
+        "理解出来",
+        "理解不出来",
+        "理解得出来"
+      ]
+    },
+    {
+      "trigger": "理解下去",
+      "level": "HSK 5",
+      "title": "理解下去: 结果/趋向补语",
+      "pattern": "理解 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于理解下去了。",
+      "exampleTr": "Finalmente consegui 理解下去.",
+      "aliases": [
+        "理解下去",
+        "理解不下去",
+        "理解得下去"
+      ]
+    },
+    {
+      "trigger": "理解起来",
+      "level": "HSK 5",
+      "title": "理解起来: 结果/趋向补语",
+      "pattern": "理解 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于理解起来了。",
+      "exampleTr": "Finalmente consegui 理解起来.",
+      "aliases": [
+        "理解起来",
+        "理解不起来",
+        "理解得起来"
+      ]
+    },
+    {
+      "trigger": "理解进去",
+      "level": "HSK 5",
+      "title": "理解进去: 结果/趋向补语",
+      "pattern": "理解 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于理解进去了。",
+      "exampleTr": "Finalmente consegui 理解进去.",
+      "aliases": [
+        "理解进去",
+        "理解不进去",
+        "理解得进去"
+      ]
+    },
+    {
+      "trigger": "理解回来",
+      "level": "HSK 5",
+      "title": "理解回来: 结果/趋向补语",
+      "pattern": "理解 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于理解回来了。",
+      "exampleTr": "Finalmente consegui 理解回来.",
+      "aliases": [
+        "理解回来",
+        "理解不回来",
+        "理解得回来"
+      ]
+    },
+    {
+      "trigger": "理解住",
+      "level": "HSK 5",
+      "title": "理解住: 结果/趋向补语",
+      "pattern": "理解 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于理解住了。",
+      "exampleTr": "Finalmente consegui 理解住.",
+      "aliases": [
+        "理解住",
+        "理解不住",
+        "理解得住"
+      ]
+    },
+    {
+      "trigger": "理解到",
+      "level": "HSK 4",
+      "title": "理解到: 结果/趋向补语",
+      "pattern": "理解 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于理解到了。",
+      "exampleTr": "Finalmente consegui 理解到.",
+      "aliases": [
+        "理解到",
+        "理解不到",
+        "理解得到"
+      ]
+    },
+    {
+      "trigger": "理解成",
+      "level": "HSK 5",
+      "title": "理解成: 结果/趋向补语",
+      "pattern": "理解 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于理解成了。",
+      "exampleTr": "Finalmente consegui 理解成.",
+      "aliases": [
+        "理解成",
+        "理解不成",
+        "理解得成"
+      ]
+    },
+    {
+      "trigger": "翻译懂",
+      "level": "HSK 4",
+      "title": "翻译懂: 结果/趋向补语",
+      "pattern": "翻译 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于翻译懂了。",
+      "exampleTr": "Finalmente consegui 翻译懂.",
+      "aliases": [
+        "翻译懂",
+        "翻译不懂",
+        "翻译得懂"
+      ]
+    },
+    {
+      "trigger": "翻译完",
+      "level": "HSK 4",
+      "title": "翻译完: 结果/趋向补语",
+      "pattern": "翻译 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于翻译完了。",
+      "exampleTr": "Finalmente consegui 翻译完.",
+      "aliases": [
+        "翻译完",
+        "翻译不完",
+        "翻译得完"
+      ]
+    },
+    {
+      "trigger": "翻译好",
+      "level": "HSK 4",
+      "title": "翻译好: 结果/趋向补语",
+      "pattern": "翻译 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于翻译好了。",
+      "exampleTr": "Finalmente consegui 翻译好.",
+      "aliases": [
+        "翻译好",
+        "翻译不好",
+        "翻译得好"
+      ]
+    },
+    {
+      "trigger": "翻译清楚",
+      "level": "HSK 5",
+      "title": "翻译清楚: 结果/趋向补语",
+      "pattern": "翻译 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于翻译清楚了。",
+      "exampleTr": "Finalmente consegui 翻译清楚.",
+      "aliases": [
+        "翻译清楚",
+        "翻译不清楚",
+        "翻译得清楚"
+      ]
+    },
+    {
+      "trigger": "翻译出来",
+      "level": "HSK 5",
+      "title": "翻译出来: 结果/趋向补语",
+      "pattern": "翻译 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于翻译出来了。",
+      "exampleTr": "Finalmente consegui 翻译出来.",
+      "aliases": [
+        "翻译出来",
+        "翻译不出来",
+        "翻译得出来"
+      ]
+    },
+    {
+      "trigger": "翻译下去",
+      "level": "HSK 5",
+      "title": "翻译下去: 结果/趋向补语",
+      "pattern": "翻译 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于翻译下去了。",
+      "exampleTr": "Finalmente consegui 翻译下去.",
+      "aliases": [
+        "翻译下去",
+        "翻译不下去",
+        "翻译得下去"
+      ]
+    },
+    {
+      "trigger": "翻译起来",
+      "level": "HSK 5",
+      "title": "翻译起来: 结果/趋向补语",
+      "pattern": "翻译 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于翻译起来了。",
+      "exampleTr": "Finalmente consegui 翻译起来.",
+      "aliases": [
+        "翻译起来",
+        "翻译不起来",
+        "翻译得起来"
+      ]
+    },
+    {
+      "trigger": "翻译进去",
+      "level": "HSK 5",
+      "title": "翻译进去: 结果/趋向补语",
+      "pattern": "翻译 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于翻译进去了。",
+      "exampleTr": "Finalmente consegui 翻译进去.",
+      "aliases": [
+        "翻译进去",
+        "翻译不进去",
+        "翻译得进去"
+      ]
+    },
+    {
+      "trigger": "翻译回来",
+      "level": "HSK 5",
+      "title": "翻译回来: 结果/趋向补语",
+      "pattern": "翻译 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于翻译回来了。",
+      "exampleTr": "Finalmente consegui 翻译回来.",
+      "aliases": [
+        "翻译回来",
+        "翻译不回来",
+        "翻译得回来"
+      ]
+    },
+    {
+      "trigger": "翻译住",
+      "level": "HSK 5",
+      "title": "翻译住: 结果/趋向补语",
+      "pattern": "翻译 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于翻译住了。",
+      "exampleTr": "Finalmente consegui 翻译住.",
+      "aliases": [
+        "翻译住",
+        "翻译不住",
+        "翻译得住"
+      ]
+    },
+    {
+      "trigger": "翻译到",
+      "level": "HSK 4",
+      "title": "翻译到: 结果/趋向补语",
+      "pattern": "翻译 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于翻译到了。",
+      "exampleTr": "Finalmente consegui 翻译到.",
+      "aliases": [
+        "翻译到",
+        "翻译不到",
+        "翻译得到"
+      ]
+    },
+    {
+      "trigger": "翻译成",
+      "level": "HSK 5",
+      "title": "翻译成: 结果/趋向补语",
+      "pattern": "翻译 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于翻译成了。",
+      "exampleTr": "Finalmente consegui 翻译成.",
+      "aliases": [
+        "翻译成",
+        "翻译不成",
+        "翻译得成"
+      ]
+    },
+    {
+      "trigger": "分析懂",
+      "level": "HSK 4",
+      "title": "分析懂: 结果/趋向补语",
+      "pattern": "分析 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于分析懂了。",
+      "exampleTr": "Finalmente consegui 分析懂.",
+      "aliases": [
+        "分析懂",
+        "分析不懂",
+        "分析得懂"
+      ]
+    },
+    {
+      "trigger": "分析完",
+      "level": "HSK 4",
+      "title": "分析完: 结果/趋向补语",
+      "pattern": "分析 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于分析完了。",
+      "exampleTr": "Finalmente consegui 分析完.",
+      "aliases": [
+        "分析完",
+        "分析不完",
+        "分析得完"
+      ]
+    },
+    {
+      "trigger": "分析好",
+      "level": "HSK 4",
+      "title": "分析好: 结果/趋向补语",
+      "pattern": "分析 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于分析好了。",
+      "exampleTr": "Finalmente consegui 分析好.",
+      "aliases": [
+        "分析好",
+        "分析不好",
+        "分析得好"
+      ]
+    },
+    {
+      "trigger": "分析清楚",
+      "level": "HSK 5",
+      "title": "分析清楚: 结果/趋向补语",
+      "pattern": "分析 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于分析清楚了。",
+      "exampleTr": "Finalmente consegui 分析清楚.",
+      "aliases": [
+        "分析清楚",
+        "分析不清楚",
+        "分析得清楚"
+      ]
+    },
+    {
+      "trigger": "分析出来",
+      "level": "HSK 5",
+      "title": "分析出来: 结果/趋向补语",
+      "pattern": "分析 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于分析出来了。",
+      "exampleTr": "Finalmente consegui 分析出来.",
+      "aliases": [
+        "分析出来",
+        "分析不出来",
+        "分析得出来"
+      ]
+    },
+    {
+      "trigger": "分析下去",
+      "level": "HSK 5",
+      "title": "分析下去: 结果/趋向补语",
+      "pattern": "分析 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于分析下去了。",
+      "exampleTr": "Finalmente consegui 分析下去.",
+      "aliases": [
+        "分析下去",
+        "分析不下去",
+        "分析得下去"
+      ]
+    },
+    {
+      "trigger": "分析起来",
+      "level": "HSK 5",
+      "title": "分析起来: 结果/趋向补语",
+      "pattern": "分析 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于分析起来了。",
+      "exampleTr": "Finalmente consegui 分析起来.",
+      "aliases": [
+        "分析起来",
+        "分析不起来",
+        "分析得起来"
+      ]
+    },
+    {
+      "trigger": "分析进去",
+      "level": "HSK 5",
+      "title": "分析进去: 结果/趋向补语",
+      "pattern": "分析 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于分析进去了。",
+      "exampleTr": "Finalmente consegui 分析进去.",
+      "aliases": [
+        "分析进去",
+        "分析不进去",
+        "分析得进去"
+      ]
+    },
+    {
+      "trigger": "分析回来",
+      "level": "HSK 5",
+      "title": "分析回来: 结果/趋向补语",
+      "pattern": "分析 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于分析回来了。",
+      "exampleTr": "Finalmente consegui 分析回来.",
+      "aliases": [
+        "分析回来",
+        "分析不回来",
+        "分析得回来"
+      ]
+    },
+    {
+      "trigger": "分析住",
+      "level": "HSK 5",
+      "title": "分析住: 结果/趋向补语",
+      "pattern": "分析 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于分析住了。",
+      "exampleTr": "Finalmente consegui 分析住.",
+      "aliases": [
+        "分析住",
+        "分析不住",
+        "分析得住"
+      ]
+    },
+    {
+      "trigger": "分析到",
+      "level": "HSK 4",
+      "title": "分析到: 结果/趋向补语",
+      "pattern": "分析 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于分析到了。",
+      "exampleTr": "Finalmente consegui 分析到.",
+      "aliases": [
+        "分析到",
+        "分析不到",
+        "分析得到"
+      ]
+    },
+    {
+      "trigger": "分析成",
+      "level": "HSK 5",
+      "title": "分析成: 结果/趋向补语",
+      "pattern": "分析 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于分析成了。",
+      "exampleTr": "Finalmente consegui 分析成.",
+      "aliases": [
+        "分析成",
+        "分析不成",
+        "分析得成"
+      ]
+    },
+    {
+      "trigger": "识别懂",
+      "level": "HSK 4",
+      "title": "识别懂: 结果/趋向补语",
+      "pattern": "识别 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于识别懂了。",
+      "exampleTr": "Finalmente consegui 识别懂.",
+      "aliases": [
+        "识别懂",
+        "识别不懂",
+        "识别得懂"
+      ]
+    },
+    {
+      "trigger": "识别完",
+      "level": "HSK 4",
+      "title": "识别完: 结果/趋向补语",
+      "pattern": "识别 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于识别完了。",
+      "exampleTr": "Finalmente consegui 识别完.",
+      "aliases": [
+        "识别完",
+        "识别不完",
+        "识别得完"
+      ]
+    },
+    {
+      "trigger": "识别好",
+      "level": "HSK 4",
+      "title": "识别好: 结果/趋向补语",
+      "pattern": "识别 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于识别好了。",
+      "exampleTr": "Finalmente consegui 识别好.",
+      "aliases": [
+        "识别好",
+        "识别不好",
+        "识别得好"
+      ]
+    },
+    {
+      "trigger": "识别清楚",
+      "level": "HSK 5",
+      "title": "识别清楚: 结果/趋向补语",
+      "pattern": "识别 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于识别清楚了。",
+      "exampleTr": "Finalmente consegui 识别清楚.",
+      "aliases": [
+        "识别清楚",
+        "识别不清楚",
+        "识别得清楚"
+      ]
+    },
+    {
+      "trigger": "识别出来",
+      "level": "HSK 5",
+      "title": "识别出来: 结果/趋向补语",
+      "pattern": "识别 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于识别出来了。",
+      "exampleTr": "Finalmente consegui 识别出来.",
+      "aliases": [
+        "识别出来",
+        "识别不出来",
+        "识别得出来"
+      ]
+    },
+    {
+      "trigger": "识别下去",
+      "level": "HSK 5",
+      "title": "识别下去: 结果/趋向补语",
+      "pattern": "识别 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于识别下去了。",
+      "exampleTr": "Finalmente consegui 识别下去.",
+      "aliases": [
+        "识别下去",
+        "识别不下去",
+        "识别得下去"
+      ]
+    },
+    {
+      "trigger": "识别起来",
+      "level": "HSK 5",
+      "title": "识别起来: 结果/趋向补语",
+      "pattern": "识别 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于识别起来了。",
+      "exampleTr": "Finalmente consegui 识别起来.",
+      "aliases": [
+        "识别起来",
+        "识别不起来",
+        "识别得起来"
+      ]
+    },
+    {
+      "trigger": "识别进去",
+      "level": "HSK 5",
+      "title": "识别进去: 结果/趋向补语",
+      "pattern": "识别 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于识别进去了。",
+      "exampleTr": "Finalmente consegui 识别进去.",
+      "aliases": [
+        "识别进去",
+        "识别不进去",
+        "识别得进去"
+      ]
+    },
+    {
+      "trigger": "识别回来",
+      "level": "HSK 5",
+      "title": "识别回来: 结果/趋向补语",
+      "pattern": "识别 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于识别回来了。",
+      "exampleTr": "Finalmente consegui 识别回来.",
+      "aliases": [
+        "识别回来",
+        "识别不回来",
+        "识别得回来"
+      ]
+    },
+    {
+      "trigger": "识别住",
+      "level": "HSK 5",
+      "title": "识别住: 结果/趋向补语",
+      "pattern": "识别 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于识别住了。",
+      "exampleTr": "Finalmente consegui 识别住.",
+      "aliases": [
+        "识别住",
+        "识别不住",
+        "识别得住"
+      ]
+    },
+    {
+      "trigger": "识别到",
+      "level": "HSK 4",
+      "title": "识别到: 结果/趋向补语",
+      "pattern": "识别 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于识别到了。",
+      "exampleTr": "Finalmente consegui 识别到.",
+      "aliases": [
+        "识别到",
+        "识别不到",
+        "识别得到"
+      ]
+    },
+    {
+      "trigger": "识别成",
+      "level": "HSK 5",
+      "title": "识别成: 结果/趋向补语",
+      "pattern": "识别 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于识别成了。",
+      "exampleTr": "Finalmente consegui 识别成.",
+      "aliases": [
+        "识别成",
+        "识别不成",
+        "识别得成"
+      ]
+    },
+    {
+      "trigger": "判断懂",
+      "level": "HSK 4",
+      "title": "判断懂: 结果/趋向补语",
+      "pattern": "判断 + 懂",
+      "explanation": "“懂”作补语，表示理解结果。",
+      "example": "这个词我终于判断懂了。",
+      "exampleTr": "Finalmente consegui 判断懂.",
+      "aliases": [
+        "判断懂",
+        "判断不懂",
+        "判断得懂"
+      ]
+    },
+    {
+      "trigger": "判断完",
+      "level": "HSK 4",
+      "title": "判断完: 结果/趋向补语",
+      "pattern": "判断 + 完",
+      "explanation": "“完”作补语，表示完成结果。",
+      "example": "这个词我终于判断完了。",
+      "exampleTr": "Finalmente consegui 判断完.",
+      "aliases": [
+        "判断完",
+        "判断不完",
+        "判断得完"
+      ]
+    },
+    {
+      "trigger": "判断好",
+      "level": "HSK 4",
+      "title": "判断好: 结果/趋向补语",
+      "pattern": "判断 + 好",
+      "explanation": "“好”作补语，表示完成且满意。",
+      "example": "这个词我终于判断好了。",
+      "exampleTr": "Finalmente consegui 判断好.",
+      "aliases": [
+        "判断好",
+        "判断不好",
+        "判断得好"
+      ]
+    },
+    {
+      "trigger": "判断清楚",
+      "level": "HSK 5",
+      "title": "判断清楚: 结果/趋向补语",
+      "pattern": "判断 + 清楚",
+      "explanation": "“清楚”作补语，表示清晰程度。",
+      "example": "这个词我终于判断清楚了。",
+      "exampleTr": "Finalmente consegui 判断清楚.",
+      "aliases": [
+        "判断清楚",
+        "判断不清楚",
+        "判断得清楚"
+      ]
+    },
+    {
+      "trigger": "判断出来",
+      "level": "HSK 5",
+      "title": "判断出来: 结果/趋向补语",
+      "pattern": "判断 + 出来",
+      "explanation": "“出来”作补语，表示识别/表达结果。",
+      "example": "这个词我终于判断出来了。",
+      "exampleTr": "Finalmente consegui 判断出来.",
+      "aliases": [
+        "判断出来",
+        "判断不出来",
+        "判断得出来"
+      ]
+    },
+    {
+      "trigger": "判断下去",
+      "level": "HSK 5",
+      "title": "判断下去: 结果/趋向补语",
+      "pattern": "判断 + 下去",
+      "explanation": "“下去”作补语，表示持续。",
+      "example": "这个词我终于判断下去了。",
+      "exampleTr": "Finalmente consegui 判断下去.",
+      "aliases": [
+        "判断下去",
+        "判断不下去",
+        "判断得下去"
+      ]
+    },
+    {
+      "trigger": "判断起来",
+      "level": "HSK 5",
+      "title": "判断起来: 结果/趋向补语",
+      "pattern": "判断 + 起来",
+      "explanation": "“起来”作补语，表示开始/评价。",
+      "example": "这个词我终于判断起来了。",
+      "exampleTr": "Finalmente consegui 判断起来.",
+      "aliases": [
+        "判断起来",
+        "判断不起来",
+        "判断得起来"
+      ]
+    },
+    {
+      "trigger": "判断进去",
+      "level": "HSK 5",
+      "title": "判断进去: 结果/趋向补语",
+      "pattern": "判断 + 进去",
+      "explanation": "“进去”作补语，表示进入。",
+      "example": "这个词我终于判断进去了。",
+      "exampleTr": "Finalmente consegui 判断进去.",
+      "aliases": [
+        "判断进去",
+        "判断不进去",
+        "判断得进去"
+      ]
+    },
+    {
+      "trigger": "判断回来",
+      "level": "HSK 5",
+      "title": "判断回来: 结果/趋向补语",
+      "pattern": "判断 + 回来",
+      "explanation": "“回来”作补语，表示返回。",
+      "example": "这个词我终于判断回来了。",
+      "exampleTr": "Finalmente consegui 判断回来.",
+      "aliases": [
+        "判断回来",
+        "判断不回来",
+        "判断得回来"
+      ]
+    },
+    {
+      "trigger": "判断住",
+      "level": "HSK 5",
+      "title": "判断住: 结果/趋向补语",
+      "pattern": "判断 + 住",
+      "explanation": "“住”作补语，表示稳定保持。",
+      "example": "这个词我终于判断住了。",
+      "exampleTr": "Finalmente consegui 判断住.",
+      "aliases": [
+        "判断住",
+        "判断不住",
+        "判断得住"
+      ]
+    },
+    {
+      "trigger": "判断到",
+      "level": "HSK 4",
+      "title": "判断到: 结果/趋向补语",
+      "pattern": "判断 + 到",
+      "explanation": "“到”作补语，表示达到目标。",
+      "example": "这个词我终于判断到了。",
+      "exampleTr": "Finalmente consegui 判断到.",
+      "aliases": [
+        "判断到",
+        "判断不到",
+        "判断得到"
+      ]
+    },
+    {
+      "trigger": "判断成",
+      "level": "HSK 5",
+      "title": "判断成: 结果/趋向补语",
+      "pattern": "判断 + 成",
+      "explanation": "“成”作补语，表示成功变成。",
+      "example": "这个词我终于判断成了。",
+      "exampleTr": "Finalmente consegui 判断成.",
+      "aliases": [
+        "判断成",
+        "判断不成",
+        "判断得成"
+      ]
+    },
+    {
+      "trigger": "个",
+      "level": "HSK 2",
+      "title": "量词“个”: 通用量词",
+      "pattern": "数词 + 个 + 名词",
+      "explanation": "“个”用于通用量词。量词会影响自然分词和词组理解。",
+      "example": "一个新的内容。",
+      "exampleTr": "Um item de tipo 个.",
+      "aliases": [
+        "个",
+        "个量词",
+        "一个",
+        "两个"
+      ]
+    },
+    {
+      "trigger": "本",
+      "level": "HSK 2",
+      "title": "量词“本”: 书籍/册子",
+      "pattern": "数词 + 本 + 名词",
+      "explanation": "“本”用于书籍/册子。量词会影响自然分词和词组理解。",
+      "example": "一本新的内容。",
+      "exampleTr": "Um item de tipo 本.",
+      "aliases": [
+        "本",
+        "本量词",
+        "一本",
+        "两本"
+      ]
+    },
+    {
+      "trigger": "张",
+      "level": "HSK 2",
+      "title": "量词“张”: 平面物/票/纸",
+      "pattern": "数词 + 张 + 名词",
+      "explanation": "“张”用于平面物/票/纸。量词会影响自然分词和词组理解。",
+      "example": "一张新的内容。",
+      "exampleTr": "Um item de tipo 张.",
+      "aliases": [
+        "张",
+        "张量词",
+        "一张",
+        "两张"
+      ]
+    },
+    {
+      "trigger": "条",
+      "level": "HSK 2",
+      "title": "量词“条”: 长条形/消息/路",
+      "pattern": "数词 + 条 + 名词",
+      "explanation": "“条”用于长条形/消息/路。量词会影响自然分词和词组理解。",
+      "example": "一条新的内容。",
+      "exampleTr": "Um item de tipo 条.",
+      "aliases": [
+        "条",
+        "条量词",
+        "一条",
+        "两条"
+      ]
+    },
+    {
+      "trigger": "只",
+      "level": "HSK 2",
+      "title": "量词“只”: 动物/手/船",
+      "pattern": "数词 + 只 + 名词",
+      "explanation": "“只”用于动物/手/船。量词会影响自然分词和词组理解。",
+      "example": "一只新的内容。",
+      "exampleTr": "Um item de tipo 只.",
+      "aliases": [
+        "只",
+        "只量词",
+        "一只",
+        "两只"
+      ]
+    },
+    {
+      "trigger": "位",
+      "level": "HSK 2",
+      "title": "量词“位”: 尊称的人",
+      "pattern": "数词 + 位 + 名词",
+      "explanation": "“位”用于尊称的人。量词会影响自然分词和词组理解。",
+      "example": "一位新的内容。",
+      "exampleTr": "Um item de tipo 位.",
+      "aliases": [
+        "位",
+        "位量词",
+        "一位",
+        "两位"
+      ]
+    },
+    {
+      "trigger": "件",
+      "level": "HSK 4",
+      "title": "量词“件”: 事情/衣服",
+      "pattern": "数词 + 件 + 名词",
+      "explanation": "“件”用于事情/衣服。量词会影响自然分词和词组理解。",
+      "example": "一件新的内容。",
+      "exampleTr": "Um item de tipo 件.",
+      "aliases": [
+        "件",
+        "件量词",
+        "一件",
+        "两件"
+      ]
+    },
+    {
+      "trigger": "次",
+      "level": "HSK 4",
+      "title": "量词“次”: 次数",
+      "pattern": "数词 + 次 + 名词",
+      "explanation": "“次”用于次数。量词会影响自然分词和词组理解。",
+      "example": "一次新的内容。",
+      "exampleTr": "Um item de tipo 次.",
+      "aliases": [
+        "次",
+        "次量词",
+        "一次",
+        "两次"
+      ]
+    },
+    {
+      "trigger": "遍",
+      "level": "HSK 4",
+      "title": "量词“遍”: 完整过程次数",
+      "pattern": "数词 + 遍 + 名词",
+      "explanation": "“遍”用于完整过程次数。量词会影响自然分词和词组理解。",
+      "example": "一遍新的内容。",
+      "exampleTr": "Um item de tipo 遍.",
+      "aliases": [
+        "遍",
+        "遍量词",
+        "一遍",
+        "两遍"
+      ]
+    },
+    {
+      "trigger": "段",
+      "level": "HSK 4",
+      "title": "量词“段”: 一段文字/时间",
+      "pattern": "数词 + 段 + 名词",
+      "explanation": "“段”用于一段文字/时间。量词会影响自然分词和词组理解。",
+      "example": "一段新的内容。",
+      "exampleTr": "Um item de tipo 段.",
+      "aliases": [
+        "段",
+        "段量词",
+        "一段",
+        "两段"
+      ]
+    },
+    {
+      "trigger": "篇",
+      "level": "HSK 4",
+      "title": "量词“篇”: 文章",
+      "pattern": "数词 + 篇 + 名词",
+      "explanation": "“篇”用于文章。量词会影响自然分词和词组理解。",
+      "example": "一篇新的内容。",
+      "exampleTr": "Um item de tipo 篇.",
+      "aliases": [
+        "篇",
+        "篇量词",
+        "一篇",
+        "两篇"
+      ]
+    },
+    {
+      "trigger": "章",
+      "level": "HSK 4",
+      "title": "量词“章”: 章节",
+      "pattern": "数词 + 章 + 名词",
+      "explanation": "“章”用于章节。量词会影响自然分词和词组理解。",
+      "example": "一章新的内容。",
+      "exampleTr": "Um item de tipo 章.",
+      "aliases": [
+        "章",
+        "章量词",
+        "一章",
+        "两章"
+      ]
+    },
+    {
+      "trigger": "部",
+      "level": "HSK 4",
+      "title": "量词“部”: 电影/书/机器",
+      "pattern": "数词 + 部 + 名词",
+      "explanation": "“部”用于电影/书/机器。量词会影响自然分词和词组理解。",
+      "example": "一部新的内容。",
+      "exampleTr": "Um item de tipo 部.",
+      "aliases": [
+        "部",
+        "部量词",
+        "一部",
+        "两部"
+      ]
+    },
+    {
+      "trigger": "套",
+      "level": "HSK 4",
+      "title": "量词“套”: 成套物品",
+      "pattern": "数词 + 套 + 名词",
+      "explanation": "“套”用于成套物品。量词会影响自然分词和词组理解。",
+      "example": "一套新的内容。",
+      "exampleTr": "Um item de tipo 套.",
+      "aliases": [
+        "套",
+        "套量词",
+        "一套",
+        "两套"
+      ]
+    },
+    {
+      "trigger": "份",
+      "level": "HSK 4",
+      "title": "量词“份”: 文件/饭/工作",
+      "pattern": "数词 + 份 + 名词",
+      "explanation": "“份”用于文件/饭/工作。量词会影响自然分词和词组理解。",
+      "example": "一份新的内容。",
+      "exampleTr": "Um item de tipo 份.",
+      "aliases": [
+        "份",
+        "份量词",
+        "一份",
+        "两份"
+      ]
+    },
+    {
+      "trigger": "种",
+      "level": "HSK 4",
+      "title": "量词“种”: 种类",
+      "pattern": "数词 + 种 + 名词",
+      "explanation": "“种”用于种类。量词会影响自然分词和词组理解。",
+      "example": "一种新的内容。",
+      "exampleTr": "Um item de tipo 种.",
+      "aliases": [
+        "种",
+        "种量词",
+        "一种",
+        "两种"
+      ]
+    },
+    {
+      "trigger": "类",
+      "level": "HSK 4",
+      "title": "量词“类”: 类别",
+      "pattern": "数词 + 类 + 名词",
+      "explanation": "“类”用于类别。量词会影响自然分词和词组理解。",
+      "example": "一类新的内容。",
+      "exampleTr": "Um item de tipo 类.",
+      "aliases": [
+        "类",
+        "类量词",
+        "一类",
+        "两类"
+      ]
+    },
+    {
+      "trigger": "项",
+      "level": "HSK 4",
+      "title": "量词“项”: 项目/任务",
+      "pattern": "数词 + 项 + 名词",
+      "explanation": "“项”用于项目/任务。量词会影响自然分词和词组理解。",
+      "example": "一项新的内容。",
+      "exampleTr": "Um item de tipo 项.",
+      "aliases": [
+        "项",
+        "项量词",
+        "一项",
+        "两项"
+      ]
+    },
+    {
+      "trigger": "门",
+      "level": "HSK 4",
+      "title": "量词“门”: 课程/学科",
+      "pattern": "数词 + 门 + 名词",
+      "explanation": "“门”用于课程/学科。量词会影响自然分词和词组理解。",
+      "example": "一门新的内容。",
+      "exampleTr": "Um item de tipo 门.",
+      "aliases": [
+        "门",
+        "门量词",
+        "一门",
+        "两门"
+      ]
+    },
+    {
+      "trigger": "场",
+      "level": "HSK 4",
+      "title": "量词“场”: 活动/比赛/雨",
+      "pattern": "数词 + 场 + 名词",
+      "explanation": "“场”用于活动/比赛/雨。量词会影响自然分词和词组理解。",
+      "example": "一场新的内容。",
+      "exampleTr": "Um item de tipo 场.",
+      "aliases": [
+        "场",
+        "场量词",
+        "一场",
+        "两场"
+      ]
+    },
+    {
+      "trigger": "阵",
+      "level": "HSK 4",
+      "title": "量词“阵”: 短时间动作/风雨",
+      "pattern": "数词 + 阵 + 名词",
+      "explanation": "“阵”用于短时间动作/风雨。量词会影响自然分词和词组理解。",
+      "example": "一阵新的内容。",
+      "exampleTr": "Um item de tipo 阵.",
+      "aliases": [
+        "阵",
+        "阵量词",
+        "一阵",
+        "两阵"
+      ]
+    },
+    {
+      "trigger": "股",
+      "level": "HSK 4",
+      "title": "量词“股”: 气味/力量/趋势",
+      "pattern": "数词 + 股 + 名词",
+      "explanation": "“股”用于气味/力量/趋势。量词会影响自然分词和词组理解。",
+      "example": "一股新的内容。",
+      "exampleTr": "Um item de tipo 股.",
+      "aliases": [
+        "股",
+        "股量词",
+        "一股",
+        "两股"
+      ]
+    },
+    {
+      "trigger": "层",
+      "level": "HSK 4",
+      "title": "量词“层”: 层级/楼层",
+      "pattern": "数词 + 层 + 名词",
+      "explanation": "“层”用于层级/楼层。量词会影响自然分词和词组理解。",
+      "example": "一层新的内容。",
+      "exampleTr": "Um item de tipo 层.",
+      "aliases": [
+        "层",
+        "层量词",
+        "一层",
+        "两层"
+      ]
+    },
+    {
+      "trigger": "颗",
+      "level": "HSK 4",
+      "title": "量词“颗”: 小圆粒",
+      "pattern": "数词 + 颗 + 名词",
+      "explanation": "“颗”用于小圆粒。量词会影响自然分词和词组理解。",
+      "example": "一颗新的内容。",
+      "exampleTr": "Um item de tipo 颗.",
+      "aliases": [
+        "颗",
+        "颗量词",
+        "一颗",
+        "两颗"
+      ]
+    },
+    {
+      "trigger": "粒",
+      "level": "HSK 4",
+      "title": "量词“粒”: 小颗粒",
+      "pattern": "数词 + 粒 + 名词",
+      "explanation": "“粒”用于小颗粒。量词会影响自然分词和词组理解。",
+      "example": "一粒新的内容。",
+      "exampleTr": "Um item de tipo 粒.",
+      "aliases": [
+        "粒",
+        "粒量词",
+        "一粒",
+        "两粒"
+      ]
+    },
+    {
+      "trigger": "滴",
+      "level": "HSK 4",
+      "title": "量词“滴”: 液体小点",
+      "pattern": "数词 + 滴 + 名词",
+      "explanation": "“滴”用于液体小点。量词会影响自然分词和词组理解。",
+      "example": "一滴新的内容。",
+      "exampleTr": "Um item de tipo 滴.",
+      "aliases": [
+        "滴",
+        "滴量词",
+        "一滴",
+        "两滴"
+      ]
+    },
+    {
+      "trigger": "片",
+      "level": "HSK 4",
+      "title": "量词“片”: 薄片/区域",
+      "pattern": "数词 + 片 + 名词",
+      "explanation": "“片”用于薄片/区域。量词会影响自然分词和词组理解。",
+      "example": "一片新的内容。",
+      "exampleTr": "Um item de tipo 片.",
+      "aliases": [
+        "片",
+        "片量词",
+        "一片",
+        "两片"
+      ]
+    }
+  ]
+}
