@@ -1,0 +1,1206 @@
+{
+  "version": 2,
+  "generated": "2026-07-08",
+  "items": [
+    {
+      "id": "h1-01",
+      "hsk": 1,
+      "title": "小猫和茶",
+      "synopsis": "HSK1·Cotidiano·小猫和茶的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.1.json"
+    },
+    {
+      "id": "h1-02",
+      "hsk": 1,
+      "title": "我的新同学",
+      "synopsis": "HSK1·Família·我的新同学的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.2.json"
+    },
+    {
+      "id": "h1-03",
+      "hsk": 1,
+      "title": "今天很热",
+      "synopsis": "HSK1·Comédialeve·今天很热的独立短篇阅读。",
+      "genre": "Comédia leve",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.3.json"
+    },
+    {
+      "id": "h1-04",
+      "hsk": 1,
+      "title": "O Guarda-chuva da Chuva",
+      "synopsis": "HSK1·Romanceescolar·Livroprogressivocomcapítulosú…",
+      "genre": "Romance escolar",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H1.4.json"
+    },
+    {
+      "id": "h1-05",
+      "hsk": 1,
+      "title": "学校门口",
+      "synopsis": "HSK1·Cotidiano·学校门口的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.5.json"
+    },
+    {
+      "id": "h1-06",
+      "hsk": 1,
+      "title": "一杯水",
+      "synopsis": "HSK1·Família·一杯水的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.6.json"
+    },
+    {
+      "id": "h1-07",
+      "hsk": 1,
+      "title": "早上的公园",
+      "synopsis": "HSK1·Comédialeve·早上的公园的独立短篇阅读。",
+      "genre": "Comédia leve",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.7.json"
+    },
+    {
+      "id": "h1-08",
+      "hsk": 1,
+      "title": "O Amigo de Xiao Ming",
+      "synopsis": "HSK1·Romanceescolar·Livroprogressivocomcapítulosú…",
+      "genre": "Romance escolar",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H1.8.json"
+    },
+    {
+      "id": "h1-09",
+      "hsk": 1,
+      "title": "小狗不见了",
+      "synopsis": "HSK1·Cotidiano·小狗不见了的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.9.json"
+    },
+    {
+      "id": "h1-10",
+      "hsk": 1,
+      "title": "三个人吃饭",
+      "synopsis": "HSK1·Família·三个人吃饭的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.10.json"
+    },
+    {
+      "id": "h1-11",
+      "hsk": 1,
+      "title": "老师的信",
+      "synopsis": "HSK1·Comédialeve·老师的信的独立短篇阅读。",
+      "genre": "Comédia leve",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.11.json"
+    },
+    {
+      "id": "h1-12",
+      "hsk": 1,
+      "title": "O Copo Novo",
+      "synopsis": "HSK1·Romanceescolar·Livroprogressivocomcapítulosú…",
+      "genre": "Romance escolar",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H1.12.json"
+    },
+    {
+      "id": "h1-13",
+      "hsk": 1,
+      "title": "我家有客人",
+      "synopsis": "HSK1·Cotidiano·我家有客人的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.13.json"
+    },
+    {
+      "id": "h1-14",
+      "hsk": 1,
+      "title": "买苹果",
+      "synopsis": "HSK1·Família·买苹果的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.14.json"
+    },
+    {
+      "id": "h1-15",
+      "hsk": 1,
+      "title": "晚上八点",
+      "synopsis": "HSK1·Comédialeve·晚上八点的独立短篇阅读。",
+      "genre": "Comédia leve",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.15.json"
+    },
+    {
+      "id": "h1-16",
+      "hsk": 1,
+      "title": "O Aniversário da Mãe",
+      "synopsis": "HSK1·Romanceescolar·Livroprogressivocomcapítulosú…",
+      "genre": "Romance escolar",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H1.16.json"
+    },
+    {
+      "id": "h1-17",
+      "hsk": 1,
+      "title": "一张照片",
+      "synopsis": "HSK1·Cotidiano·一张照片的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.17.json"
+    },
+    {
+      "id": "h1-18",
+      "hsk": 1,
+      "title": "去书店",
+      "synopsis": "HSK1·Família·去书店的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.18.json"
+    },
+    {
+      "id": "h1-19",
+      "hsk": 1,
+      "title": "爸爸做饭",
+      "synopsis": "HSK1·Comédialeve·爸爸做饭的独立短篇阅读。",
+      "genre": "Comédia leve",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H1.19.json"
+    },
+    {
+      "id": "h1-20",
+      "hsk": 1,
+      "title": "Meu Livro de Chinês",
+      "synopsis": "HSK1·Romanceescolar·Livroprogressivocomcapítulosú…",
+      "genre": "Romance escolar",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H1.20.json"
+    },
+    {
+      "id": "h2-01",
+      "hsk": 2,
+      "title": "慢车去上海",
+      "synopsis": "HSK2·Cotidiano·慢车去上海的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.1.json"
+    },
+    {
+      "id": "h2-02",
+      "hsk": 2,
+      "title": "会说话的风筝",
+      "synopsis": "HSK2·Viagem·会说话的风筝的独立短篇阅读。",
+      "genre": "Viagem",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.2.json"
+    },
+    {
+      "id": "h2-03",
+      "hsk": 2,
+      "title": "奶奶的小店",
+      "synopsis": "HSK2·Família·奶奶的小店的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.3.json"
+    },
+    {
+      "id": "h2-04",
+      "hsk": 2,
+      "title": "Amigos em Pequim",
+      "synopsis": "HSK2·Aventura·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Aventura",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H2.4.json"
+    },
+    {
+      "id": "h2-05",
+      "hsk": 2,
+      "title": "迷路的学生",
+      "synopsis": "HSK2·Culturachinesa·迷路的学生的独立短篇阅读。",
+      "genre": "Cultura chinesa",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.5.json"
+    },
+    {
+      "id": "h2-06",
+      "hsk": 2,
+      "title": "一封中文邮件",
+      "synopsis": "HSK2·Cotidiano·一封中文邮件的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.6.json"
+    },
+    {
+      "id": "h2-07",
+      "hsk": 2,
+      "title": "河边的早饭",
+      "synopsis": "HSK2·Viagem·河边的早饭的独立短篇阅读。",
+      "genre": "Viagem",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.7.json"
+    },
+    {
+      "id": "h2-08",
+      "hsk": 2,
+      "title": "A Bicicleta na Porta",
+      "synopsis": "HSK2·Família·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Família",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H2.8.json"
+    },
+    {
+      "id": "h2-09",
+      "hsk": 2,
+      "title": "猫在楼上",
+      "synopsis": "HSK2·Aventura·猫在楼上的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.9.json"
+    },
+    {
+      "id": "h2-10",
+      "hsk": 2,
+      "title": "小城的雨",
+      "synopsis": "HSK2·Culturachinesa·小城的雨的独立短篇阅读。",
+      "genre": "Cultura chinesa",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.10.json"
+    },
+    {
+      "id": "h2-11",
+      "hsk": 2,
+      "title": "冬天的照片",
+      "synopsis": "HSK2·Cotidiano·冬天的照片的独立短篇阅读。",
+      "genre": "Cotidiano",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.11.json"
+    },
+    {
+      "id": "h2-12",
+      "hsk": 2,
+      "title": "O Caminho de Casa",
+      "synopsis": "HSK2·Viagem·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Viagem",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H2.12.json"
+    },
+    {
+      "id": "h2-13",
+      "hsk": 2,
+      "title": "学校的比赛",
+      "synopsis": "HSK2·Família·学校的比赛的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.13.json"
+    },
+    {
+      "id": "h2-14",
+      "hsk": 2,
+      "title": "一件蓝衣服",
+      "synopsis": "HSK2·Aventura·一件蓝衣服的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.14.json"
+    },
+    {
+      "id": "h2-15",
+      "hsk": 2,
+      "title": "晚饭以后",
+      "synopsis": "HSK2·Culturachinesa·晚饭以后的独立短篇阅读。",
+      "genre": "Cultura chinesa",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.15.json"
+    },
+    {
+      "id": "h2-16",
+      "hsk": 2,
+      "title": "O Plano de Fim de Semana",
+      "synopsis": "HSK2·Cotidiano·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Cotidiano",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H2.16.json"
+    },
+    {
+      "id": "h2-17",
+      "hsk": 2,
+      "title": "老师的地图",
+      "synopsis": "HSK2·Viagem·老师的地图的独立短篇阅读。",
+      "genre": "Viagem",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.17.json"
+    },
+    {
+      "id": "h2-18",
+      "hsk": 2,
+      "title": "小船和月亮",
+      "synopsis": "HSK2·Família·小船和月亮的独立短篇阅读。",
+      "genre": "Família",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.18.json"
+    },
+    {
+      "id": "h2-19",
+      "hsk": 2,
+      "title": "新开的面馆",
+      "synopsis": "HSK2·Aventura·新开的面馆的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H2.19.json"
+    },
+    {
+      "id": "h2-20",
+      "hsk": 2,
+      "title": "A Primeira Viagem de Trem",
+      "synopsis": "HSK2·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H2.20.json"
+    },
+    {
+      "id": "h3-01",
+      "hsk": 3,
+      "title": "山里的蓝灯",
+      "synopsis": "HSK3·Aventura·山里的蓝灯的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.1.json"
+    },
+    {
+      "id": "h3-02",
+      "hsk": 3,
+      "title": "书包里的钥匙",
+      "synopsis": "HSK3·Mistério·书包里的钥匙的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.2.json"
+    },
+    {
+      "id": "h3-03",
+      "hsk": 3,
+      "title": "雨夜公交车",
+      "synopsis": "HSK3·Romanceescolar·雨夜公交车的独立短篇阅读。",
+      "genre": "Romance escolar",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.3.json"
+    },
+    {
+      "id": "h3-04",
+      "hsk": 3,
+      "title": "A Carta sem Nome",
+      "synopsis": "HSK3·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H3.4.json"
+    },
+    {
+      "id": "h3-05",
+      "hsk": 3,
+      "title": "同桌的秘密",
+      "synopsis": "HSK3·Moderno·同桌的秘密的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.5.json"
+    },
+    {
+      "id": "h3-06",
+      "hsk": 3,
+      "title": "会唱歌的石头",
+      "synopsis": "HSK3·Aventura·会唱歌的石头的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.6.json"
+    },
+    {
+      "id": "h3-07",
+      "hsk": 3,
+      "title": "春天的旅行",
+      "synopsis": "HSK3·Mistério·春天的旅行的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.7.json"
+    },
+    {
+      "id": "h3-08",
+      "hsk": 3,
+      "title": "O Acordo na Ponte",
+      "synopsis": "HSK3·Romanceescolar·Livroprogressivocomcapítulosú…",
+      "genre": "Romance escolar",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H3.8.json"
+    },
+    {
+      "id": "h3-09",
+      "hsk": 3,
+      "title": "茶馆里的老人",
+      "synopsis": "HSK3·Culturachinesa·茶馆里的老人的独立短篇阅读。",
+      "genre": "Cultura chinesa",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.9.json"
+    },
+    {
+      "id": "h3-10",
+      "hsk": 3,
+      "title": "校园里的小侦探",
+      "synopsis": "HSK3·Moderno·校园里的小侦探的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.10.json"
+    },
+    {
+      "id": "h3-11",
+      "hsk": 3,
+      "title": "黄河边的风",
+      "synopsis": "HSK3·Aventura·黄河边的风的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.11.json"
+    },
+    {
+      "id": "h3-12",
+      "hsk": 3,
+      "title": "Um Bilhete Antigo",
+      "synopsis": "HSK3·Mistério·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Mistério",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H3.12.json"
+    },
+    {
+      "id": "h3-13",
+      "hsk": 3,
+      "title": "最后一班车",
+      "synopsis": "HSK3·Romanceescolar·最后一班车的独立短篇阅读。",
+      "genre": "Romance escolar",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.13.json"
+    },
+    {
+      "id": "h3-14",
+      "hsk": 3,
+      "title": "小院里的树",
+      "synopsis": "HSK3·Culturachinesa·小院里的树的独立短篇阅读。",
+      "genre": "Cultura chinesa",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.14.json"
+    },
+    {
+      "id": "h3-15",
+      "hsk": 3,
+      "title": "城市里的白猫",
+      "synopsis": "HSK3·Moderno·城市里的白猫的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.15.json"
+    },
+    {
+      "id": "h3-16",
+      "hsk": 3,
+      "title": "Um Dia na Vila Antiga",
+      "synopsis": "HSK3·Aventura·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Aventura",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H3.16.json"
+    },
+    {
+      "id": "h3-17",
+      "hsk": 3,
+      "title": "晚自习之后",
+      "synopsis": "HSK3·Mistério·晚自习之后的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.17.json"
+    },
+    {
+      "id": "h3-18",
+      "hsk": 3,
+      "title": "三天的任务",
+      "synopsis": "HSK3·Romanceescolar·三天的任务的独立短篇阅读。",
+      "genre": "Romance escolar",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.18.json"
+    },
+    {
+      "id": "h3-19",
+      "hsk": 3,
+      "title": "朋友的画展",
+      "synopsis": "HSK3·Culturachinesa·朋友的画展的独立短篇阅读。",
+      "genre": "Cultura chinesa",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H3.19.json"
+    },
+    {
+      "id": "h3-20",
+      "hsk": 3,
+      "title": "O Celular Desaparecido",
+      "synopsis": "HSK3·Moderno·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Moderno",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H3.20.json"
+    },
+    {
+      "id": "h4-01",
+      "hsk": 4,
+      "title": "长安小雨",
+      "synopsis": "HSK4·Histórico·长安小雨的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.1.json"
+    },
+    {
+      "id": "h4-02",
+      "hsk": 4,
+      "title": "海边的密码",
+      "synopsis": "HSK4·Mistério·海边的密码的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.2.json"
+    },
+    {
+      "id": "h4-03",
+      "hsk": 4,
+      "title": "竹林里的客人",
+      "synopsis": "HSK4·Aventura·竹林里的客人的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.3.json"
+    },
+    {
+      "id": "h4-04",
+      "hsk": 4,
+      "title": "A Xícara de Porcelana",
+      "synopsis": "HSK4·Viagem·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Viagem",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H4.4.json"
+    },
+    {
+      "id": "h4-05",
+      "hsk": 4,
+      "title": "O Jovem e a Estação",
+      "synopsis": "HSK4·Fantasia·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Fantasia",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H4.5.json"
+    },
+    {
+      "id": "h4-06",
+      "hsk": 4,
+      "title": "山城夜行",
+      "synopsis": "HSK4·Moderno·山城夜行的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.6.json"
+    },
+    {
+      "id": "h4-07",
+      "hsk": 4,
+      "title": "湖上的灯火",
+      "synopsis": "HSK4·Histórico·湖上的灯火的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.7.json"
+    },
+    {
+      "id": "h4-08",
+      "hsk": 4,
+      "title": "A Vila sobre as Nuvens",
+      "synopsis": "HSK4·Mistério·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Mistério",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H4.8.json"
+    },
+    {
+      "id": "h4-09",
+      "hsk": 4,
+      "title": "博物馆之夜",
+      "synopsis": "HSK4·Aventura·博物馆之夜的独立短篇阅读。",
+      "genre": "Aventura",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.9.json"
+    },
+    {
+      "id": "h4-10",
+      "hsk": 4,
+      "title": "A Canção além do Muro",
+      "synopsis": "HSK4·Viagem·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Viagem",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H4.10.json"
+    },
+    {
+      "id": "h4-11",
+      "hsk": 4,
+      "title": "边城列车",
+      "synopsis": "HSK4·Fantasia·边城列车的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.11.json"
+    },
+    {
+      "id": "h4-12",
+      "hsk": 4,
+      "title": "A Última Lanterna",
+      "synopsis": "HSK4·Moderno·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Moderno",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H4.12.json"
+    },
+    {
+      "id": "h4-13",
+      "hsk": 4,
+      "title": "古桥下的影子",
+      "synopsis": "HSK4·Histórico·古桥下的影子的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.13.json"
+    },
+    {
+      "id": "h4-14",
+      "hsk": 4,
+      "title": "秋天的辩论",
+      "synopsis": "HSK4·Mistério·秋天的辩论的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.14.json"
+    },
+    {
+      "id": "h4-15",
+      "hsk": 4,
+      "title": "O Relógio da Livraria Antiga",
+      "synopsis": "HSK4·Aventura·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Aventura",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H4.15.json"
+    },
+    {
+      "id": "h4-16",
+      "hsk": 4,
+      "title": "A Carta do Sul",
+      "synopsis": "HSK4·Viagem·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Viagem",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H4.16.json"
+    },
+    {
+      "id": "h4-17",
+      "hsk": 4,
+      "title": "失踪的剧本",
+      "synopsis": "HSK4·Fantasia·失踪的剧本的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.17.json"
+    },
+    {
+      "id": "h4-18",
+      "hsk": 4,
+      "title": "西行笔记",
+      "synopsis": "HSK4·Moderno·西行笔记的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.18.json"
+    },
+    {
+      "id": "h4-19",
+      "hsk": 4,
+      "title": "月下的市场",
+      "synopsis": "HSK4·Histórico·月下的市场的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H4.19.json"
+    },
+    {
+      "id": "h4-20",
+      "hsk": 4,
+      "title": "O Papagaio de Papel no Vento",
+      "synopsis": "HSK4·Mistério·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Mistério",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H4.20.json"
+    },
+    {
+      "id": "h5-01",
+      "hsk": 5,
+      "title": "玉门旧事",
+      "synopsis": "HSK5·Fantasia·玉门旧事的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.1.json"
+    },
+    {
+      "id": "h5-02",
+      "hsk": 5,
+      "title": "没有皇帝的朝会",
+      "synopsis": "HSK5·Histórico·没有皇帝的朝会的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.2.json"
+    },
+    {
+      "id": "h5-03",
+      "hsk": 5,
+      "title": "城市更新计划",
+      "synopsis": "HSK5·Política·城市更新计划的独立短篇阅读。",
+      "genre": "Política",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.3.json"
+    },
+    {
+      "id": "h5-04",
+      "hsk": 5,
+      "title": "Uma Audiência Pública",
+      "synopsis": "HSK5·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H5.4.json"
+    },
+    {
+      "id": "h5-05",
+      "hsk": 5,
+      "title": "A Livraria no Fim do Metrô",
+      "synopsis": "HSK5·Mistério·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Mistério",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H5.5.json"
+    },
+    {
+      "id": "h5-06",
+      "hsk": 5,
+      "title": "沉默的记者",
+      "synopsis": "HSK5·Moderno·沉默的记者的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.6.json"
+    },
+    {
+      "id": "h5-07",
+      "hsk": 5,
+      "title": "茶山契约",
+      "synopsis": "HSK5·Fantasia·茶山契约的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.7.json"
+    },
+    {
+      "id": "h5-08",
+      "hsk": 5,
+      "title": "Guardiões da Rua Antiga",
+      "synopsis": "HSK5·Histórico·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Histórico",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H5.8.json"
+    },
+    {
+      "id": "h5-09",
+      "hsk": 5,
+      "title": "古琴社的冬天",
+      "synopsis": "HSK5·Política·古琴社的冬天的独立短篇阅读。",
+      "genre": "Política",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.9.json"
+    },
+    {
+      "id": "h5-10",
+      "hsk": 5,
+      "title": "Notas de Voo Noturno",
+      "synopsis": "HSK5·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H5.10.json"
+    },
+    {
+      "id": "h5-11",
+      "hsk": 5,
+      "title": "镜湖传说",
+      "synopsis": "HSK5·Mistério·镜湖传说的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.11.json"
+    },
+    {
+      "id": "h5-12",
+      "hsk": 5,
+      "title": "Projeto Pássaro Azul",
+      "synopsis": "HSK5·Moderno·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Moderno",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H5.12.json"
+    },
+    {
+      "id": "h5-13",
+      "hsk": 5,
+      "title": "县城里的辩论",
+      "synopsis": "HSK5·Fantasia·县城里的辩论的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.13.json"
+    },
+    {
+      "id": "h5-14",
+      "hsk": 5,
+      "title": "风暴前的船",
+      "synopsis": "HSK5·Histórico·风暴前的船的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.14.json"
+    },
+    {
+      "id": "h5-15",
+      "hsk": 5,
+      "title": "Ao Norte do Grande Rio",
+      "synopsis": "HSK5·Política·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Política",
+      "type": "book",
+      "chapters_count": 2,
+      "path": "H5.15.json"
+    },
+    {
+      "id": "h5-16",
+      "hsk": 5,
+      "title": "Jianghu no Papel",
+      "synopsis": "HSK5·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H5.16.json"
+    },
+    {
+      "id": "h5-17",
+      "hsk": 5,
+      "title": "未寄出的奏折",
+      "synopsis": "HSK5·Mistério·未寄出的奏折的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.17.json"
+    },
+    {
+      "id": "h5-18",
+      "hsk": 5,
+      "title": "算法与茶馆",
+      "synopsis": "HSK5·Moderno·算法与茶馆的独立短篇阅读。",
+      "genre": "Moderno",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.18.json"
+    },
+    {
+      "id": "h5-19",
+      "hsk": 5,
+      "title": "山河之间",
+      "synopsis": "HSK5·Fantasia·山河之间的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H5.19.json"
+    },
+    {
+      "id": "h5-20",
+      "hsk": 5,
+      "title": "Arquivos na Névoa",
+      "synopsis": "HSK5·Histórico·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Histórico",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H5.20.json"
+    },
+    {
+      "id": "h6-01",
+      "hsk": 6,
+      "title": "流亡者的灯塔",
+      "synopsis": "HSK6·Histórico·流亡者的灯塔的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.1.json"
+    },
+    {
+      "id": "h6-02",
+      "hsk": 6,
+      "title": "虚构王朝的清晨",
+      "synopsis": "HSK6·Política·虚构王朝的清晨的独立短篇阅读。",
+      "genre": "Política",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.2.json"
+    },
+    {
+      "id": "h6-03",
+      "hsk": 6,
+      "title": "算法治理备忘录",
+      "synopsis": "HSK6·Fantasia·算法治理备忘录的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.3.json"
+    },
+    {
+      "id": "h6-04",
+      "hsk": 6,
+      "title": "O Tradutor na Tempestade",
+      "synopsis": "HSK6·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H6.4.json"
+    },
+    {
+      "id": "h6-05",
+      "hsk": 6,
+      "title": "O Ano Esquecido",
+      "synopsis": "HSK6·Mistério·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Mistério",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H6.5.json"
+    },
+    {
+      "id": "h6-06",
+      "hsk": 6,
+      "title": "沉默档案馆",
+      "synopsis": "HSK6·Viagem·沉默档案馆的独立短篇阅读。",
+      "genre": "Viagem",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.6.json"
+    },
+    {
+      "id": "h6-07",
+      "hsk": 6,
+      "title": "雨季之后的公民课",
+      "synopsis": "HSK6·Histórico·雨季之后的公民课的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.7.json"
+    },
+    {
+      "id": "h6-08",
+      "hsk": 6,
+      "title": "A Garça de Papel e a Carta Nacional",
+      "synopsis": "HSK6·Política·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Política",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H6.8.json"
+    },
+    {
+      "id": "h6-09",
+      "hsk": 6,
+      "title": "长安的影子议会",
+      "synopsis": "HSK6·Fantasia·长安的影子议会的独立短篇阅读。",
+      "genre": "Fantasia",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.9.json"
+    },
+    {
+      "id": "h6-10",
+      "hsk": 6,
+      "title": "Testemunho entre Montanhas e Mares",
+      "synopsis": "HSK6·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 4,
+      "path": "H6.10.json"
+    },
+    {
+      "id": "h6-11",
+      "hsk": 6,
+      "title": "河流改道以前",
+      "synopsis": "HSK6·Mistério·河流改道以前的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.11.json"
+    },
+    {
+      "id": "h6-12",
+      "hsk": 6,
+      "title": "A Última Academia",
+      "synopsis": "HSK6·Viagem·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Viagem",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H6.12.json"
+    },
+    {
+      "id": "h6-13",
+      "hsk": 6,
+      "title": "匿名者的乐章",
+      "synopsis": "HSK6·Histórico·匿名者的乐章的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.13.json"
+    },
+    {
+      "id": "h6-14",
+      "hsk": 6,
+      "title": "雾都审判",
+      "synopsis": "HSK6·Política·雾都审判的独立短篇阅读。",
+      "genre": "Política",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.14.json"
+    },
+    {
+      "id": "h6-15",
+      "hsk": 6,
+      "title": "O Museu sobre as Ruínas",
+      "synopsis": "HSK6·Fantasia·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Fantasia",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H6.15.json"
+    },
+    {
+      "id": "h6-16",
+      "hsk": 6,
+      "title": "A Rota do Chá na Fronteira",
+      "synopsis": "HSK6·Culturachinesa·Livroprogressivocomcapítulosú…",
+      "genre": "Cultura chinesa",
+      "type": "book",
+      "chapters_count": 3,
+      "path": "H6.16.json"
+    },
+    {
+      "id": "h6-17",
+      "hsk": 6,
+      "title": "旧制度的温柔告别",
+      "synopsis": "HSK6·Mistério·旧制度的温柔告别的独立短篇阅读。",
+      "genre": "Mistério",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.17.json"
+    },
+    {
+      "id": "h6-18",
+      "hsk": 6,
+      "title": "月球背面的汉字课",
+      "synopsis": "HSK6·Viagem·月球背面的汉字课的独立短篇阅读。",
+      "genre": "Viagem",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.18.json"
+    },
+    {
+      "id": "h6-19",
+      "hsk": 6,
+      "title": "岛屿共和国的春天",
+      "synopsis": "HSK6·Histórico·岛屿共和国的春天的独立短篇阅读。",
+      "genre": "Histórico",
+      "type": "simple_reading",
+      "chapters_count": 0,
+      "path": "H6.19.json"
+    },
+    {
+      "id": "h6-20",
+      "hsk": 6,
+      "title": "Crônicas da Cidade-Espelho",
+      "synopsis": "HSK6·Política·Livroprogressivocomcapítulosúnicos.",
+      "genre": "Política",
+      "type": "book",
+      "chapters_count": 4,
+      "path": "H6.20.json"
+    }
+  ]
+}
