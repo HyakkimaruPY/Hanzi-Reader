@@ -1,0 +1,790 @@
+{
+  "generatedAt": "2026-07-10T23:35:48Z",
+  "status": "passed",
+  "viewports": [
+    {
+      "name": "phone-narrow",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "bootMs": 1969,
+      "nav": [
+        "Leitura",
+        "Flash Cards",
+        "Dicionário",
+        "Prática",
+        "Música",
+        "Meu Perfil"
+      ],
+      "practiceCardBoxes": [
+        {
+          "w": 321.640625,
+          "h": 84,
+          "right": 340.8125,
+          "left": 19.171875
+        },
+        {
+          "w": 324,
+          "h": 84,
+          "right": 342,
+          "left": 18
+        },
+        {
+          "w": 311.828125,
+          "h": 84,
+          "right": 335.90625,
+          "left": 24.078125
+        }
+      ],
+      "profileSummaryBoxes": [
+        {
+          "h": 144,
+          "w": 328,
+          "right": 344
+        },
+        {
+          "h": 193.859375,
+          "w": 328,
+          "right": 344
+        }
+      ],
+      "streakAlignment": [
+        {
+          "value": 1,
+          "box": {
+            "x": 201.671875,
+            "y": 478.015625,
+            "width": 98.953125,
+            "height": 39.859375
+          },
+          "number": {
+            "x": 244.28125,
+            "y": 478.015625,
+            "width": 13.734375,
+            "height": 23.9375
+          }
+        },
+        {
+          "value": 10,
+          "box": {
+            "x": 203.65625,
+            "y": 478.015625,
+            "width": 105.59375,
+            "height": 39.859375
+          },
+          "number": {
+            "x": 242.71875,
+            "y": 478.015625,
+            "width": 27.46875,
+            "height": 23.9375
+          }
+        },
+        {
+          "value": 100,
+          "box": {
+            "x": 208.96875,
+            "y": 478.015625,
+            "width": 105.59375,
+            "height": 39.859375
+          },
+          "number": {
+            "x": 241.171875,
+            "y": 478.015625,
+            "width": 41.1875,
+            "height": 23.9375
+          }
+        }
+      ],
+      "readerDock": {
+        "x": 234.75,
+        "y": 684,
+        "width": 117.25,
+        "height": 54
+      },
+      "readerFullscreenHitArea": {
+        "x": 303,
+        "y": 689,
+        "width": 44,
+        "height": 44
+      },
+      "tracks": 42,
+      "horizontalOverflow": 0,
+      "longTasksMs": [
+        163,
+        58,
+        65,
+        122,
+        55
+      ],
+      "maxLongTaskMs": 163,
+      "pageErrors": [],
+      "failedRequests": [
+        "https://hanzi.test/api/tts-edge?health=1"
+      ],
+      "missingLocalResources": [],
+      "serverlessRoutesMocked": [
+        "/api/tts-edge"
+      ]
+    },
+    {
+      "name": "phone-wide",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "bootMs": 2148,
+      "nav": [
+        "Leitura",
+        "Flash Cards",
+        "Dicionário",
+        "Prática",
+        "Música",
+        "Meu Perfil"
+      ],
+      "practiceCardBoxes": [
+        {
+          "w": 353.875,
+          "h": 94.59375,
+          "right": 391.9375,
+          "left": 38.0625
+        },
+        {
+          "w": 394,
+          "h": 94.59375,
+          "right": 412,
+          "left": 18
+        },
+        {
+          "w": 342.5,
+          "h": 94.59375,
+          "right": 386.25,
+          "left": 43.75
+        }
+      ],
+      "profileSummaryBoxes": [
+        {
+          "h": 144,
+          "w": 395.625,
+          "right": 412.8125
+        },
+        {
+          "h": 207.5,
+          "w": 395.625,
+          "right": 412.8125
+        }
+      ],
+      "streakAlignment": [
+        {
+          "value": 1,
+          "box": {
+            "x": 236.859375,
+            "y": 470.34375,
+            "width": 98.953125,
+            "height": 44.5
+          },
+          "number": {
+            "x": 278.125,
+            "y": 470.34375,
+            "width": 16.40625,
+            "height": 28.578125
+          }
+        },
+        {
+          "value": 10,
+          "box": {
+            "x": 233.53125,
+            "y": 470.34375,
+            "width": 105.59375,
+            "height": 44.5
+          },
+          "number": {
+            "x": 269.921875,
+            "y": 470.34375,
+            "width": 32.8125,
+            "height": 28.578125
+          }
+        },
+        {
+          "value": 100,
+          "box": {
+            "x": 233.53125,
+            "y": 470.34375,
+            "width": 105.59375,
+            "height": 44.5
+          },
+          "number": {
+            "x": 261.71875,
+            "y": 470.34375,
+            "width": 49.203125,
+            "height": 28.578125
+          }
+        }
+      ],
+      "readerDock": {
+        "x": 306.75,
+        "y": 816,
+        "width": 115.25,
+        "height": 54
+      },
+      "readerFullscreenHitArea": {
+        "x": 373,
+        "y": 821,
+        "width": 44,
+        "height": 44
+      },
+      "tracks": 42,
+      "horizontalOverflow": 0,
+      "longTasksMs": [
+        175,
+        76,
+        85,
+        161,
+        138
+      ],
+      "maxLongTaskMs": 175,
+      "pageErrors": [],
+      "failedRequests": [
+        "https://hanzi.test/api/tts-edge?health=1"
+      ],
+      "missingLocalResources": [],
+      "serverlessRoutesMocked": [
+        "/api/tts-edge"
+      ]
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "bootMs": 2123,
+      "nav": [
+        "Leitura",
+        "Flash Cards",
+        "Dicionário",
+        "Prática",
+        "Música",
+        "Meu Perfil"
+      ],
+      "practiceCardBoxes": [
+        {
+          "w": 361,
+          "h": 98,
+          "right": 379,
+          "left": 18
+        },
+        {
+          "w": 361,
+          "h": 112,
+          "right": 750,
+          "left": 389
+        },
+        {
+          "w": 360.015625,
+          "h": 98,
+          "right": 378.5,
+          "left": 18.484375
+        }
+      ],
+      "profileSummaryBoxes": [
+        {
+          "h": 211.21875,
+          "w": 351,
+          "right": 379
+        },
+        {
+          "h": 211.21875,
+          "w": 351,
+          "right": 740
+        }
+      ],
+      "streakAlignment": [
+        {
+          "value": 1,
+          "box": {
+            "x": 586.359375,
+            "y": 299.671875,
+            "width": 98.953125,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 626.5625,
+            "y": 299.671875,
+            "width": 18.53125,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 10,
+          "box": {
+            "x": 583.03125,
+            "y": 299.671875,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 617.296875,
+            "y": 299.671875,
+            "width": 37.0625,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 100,
+          "box": {
+            "x": 583.03125,
+            "y": 299.671875,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 608.03125,
+            "y": 299.671875,
+            "width": 55.59375,
+            "height": 32.296875
+          }
+        }
+      ],
+      "readerDock": {
+        "x": 644.75,
+        "y": 908,
+        "width": 115.25,
+        "height": 54
+      },
+      "readerFullscreenHitArea": {
+        "x": 711,
+        "y": 913,
+        "width": 44,
+        "height": 44
+      },
+      "tracks": 42,
+      "horizontalOverflow": 0,
+      "longTasksMs": [
+        167,
+        56,
+        74,
+        164,
+        62,
+        206,
+        55
+      ],
+      "maxLongTaskMs": 206,
+      "pageErrors": [],
+      "failedRequests": [
+        "https://hanzi.test/api/tts-edge?health=1"
+      ],
+      "missingLocalResources": [],
+      "serverlessRoutesMocked": [
+        "/api/tts-edge"
+      ]
+    },
+    {
+      "name": "four-three",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "bootMs": 2107,
+      "nav": [
+        "Leitura",
+        "Flash Cards",
+        "Dicionário",
+        "Prática",
+        "Música",
+        "Meu Perfil"
+      ],
+      "practiceCardBoxes": [
+        {
+          "w": 371.765625,
+          "h": 98,
+          "right": 505.375,
+          "left": 133.609375
+        },
+        {
+          "w": 375,
+          "h": 112,
+          "right": 892,
+          "left": 517
+        },
+        {
+          "w": 360.015625,
+          "h": 98,
+          "right": 499.5,
+          "left": 139.484375
+        }
+      ],
+      "profileSummaryBoxes": [
+        {
+          "h": 211.21875,
+          "w": 455,
+          "right": 507
+        },
+        {
+          "h": 211.21875,
+          "w": 455,
+          "right": 972
+        }
+      ],
+      "streakAlignment": [
+        {
+          "value": 1,
+          "box": {
+            "x": 766.359375,
+            "y": 299.671875,
+            "width": 98.953125,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 806.5625,
+            "y": 299.671875,
+            "width": 18.53125,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 10,
+          "box": {
+            "x": 763.03125,
+            "y": 299.671875,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 797.296875,
+            "y": 299.671875,
+            "width": 37.0625,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 100,
+          "box": {
+            "x": 763.03125,
+            "y": 299.671875,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 788.03125,
+            "y": 299.671875,
+            "width": 55.59375,
+            "height": 32.296875
+          }
+        }
+      ],
+      "readerDock": {
+        "x": 900.75,
+        "y": 652,
+        "width": 115.25,
+        "height": 54
+      },
+      "readerFullscreenHitArea": {
+        "x": 967,
+        "y": 657,
+        "width": 44,
+        "height": 44
+      },
+      "tracks": 42,
+      "horizontalOverflow": 0,
+      "longTasksMs": [
+        163,
+        61,
+        68,
+        121,
+        50,
+        258
+      ],
+      "maxLongTaskMs": 258,
+      "pageErrors": [],
+      "failedRequests": [
+        "https://hanzi.test/api/tts-edge?health=1"
+      ],
+      "missingLocalResources": [],
+      "serverlessRoutesMocked": [
+        "/api/tts-edge"
+      ]
+    },
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bootMs": 2602,
+      "nav": [
+        "Leitura",
+        "Flash Cards",
+        "Dicionário",
+        "Prática",
+        "Música",
+        "Meu Perfil"
+      ],
+      "practiceCardBoxes": [
+        {
+          "w": 371.765625,
+          "h": 98,
+          "right": 713.375,
+          "left": 341.609375
+        },
+        {
+          "w": 375,
+          "h": 112,
+          "right": 1100,
+          "left": 725
+        },
+        {
+          "w": 360.015625,
+          "h": 98,
+          "right": 707.5,
+          "left": 347.484375
+        }
+      ],
+      "profileSummaryBoxes": [
+        {
+          "h": 211.21875,
+          "w": 455,
+          "right": 715
+        },
+        {
+          "h": 211.21875,
+          "w": 455,
+          "right": 1180
+        }
+      ],
+      "streakAlignment": [
+        {
+          "value": 1,
+          "box": {
+            "x": 974.359375,
+            "y": 299.671875,
+            "width": 98.953125,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 1014.5625,
+            "y": 299.671875,
+            "width": 18.53125,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 10,
+          "box": {
+            "x": 971.03125,
+            "y": 299.671875,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 1005.296875,
+            "y": 299.671875,
+            "width": 37.0625,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 100,
+          "box": {
+            "x": 971.03125,
+            "y": 299.671875,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 996.03125,
+            "y": 299.671875,
+            "width": 55.59375,
+            "height": 32.296875
+          }
+        }
+      ],
+      "readerDock": {
+        "x": 1316.75,
+        "y": 784,
+        "width": 115.25,
+        "height": 54
+      },
+      "readerFullscreenHitArea": {
+        "x": 1383,
+        "y": 789,
+        "width": 44,
+        "height": 44
+      },
+      "tracks": 42,
+      "horizontalOverflow": 0,
+      "longTasksMs": [
+        222,
+        116,
+        256,
+        86,
+        83,
+        79
+      ],
+      "maxLongTaskMs": 256,
+      "pageErrors": [],
+      "failedRequests": [
+        "https://hanzi.test/api/tts-edge?health=1"
+      ],
+      "missingLocalResources": [],
+      "serverlessRoutesMocked": [
+        "/api/tts-edge"
+      ]
+    },
+    {
+      "name": "ultrawide",
+      "viewport": {
+        "width": 2560,
+        "height": 1080
+      },
+      "bootMs": 2593,
+      "nav": [
+        "Leitura",
+        "Flash Cards",
+        "Dicionário",
+        "Prática",
+        "Música",
+        "Meu Perfil"
+      ],
+      "practiceCardBoxes": [
+        {
+          "w": 371.765625,
+          "h": 98,
+          "right": 1273.375,
+          "left": 901.609375
+        },
+        {
+          "w": 375,
+          "h": 112,
+          "right": 1660,
+          "left": 1285
+        },
+        {
+          "w": 360.015625,
+          "h": 98,
+          "right": 1267.5,
+          "left": 907.484375
+        }
+      ],
+      "profileSummaryBoxes": [
+        {
+          "h": 211.21875,
+          "w": 455,
+          "right": 1275
+        },
+        {
+          "h": 211.21875,
+          "w": 455,
+          "right": 1740
+        }
+      ],
+      "streakAlignment": [
+        {
+          "value": 1,
+          "box": {
+            "x": 1534.359375,
+            "y": 347.78125,
+            "width": 98.953125,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 1574.5625,
+            "y": 347.78125,
+            "width": 18.53125,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 10,
+          "box": {
+            "x": 1531.03125,
+            "y": 347.78125,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 1565.296875,
+            "y": 347.78125,
+            "width": 37.0625,
+            "height": 32.296875
+          }
+        },
+        {
+          "value": 100,
+          "box": {
+            "x": 1531.03125,
+            "y": 347.78125,
+            "width": 105.59375,
+            "height": 48.21875
+          },
+          "number": {
+            "x": 1556.03125,
+            "y": 347.78125,
+            "width": 55.59375,
+            "height": 32.296875
+          }
+        }
+      ],
+      "readerDock": {
+        "x": 2436.75,
+        "y": 964,
+        "width": 115.25,
+        "height": 54
+      },
+      "readerFullscreenHitArea": {
+        "x": 2503,
+        "y": 969,
+        "width": 44,
+        "height": 44
+      },
+      "tracks": 42,
+      "horizontalOverflow": 0,
+      "longTasksMs": [
+        215,
+        88,
+        121,
+        161,
+        309,
+        60,
+        74
+      ],
+      "maxLongTaskMs": 309,
+      "pageErrors": [],
+      "failedRequests": [
+        "https://hanzi.test/api/tts-edge?health=1"
+      ],
+      "missingLocalResources": [],
+      "serverlessRoutesMocked": [
+        "/api/tts-edge"
+      ]
+    }
+  ],
+  "summary": {
+    "viewportsPassed": 6,
+    "pageErrors": 0,
+    "horizontalOverflowCases": 0,
+    "bootMsRange": [
+      1969,
+      2602
+    ],
+    "maxObservedLongTaskMs": 309
+  },
+  "assertions": [
+    "navegação inferior com seis abas, incluindo Música independente",
+    "nenhum download de áudio de música durante o boot",
+    "cards de Prática compactos e sem overflow",
+    "SVGs vetoriais novos presentes e proporcionais",
+    "introdução e rodada funcional da Sequência tonal",
+    "valores de sequência 1, 10 e 100 sem extravasamento",
+    "cards de resumo do perfil com alturas equivalentes em telas médias e grandes",
+    "tamanho e opacidade do botão do leitor persistidos e aplicados em tempo real",
+    "área de toque do controle de tela cheia com no mínimo 44 px",
+    "modal original de Música com 42 faixas e controles de player",
+    "um único item ativo na navegação durante as trocas de tela",
+    "ausência de overflow horizontal e de erros JavaScript de página"
+  ],
+  "notes": [
+    "O endpoint serverless /api/tts-edge foi simulado no navegador de teste; seus testes de health, CORS e validação são executados separadamente pelo npm test.",
+    "As tarefas longas observadas incluem parse/inicialização do script legado principal e carga do banco local; não houve bloqueio crítico nas trocas de tela testadas."
+  ]
+}
