@@ -1,0 +1,72 @@
+{
+  "splash": {
+    "renderedWidth": 1280,
+    "removed": true,
+    "faviconHref": "assets/panda-manhua-logo.svg",
+    "svgExists": true
+  },
+  "streakAlignment": {
+    "1": {
+      "numberCenterDelta": 0.01,
+      "unitCenterDelta": 0,
+      "inside": true,
+      "lineHeight": "23.4px"
+    },
+    "2": {
+      "numberCenterDelta": 0.01,
+      "unitCenterDelta": 0,
+      "inside": true,
+      "lineHeight": "23.4px"
+    },
+    "9": {
+      "numberCenterDelta": 0.01,
+      "unitCenterDelta": 0,
+      "inside": true,
+      "lineHeight": "23.4px"
+    },
+    "10": {
+      "numberCenterDelta": 0,
+      "unitCenterDelta": 0,
+      "inside": true,
+      "lineHeight": "23.4px"
+    },
+    "100": {
+      "numberCenterDelta": 0.01,
+      "unitCenterDelta": 0,
+      "inside": true,
+      "lineHeight": "23.4px"
+    }
+  },
+  "camera": {
+    "withoutImageOpacity": 1.0,
+    "withImageOpacity": 0.0,
+    "replaceActionAccessible": true
+  },
+  "practice": {
+    "groups": 3,
+    "musicStandaloneRemoved": true,
+    "writingInProduction": true,
+    "ambienceDefaultOff": true,
+    "musicInitiallyPaused": true
+  },
+  "toneSequence": {
+    "slots": 1,
+    "feedbackWaitsForAudio": true,
+    "progressStored": true,
+    "aggregateStored": true,
+    "spacedReviewStored": true,
+    "centralAudioElement": true
+  },
+  "reader": {
+    "defaultEnhancedForNewUser": true,
+    "segments": 4,
+    "maxSegment": 293,
+    "minSegment": 269,
+    "playingSoonAfterStart": true,
+    "ttsRequestsStarted": 3,
+    "disabledSaved": true,
+    "disabledRehydrated": true,
+    "fallbackSucceeded": true
+  },
+  "consoleErrors": []
+}
