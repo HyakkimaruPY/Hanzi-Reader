@@ -1,0 +1,14 @@
+{
+  "name": "hanzi-reader-local-source-tts-api",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Hanzi Reader modular com fontes locais e ponte serverless de TTS.",
+  "scripts": {
+    "check:syntax": "node --check js/script.mjs && node --check js/source-adapter.mjs && node --check js/voice-bridge.mjs && node --check js/manualSearch.mjs && node --check js/manualSearchCore.mjs && node --check api/tts-edge.js",
+    "validate": "node scripts/validate-project.mjs && node scripts/validate-db.mjs && node scripts/validate-trad-simp-db.mjs",
+    "test:api": "node scripts/test-tts-api.cjs",
+    "test": "npm run check:syntax && npm run validate && npm run test:api"
+  },
+  "keywords": ["hanzi", "chinese", "reader", "pwa"],
+  "license": "SEE LICENSE IN LICENSE"
+}
