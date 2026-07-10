@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-10",
+  "result": "passed",
+  "viewports": [
+    {"name": "mobile", "width": 412, "height": 915, "touch": true},
+    {"name": "desktop", "width": 1366, "height": 900, "touch": false}
+  ],
+  "checks": {
+    "application_boot": true,
+    "javascript_page_errors": 0,
+    "custom_select_native_popup_disabled": true,
+    "custom_select_state_sync": true,
+    "custom_select_portal_inside_scrollable_modal": true,
+    "language_switch_pt_en": true,
+    "streak_local_storage": true,
+    "streak_timezone": "America/Sao_Paulo",
+    "profile_metric_cards": 8,
+    "profile_chart_bars": 14,
+    "writing_practice_canvas": true,
+    "writing_pointer_input": true,
+    "modal_accessibility_role": "dialog",
+    "reader_fullscreen_button_css_px": [46, 46],
+    "reader_fullscreen_icon_css_px": [26, 26],
+    "reader_fullscreen_state_label": true,
+    "book_next_button_visible": true,
+    "book_next_button_css_px": [101, 46],
+    "desktop_modal_centered": true,
+    "npm_test": "passed"
+  },
+  "notes": [
+    "A navegação externa foi bloqueada durante o ensaio visual para manter o teste determinístico.",
+    "A rota serverless de TTS foi validada separadamente pelo teste automatizado da API.",
+    "O projeto possui traduções completas de interface apenas para português e inglês; nenhum idioma parcial foi exposto como completo."
+  ]
+}
