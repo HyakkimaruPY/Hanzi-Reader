@@ -11,6 +11,16 @@ const read=rel=>fs.readFileSync(path.join(root,rel),'utf8');
 const index=read('index.html');
 const script=read('js/script.mjs');
 const adapter=read('js/source-adapter.mjs');
+const visual=read('js/visual-refresh.js');
+
+if(!index.includes('css/visual-refresh.css')||!index.includes('js/visual-refresh.js'))bad('camada de identidade visual não está carregada no HTML.');
+else ok('camada de identidade visual carregada por último');
+if(!visual.includes('America/Sao_Paulo')||!visual.includes('hzStreak.v1'))bad('sequência diária no fuso de Brasília ausente.');
+else ok('sequência diária persistente usa o fuso de Brasília');
+if(!visual.includes('hz-select-shell')||!visual.includes("select.dispatchEvent(new Event('change'"))bad('select customizado não preserva o estado dos controles originais.');
+else ok('selects nativos possuem camada customizada sincronizada');
+if(!visual.includes('hzp-writing')||!visual.includes('hz-writing-canvas'))bad('terceira prática de escrita não foi instalada.');
+else ok('módulo local de prática de escrita presente');
 
 if(!index.includes('class="app-booting"'))bad('index.html não ativa o bloqueio visual de inicialização.');
 else ok('boot visual bloqueia o scaffold legado');
