@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "description": "Fallback local leve para compostos frequentes quando fontes remotas estão indisponíveis.",
+  "entries": {
+    "你": {"pinyin":"nǐ","hsk":1,"pt":["você"],"en":["you"]},
+    "你们": {"pinyin":"nǐ men","hsk":1,"pt":["vocês"],"en":["you (plural)"]},
+    "你的": {"pinyin":"nǐ de","hsk":1,"pt":["seu; sua; seus; suas","aquilo que pertence a você"],"en":["your; yours"]},
+    "你们的": {"pinyin":"nǐ men de","hsk":1,"pt":["de vocês; seu; sua; seus; suas","aquilo que pertence a vocês"],"en":["your; yours (plural)"]},
+    "你想": {"pinyin":"nǐ xiǎng","hsk":1,"pt":["você quer; você pensa","você gostaria"],"en":["you want; you think"]},
+    "你知道": {"pinyin":"nǐ zhī dào","hsk":1,"pt":["você sabe; você conhece"],"en":["you know"]},
+    "你看": {"pinyin":"nǐ kàn","hsk":1,"pt":["você vê; olhe","na sua opinião"],"en":["you see; look"]},
+    "你好": {"pinyin":"nǐ hǎo","hsk":1,"pt":["olá; oi"],"en":["hello; hi"]},
+    "我的": {"pinyin":"wǒ de","hsk":1,"pt":["meu; minha; meus; minhas"],"en":["my; mine"]},
+    "他们的": {"pinyin":"tā men de","hsk":1,"pt":["deles; delas"],"en":["their; theirs"]},
+    "我们的": {"pinyin":"wǒ men de","hsk":1,"pt":["nosso; nossa; nossos; nossas"],"en":["our; ours"]}
+  }
+}
