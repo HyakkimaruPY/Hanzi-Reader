@@ -1,0 +1,206 @@
+{
+  "generated_at_utc": "2026-07-11T01:09:07.823324+00:00",
+  "cycles_per_build": 8,
+  "warmup_cycles_per_build": 2,
+  "functional": {
+    "build": "functional",
+    "boot_ms": 1027.8575199999977,
+    "flow_metrics": {
+      "practice_open_ms": 156.6475170002377,
+      "practice_tab_listening_ms": 73.4969800005274,
+      "practice_tab_production_ms": 70.19884000055754,
+      "practice_tab_leisure_ms": 107.89869600012025,
+      "music_open_ms": 80.82515700061776,
+      "music_minimize_ms": 64.96804800008249,
+      "music_expand_ms": 53.431131999786885,
+      "reader_size_response_ms": 516.450316999908,
+      "reader_opacity_response_ms": 36.63728099945729,
+      "profile_open_ms": 298.92940600075235,
+      "dom_nodes": 3512,
+      "listeners": {
+        "added": 694,
+        "removed": 16,
+        "net": 678
+      },
+      "active_intervals": 2,
+      "performance": null
+    },
+    "warmup": {
+      "cycles": 2,
+      "cycle_ms": [
+        2425.9383759999764,
+        2227.0732910001243
+      ],
+      "mean_cycle_ms": 2326.5058335000504,
+      "p95_cycle_ms": 2227.0732910001243,
+      "nodes_start": 3512,
+      "nodes_end": 3512,
+      "node_growth": 0,
+      "listeners_start": {
+        "added": 694,
+        "removed": 16,
+        "net": 678
+      },
+      "listeners_end": {
+        "added": 718,
+        "removed": 46,
+        "net": 672
+      },
+      "listener_net_growth": -6,
+      "mini_count": 0,
+      "open_music_modals": 0,
+      "active_intervals": 2
+    },
+    "steady": {
+      "cycles": 8,
+      "cycle_ms": [
+        2578.8734420002584,
+        2336.8382150001707,
+        1994.8283319999973,
+        2020.9093459998257,
+        2372.6761999996597,
+        2349.1678110003704,
+        1993.5585940002056,
+        2390.372472999843
+      ],
+      "mean_cycle_ms": 2254.6530516250414,
+      "p95_cycle_ms": 2390.372472999843,
+      "nodes_start": 3512,
+      "nodes_end": 3512,
+      "node_growth": 0,
+      "listeners_start": {
+        "added": 718,
+        "removed": 46,
+        "net": 672
+      },
+      "listeners_end": {
+        "added": 814,
+        "removed": 166,
+        "net": 648
+      },
+      "listener_net_growth": -24,
+      "mini_count": 0,
+      "open_music_modals": 0,
+      "active_intervals": 2
+    },
+    "errors": [],
+    "failed_requests": []
+  },
+  "optimized": {
+    "build": "optimized",
+    "boot_ms": 811.7963940003392,
+    "flow_metrics": {
+      "practice_open_ms": 143.47455799997988,
+      "practice_tab_listening_ms": 90.85694199984573,
+      "practice_tab_production_ms": 77.04526399993483,
+      "practice_tab_leisure_ms": 102.1422599997095,
+      "music_open_ms": 81.63187700029084,
+      "music_minimize_ms": 98.220193999623,
+      "music_expand_ms": 71.8376819995683,
+      "reader_size_response_ms": 556.1799879997125,
+      "reader_opacity_response_ms": 36.625421999815444,
+      "profile_open_ms": 236.5028069998516,
+      "dom_nodes": 3439,
+      "listeners": {
+        "added": 330,
+        "removed": 16,
+        "net": 314
+      },
+      "active_intervals": 2,
+      "performance": {
+        "bootAt": 654.9000000003725,
+        "screens": [
+          {
+            "id": "sp",
+            "ms": 26.8,
+            "at": 1783731921894
+          },
+          {
+            "id": "sx",
+            "ms": 42.4,
+            "at": 1783731923060
+          },
+          {
+            "id": "spf",
+            "ms": 37.9,
+            "at": 1783731925017
+          }
+        ],
+        "longTasks": 4,
+        "longTaskTime": 574,
+        "domNodes": 3439,
+        "heap": 10600000,
+        "lowPower": false
+      }
+    },
+    "warmup": {
+      "cycles": 2,
+      "cycle_ms": [
+        2110.6001920006747,
+        2652.8476729999966
+      ],
+      "mean_cycle_ms": 2381.7239325003356,
+      "p95_cycle_ms": 2110.6001920006747,
+      "nodes_start": 3439,
+      "nodes_end": 3513,
+      "node_growth": 74,
+      "listeners_start": {
+        "added": 330,
+        "removed": 16,
+        "net": 314
+      },
+      "listeners_end": {
+        "added": 434,
+        "removed": 46,
+        "net": 388
+      },
+      "listener_net_growth": 74,
+      "mini_count": 0,
+      "open_music_modals": 0,
+      "active_intervals": 2
+    },
+    "steady": {
+      "cycles": 8,
+      "cycle_ms": [
+        2464.600662000521,
+        2120.242259000406,
+        2133.7373249998564,
+        2057.5709139993705,
+        2095.275845999822,
+        2780.6594700005007,
+        2660.9748979999495,
+        2007.2013760000118
+      ],
+      "mean_cycle_ms": 2290.032843750055,
+      "p95_cycle_ms": 2660.9748979999495,
+      "nodes_start": 3513,
+      "nodes_end": 3513,
+      "node_growth": 0,
+      "listeners_start": {
+        "added": 434,
+        "removed": 46,
+        "net": 388
+      },
+      "listeners_end": {
+        "added": 530,
+        "removed": 166,
+        "net": 364
+      },
+      "listener_net_growth": -24,
+      "mini_count": 0,
+      "open_music_modals": 0,
+      "active_intervals": 2
+    },
+    "errors": [],
+    "failed_requests": []
+  },
+  "conclusion": {
+    "functional_node_growth": 0,
+    "optimized_node_growth": 0,
+    "functional_listener_net_growth": -24,
+    "optimized_listener_net_growth": -24,
+    "optimized_mini_players_after_close": 0,
+    "optimized_open_music_modals_after_close": 0,
+    "optimized_active_intervals": 2
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "generated_at_utc": "2026-07-11T01:09:07.823289+00:00",
+  "method": "Playwright/Chromium, viewport 430x932, same local routed origin and mocked remote media; values are synthetic and CSS-transition timing can add variance.",
+  "functional": {
+    "boot_ms": 1027.8575199999977,
+    "practice_open_ms": 156.6475170002377,
+    "profile_open_ms": 298.92940600075235,
+    "music_open_ms": 80.82515700061776,
+    "music_minimize_ms": 64.96804800008249,
+    "music_expand_ms": 53.431131999786885,
+    "dom_nodes": 3512,
+    "listener_net": 678
+  },
+  "optimized": {
+    "boot_ms": 811.7963940003392,
+    "practice_open_ms": 143.47455799997988,
+    "profile_open_ms": 236.5028069998516,
+    "music_open_ms": 81.63187700029084,
+    "music_minimize_ms": 98.220193999623,
+    "music_expand_ms": 71.8376819995683,
+    "dom_nodes": 3439,
+    "listener_net": 314
+  },
+  "delta_percent": {
+    "boot_ms": -21.02,
+    "practice_open_ms": -8.41,
+    "profile_open_ms": -20.88,
+    "music_open_ms": 1.0,
+    "music_minimize_ms": 51.18,
+    "music_expand_ms": 34.45,
+    "dom_nodes": -2.08,
+    "listener_net": -53.69
+  },
+  "reader_controls": [
+    {
+      "build": "functional",
+      "boot_ms": 1191.3132229992698,
+      "reader_control_benchmark": {
+        "size": {
+          "mean": 0.3199999999813736,
+          "max": 1.1000000005587935,
+          "p95": 0.5
+        },
+        "opacity": {
+          "mean": 6.707000000020489,
+          "max": 12.899999999441206,
+          "p95": 9.900000000372529
+        },
+        "stored": "{\"size\":\"auto\",\"opacity\":1,\"v\":1,\"changedAt\":1783732122426}",
+        "rootSize": "auto",
+        "rootOpacity": "1"
+      },
+      "errors": [],
+      "failed": []
+    },
+    {
+      "build": "optimized",
+      "boot_ms": 1005.6631600000401,
+      "reader_control_benchmark": {
+        "size": {
+          "mean": 0.2030000000167638,
+          "max": 1,
+          "p95": 0.39999999944120646
+        },
+        "opacity": {
+          "mean": 4.941000000024214,
+          "max": 8,
+          "p95": 7.400000000372529
+        },
+        "stored": "{\"size\":\"auto\",\"opacity\":1,\"v\":1,\"changedAt\":1783732126352}",
+        "rootSize": "auto",
+        "rootOpacity": "1"
+      },
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "interpretation": [
+    "The optimized build reduced the mounted DOM by 73 nodes and net registered listeners by 364 in this harness.",
+    "Boot, Practice, and Profile were faster in the stress-profile sample; player transition timings varied and were not treated as a universal speedup claim.",
+    "Reader button preferences update CSS variables without rebuilding the reader; direct size/opacity update benchmarks are included."
+  ]
+}

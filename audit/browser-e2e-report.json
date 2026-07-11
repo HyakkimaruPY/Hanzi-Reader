@@ -1,0 +1,457 @@
+{
+  "generated_at_utc": "2026-07-11T01:09:07.823328+00:00",
+  "test_environment": "Chromium via Playwright; local files routed under https://hanzi.local because direct local navigation is blocked in the execution environment. Remote audio was mocked; UI/state/resource cleanup were exercised.",
+  "viewports": {
+    "360x800": {
+      "checks": [
+        "bottom-nav-5",
+        "no-isolated-music",
+        "practice-3-categories",
+        "practice-card-alignment",
+        "writing-production",
+        "music-leisure",
+        "guzheng-svg",
+        "music-modal",
+        "music-library-42",
+        "music-controls-svg",
+        "music-minimize",
+        "music-persists",
+        "mini-drag",
+        "music-expand-state",
+        "music-close-release",
+        "reader-size-control",
+        "reader-opacity-control",
+        "reader-settings-persist",
+        "profile-streak-horizontal",
+        "profile-streak-1-10-100",
+        "open-graph",
+        "twitter-cards"
+      ],
+      "check_count": 22,
+      "metrics": {
+        "practice_open_ms": 179.91787699975248,
+        "practice_tab_listening_ms": 77.69887499944161,
+        "practice_tab_production_ms": 92.28254600020591,
+        "practice_tab_leisure_ms": 115.83924899969134,
+        "music_open_ms": 164.59923599995818,
+        "music_minimize_ms": 103.41174499990302,
+        "music_expand_ms": 67.96345899965672,
+        "reader_size_response_ms": 466.36162899994815,
+        "reader_opacity_response_ms": 33.565576000000874,
+        "profile_open_ms": 183.15746600001148,
+        "dom_nodes": 3439,
+        "listeners": {
+          "added": 330,
+          "removed": 16,
+          "net": 314
+        },
+        "active_intervals": 2,
+        "performance": {
+          "bootAt": 681.7000000001863,
+          "screens": [
+            {
+              "id": "sp",
+              "ms": 22.8,
+              "at": 1783731766674
+            },
+            {
+              "id": "sx",
+              "ms": 38.6,
+              "at": 1783731768080
+            },
+            {
+              "id": "spf",
+              "ms": 32.4,
+              "at": 1783731770155
+            }
+          ],
+          "longTasks": 4,
+          "longTaskTime": 458,
+          "domNodes": 3439,
+          "heap": 11200000,
+          "lowPower": false
+        },
+        "boot_ms": 969.1365620001307
+      },
+      "browser_errors": [],
+      "failed_requests": []
+    },
+    "430x932": {
+      "checks": [
+        "bottom-nav-5",
+        "no-isolated-music",
+        "practice-3-categories",
+        "practice-card-alignment",
+        "writing-production",
+        "music-leisure",
+        "guzheng-svg",
+        "music-modal",
+        "music-library-42",
+        "music-controls-svg",
+        "music-minimize",
+        "music-persists",
+        "mini-drag",
+        "music-expand-state",
+        "music-close-release",
+        "reader-size-control",
+        "reader-opacity-control",
+        "reader-settings-persist",
+        "profile-streak-horizontal",
+        "profile-streak-1-10-100",
+        "open-graph",
+        "twitter-cards"
+      ],
+      "check_count": 22,
+      "metrics": {
+        "practice_open_ms": 185.10604499988403,
+        "practice_tab_listening_ms": 112.88733900073566,
+        "practice_tab_production_ms": 70.87041299928387,
+        "practice_tab_leisure_ms": 104.8812689996339,
+        "music_open_ms": 174.2143320007017,
+        "music_minimize_ms": 132.1423830004278,
+        "music_expand_ms": 68.70946600065508,
+        "reader_size_response_ms": 536.4525609993507,
+        "reader_opacity_response_ms": 35.78676999950403,
+        "profile_open_ms": 352.55478599992784,
+        "dom_nodes": 3439,
+        "listeners": {
+          "added": 330,
+          "removed": 16,
+          "net": 314
+        },
+        "active_intervals": 2,
+        "performance": {
+          "bootAt": 735.7999999998137,
+          "screens": [
+            {
+              "id": "sp",
+              "ms": 28,
+              "at": 1783731775049
+            },
+            {
+              "id": "sx",
+              "ms": 47.9,
+              "at": 1783731776653
+            },
+            {
+              "id": "spf",
+              "ms": 37.8,
+              "at": 1783731779003
+            }
+          ],
+          "longTasks": 5,
+          "longTaskTime": 721,
+          "domNodes": 3439,
+          "heap": 15200000,
+          "lowPower": false
+        },
+        "boot_ms": 1023.5925699998916
+      },
+      "browser_errors": [],
+      "failed_requests": []
+    },
+    "768x1024": {
+      "checks": [
+        "bottom-nav-5",
+        "no-isolated-music",
+        "practice-3-categories",
+        "practice-card-alignment",
+        "writing-production",
+        "music-leisure",
+        "guzheng-svg",
+        "music-modal",
+        "music-library-42",
+        "music-controls-svg",
+        "music-minimize",
+        "music-persists",
+        "mini-drag",
+        "music-expand-state",
+        "music-close-release",
+        "reader-size-control",
+        "reader-opacity-control",
+        "reader-settings-persist",
+        "profile-streak-horizontal",
+        "profile-streak-1-10-100",
+        "open-graph",
+        "twitter-cards"
+      ],
+      "check_count": 22,
+      "metrics": {
+        "practice_open_ms": 253.65974499982258,
+        "practice_tab_listening_ms": 105.2542679999533,
+        "practice_tab_production_ms": 128.7616050003635,
+        "practice_tab_leisure_ms": 160.59972099992592,
+        "music_open_ms": 92.1589009994932,
+        "music_minimize_ms": 163.42287299994496,
+        "music_expand_ms": 105.44395999932021,
+        "reader_size_response_ms": 201.5121819995329,
+        "reader_opacity_response_ms": 34.45268900031806,
+        "profile_open_ms": 221.93841399985104,
+        "dom_nodes": 3439,
+        "listeners": {
+          "added": 330,
+          "removed": 16,
+          "net": 314
+        },
+        "active_intervals": 2,
+        "performance": {
+          "bootAt": 614.5999999996275,
+          "screens": [
+            {
+              "id": "sp",
+              "ms": 54,
+              "at": 1783731783598
+            },
+            {
+              "id": "sx",
+              "ms": 81.1,
+              "at": 1783731785687
+            },
+            {
+              "id": "spf",
+              "ms": 80.6,
+              "at": 1783731788068
+            }
+          ],
+          "longTasks": 5,
+          "longTaskTime": 739,
+          "domNodes": 3439,
+          "heap": 11200000,
+          "lowPower": false
+        },
+        "boot_ms": 798.1650279998576
+      },
+      "browser_errors": [],
+      "failed_requests": []
+    },
+    "1024x768": {
+      "checks": [
+        "bottom-nav-5",
+        "no-isolated-music",
+        "practice-3-categories",
+        "practice-card-alignment",
+        "writing-production",
+        "music-leisure",
+        "guzheng-svg",
+        "music-modal",
+        "music-library-42",
+        "music-controls-svg",
+        "music-minimize",
+        "music-persists",
+        "mini-drag",
+        "music-expand-state",
+        "music-close-release",
+        "reader-size-control",
+        "reader-opacity-control",
+        "reader-settings-persist",
+        "profile-streak-horizontal",
+        "profile-streak-1-10-100",
+        "open-graph",
+        "twitter-cards"
+      ],
+      "check_count": 22,
+      "metrics": {
+        "practice_open_ms": 226.00100399995426,
+        "practice_tab_listening_ms": 206.11697500044102,
+        "practice_tab_production_ms": 81.17859899994073,
+        "practice_tab_leisure_ms": 198.54175899945403,
+        "music_open_ms": 169.34057300022687,
+        "music_minimize_ms": 63.2402560004266,
+        "music_expand_ms": 136.6885409997849,
+        "reader_size_response_ms": 230.55935299998964,
+        "reader_opacity_response_ms": 37.88316499958455,
+        "profile_open_ms": 260.59828600045876,
+        "dom_nodes": 3439,
+        "listeners": {
+          "added": 330,
+          "removed": 16,
+          "net": 314
+        },
+        "active_intervals": 2,
+        "performance": {
+          "bootAt": 773.6000000005588,
+          "screens": [
+            {
+              "id": "sp",
+              "ms": 49.9,
+              "at": 1783731808696
+            },
+            {
+              "id": "sx",
+              "ms": 28.9,
+              "at": 1783731811214
+            },
+            {
+              "id": "spf",
+              "ms": 82.4,
+              "at": 1783731814169
+            }
+          ],
+          "longTasks": 6,
+          "longTaskTime": 884,
+          "domNodes": 3439,
+          "heap": 11900000,
+          "lowPower": false
+        },
+        "boot_ms": 1000.5363260006561
+      },
+      "browser_errors": [],
+      "failed_requests": []
+    },
+    "1440x900": {
+      "checks": [
+        "bottom-nav-5",
+        "no-isolated-music",
+        "practice-3-categories",
+        "practice-card-alignment",
+        "writing-production",
+        "music-leisure",
+        "guzheng-svg",
+        "music-modal",
+        "music-library-42",
+        "music-controls-svg",
+        "music-minimize",
+        "music-persists",
+        "mini-drag",
+        "music-expand-state",
+        "music-close-release",
+        "reader-size-control",
+        "reader-opacity-control",
+        "reader-settings-persist",
+        "profile-streak-horizontal",
+        "profile-streak-1-10-100",
+        "open-graph",
+        "twitter-cards"
+      ],
+      "check_count": 22,
+      "metrics": {
+        "practice_open_ms": 283.59177599941177,
+        "practice_tab_listening_ms": 209.00724300008733,
+        "practice_tab_production_ms": 81.94802199977858,
+        "practice_tab_leisure_ms": 116.19729299945902,
+        "music_open_ms": 233.08115399959206,
+        "music_minimize_ms": 361.1642159994517,
+        "music_expand_ms": 136.55743099934625,
+        "reader_size_response_ms": 190.72923000021547,
+        "reader_opacity_response_ms": 35.3308730000208,
+        "profile_open_ms": 282.4031850004758,
+        "dom_nodes": 3439,
+        "listeners": {
+          "added": 330,
+          "removed": 16,
+          "net": 314
+        },
+        "active_intervals": 2,
+        "performance": {
+          "bootAt": 646.2999999998137,
+          "screens": [
+            {
+              "id": "sp",
+              "ms": 96.4,
+              "at": 1783731824909
+            },
+            {
+              "id": "sx",
+              "ms": 19.6,
+              "at": 1783731828001
+            },
+            {
+              "id": "spf",
+              "ms": 132.3,
+              "at": 1783731832051
+            }
+          ],
+          "longTasks": 4,
+          "longTaskTime": 549,
+          "domNodes": 3439,
+          "heap": 12700000,
+          "lowPower": false
+        },
+        "boot_ms": 1232.9620799991972
+      },
+      "browser_errors": [],
+      "failed_requests": []
+    },
+    "2560x1080": {
+      "checks": [
+        "bottom-nav-5",
+        "no-isolated-music",
+        "practice-3-categories",
+        "practice-card-alignment",
+        "writing-production",
+        "music-leisure",
+        "guzheng-svg",
+        "music-modal",
+        "music-library-42",
+        "music-controls-svg",
+        "music-minimize",
+        "music-persists",
+        "mini-drag",
+        "music-expand-state",
+        "music-close-release",
+        "reader-size-control",
+        "reader-opacity-control",
+        "reader-settings-persist",
+        "profile-streak-horizontal",
+        "profile-streak-1-10-100",
+        "open-graph",
+        "twitter-cards"
+      ],
+      "check_count": 22,
+      "metrics": {
+        "practice_open_ms": 628.0215169999792,
+        "practice_tab_listening_ms": 353.6793530001887,
+        "practice_tab_production_ms": 322.2755729993878,
+        "practice_tab_leisure_ms": 184.01842599996598,
+        "music_open_ms": 410.3695300000254,
+        "music_minimize_ms": 538.1681240005491,
+        "music_expand_ms": 208.69235699956334,
+        "reader_size_response_ms": 493.02023500058567,
+        "reader_opacity_response_ms": 33.665014999314735,
+        "profile_open_ms": 173.6479840001266,
+        "dom_nodes": 3439,
+        "listeners": {
+          "added": 330,
+          "removed": 16,
+          "net": 314
+        },
+        "active_intervals": 2,
+        "performance": {
+          "bootAt": 756.2000000001863,
+          "screens": [
+            {
+              "id": "sp",
+              "ms": 170.3,
+              "at": 1783731838281
+            },
+            {
+              "id": "sx",
+              "ms": 167.9,
+              "at": 1783731844383
+            },
+            {
+              "id": "spf",
+              "ms": 274.3,
+              "at": 1783731850225
+            }
+          ],
+          "longTasks": 6,
+          "longTaskTime": 1043,
+          "domNodes": 3439,
+          "heap": 10000000,
+          "lowPower": false
+        },
+        "boot_ms": 1268.9274390004357
+      },
+      "browser_errors": [],
+      "failed_requests": []
+    }
+  },
+  "summary": {
+    "viewports_tested": 6,
+    "checks_per_viewport": 22,
+    "total_checks": 132,
+    "browser_errors": 0,
+    "failed_requests": 0
+  }
+}
