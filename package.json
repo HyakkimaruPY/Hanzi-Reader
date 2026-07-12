@@ -4,16 +4,17 @@
   "private": true,
   "description": "Hanzi Reader com leitor virtual estável, prática de tons e escrita de Hanzi, persistência unificada e interface trilíngue.",
   "scripts": {
-    "check:syntax": "node --check js/script.mjs && node --check js/source-adapter.mjs && node --check js/voice-bridge.mjs && node --check js/manualSearch.mjs && node --check js/manualSearchCore.mjs && node --check js/visual-refresh.js && node --check js/learning-core.mjs && node --check js/learning-engine.mjs && node --check js/hanzi-writing.mjs && node --check js/hanzi-scoring-config.mjs && node --check js/practice-ui.mjs && node --check js/practice-audio-service.mjs && node --check js/ui-lifecycle.mjs && node --check js/music-player.mjs && node --check js/performance-engine.mjs && node --check api/tts-edge.js && node --check api/tatoeba.js",
+    "check:syntax": "node --check js/script.mjs && node --check js/source-adapter.mjs && node --check js/voice-bridge.mjs && node --check js/manualSearch.mjs && node --check js/manualSearchCore.mjs && node --check js/visual-refresh.js && node --check js/learning-core.mjs && node --check js/learning-engine.mjs && node --check js/hanzi-writing.mjs && node --check js/hanzi-scoring-config.mjs && node --check js/practice-ui.mjs && node --check js/practice-audio-service.mjs && node --check js/ui-lifecycle.mjs && node --check js/music-player.mjs && node --check js/performance-engine.mjs && node --check api/tts-edge.js && node --check api/tatoeba.js && node --check js/practice-engine.mjs && node --check js/audio-coordination.mjs && node --check js/navigation-controller.mjs",
     "validate": "node scripts/validate-project.mjs && node scripts/validate-db.mjs && node scripts/validate-trad-simp-db.mjs",
     "test:api": "node scripts/test-tts-api.cjs && node scripts/test-tatoeba-api.cjs",
-    "test": "npm run check:syntax && npm run validate && npm run test:learning && npm run test:scoring && npm run test:audio && npm run test:ui && npm run test:refinement && npm run test:stability && npm run test:api",
+    "test": "npm run check:syntax && npm run validate && npm run test:learning && npm run test:scoring && npm run test:audio && npm run test:ui && npm run test:refinement && npm run test:stability && npm run test:architecture && npm run test:api",
     "test:learning": "node scripts/test-learning-core.mjs",
     "test:scoring": "node scripts/test-hanzi-scoring.mjs",
     "test:audio": "node scripts/test-practice-audio.mjs",
     "test:refinement": "node scripts/test-refinement-v52.mjs",
     "test:ui": "node scripts/test-ui-refinement.mjs",
-    "test:stability": "node scripts/test-stability.mjs"
+    "test:stability": "node scripts/test-stability.mjs",
+    "test:architecture": "node scripts/test-architecture.mjs"
   },
   "keywords": [
     "hanzi",

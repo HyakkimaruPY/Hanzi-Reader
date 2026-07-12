@@ -450,7 +450,7 @@ function openToneDrawIntro({ firstRun = false, onStart = null } = {}) {
       {title:titles[4],detail:`${steps[4]} ${steps[5]}`},
       {title:titles[5],detail:steps[6]}
     ];
-    return window.hzPracticeUI.showHelp({firstRun,kicker:TX('howToPlay'),title:TX('toneIntroTitle'),summary:TX('toneIntroLead'),visualHtml:`${toneCurvesSvg()}<div class="hz51-tone-legend">${TX('toneLegend').map(l=>`<span>${escX(l)}</span>`).join('')}</div>`,topics,startLabel:TX('start'),closeLabel:TX('gotIt'),onStart:()=>{prefs.set(TONE_INTRO_KEY,'1');onStart?.();}});
+    return window.hzPracticeUI.showHelp({firstRun,kicker:TX('howToPlay'),title:TX('toneIntroTitle'),summary:TX('toneIntroLead'),visualHtml:`${toneCurvesSvg()}<div class="hz51-tone-legend">${TX('toneLegend').map(l=>`<span>${escX(l)}</span>`).join('')}</div>`,topics,startLabel:TX('start'),closeLabel:TX('gotIt'),onStart:()=>{prefs.set(TONE_INTRO_KEY,'1');onStart?.();},onClose:reason=>{if(firstRun&&reason!=='start')window.hzBackToHub?.();}});
   }
   document.getElementById('hz51-tone-intro')?.remove();
   const legend = TX('toneLegend').map(l => `<span>${escX(l)}</span>`).join('');
@@ -461,6 +461,7 @@ function openToneDrawIntro({ firstRun = false, onStart = null } = {}) {
   wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true');
   wrap.innerHTML = `<div class="hz51-overlay-back"></div>
     <section class="hz51-intro-card" tabindex="-1">
+      <button type="button" class="hz51-intro-close" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       <p class="hz51-kicker">${escX(TX('howToPlay'))}</p>
       <h2>${escX(TX('toneIntroTitle'))}</h2>
       <p class="hz51-lead">${escX(TX('toneIntroLead'))}</p>
@@ -472,9 +473,10 @@ function openToneDrawIntro({ firstRun = false, onStart = null } = {}) {
       </div>
     </section>`;
   document.body.appendChild(wrap);
-  const closeIt = () => { wrap.classList.remove('open'); setTimeout(() => wrap.remove(), 160); };
-  wrap.querySelector('[data-intro-start]').onclick = () => { prefs.set(TONE_INTRO_KEY, '1'); closeIt(); onStart?.(); };
-  wrap.querySelector('.hz51-overlay-back').onclick = () => { if (!firstRun) closeIt(); };
+  const closeIt = reason => { wrap.classList.remove('open'); setTimeout(() => wrap.remove(), 160); if (firstRun && reason !== 'start') window.hzBackToHub?.(); };
+  wrap.querySelector('[data-intro-start]').onclick = () => { prefs.set(TONE_INTRO_KEY, '1'); closeIt('start'); onStart?.(); };
+  wrap.querySelector('.hz51-intro-close').onclick = () => closeIt('dismiss');
+  wrap.querySelector('.hz51-overlay-back').onclick = () => { if (!firstRun) closeIt('backdrop'); };
   requestAnimationFrame(() => { wrap.classList.add('open'); wrap.querySelector('.hz51-intro-card')?.focus?.({ preventScroll: true }); });
 }
 window.hzOpenToneDrawIntro = openToneDrawIntro;
@@ -498,7 +500,7 @@ function syncToneHelpFab(activity) {
   const fab = document.createElement('button');
   fab.type = 'button'; fab.id = 'hz51-tone-help'; fab.className = 'hz51-help-fab';
   fab.setAttribute('aria-label', TX('howToPlay'));
-  fab.textContent = '?';
+  fab.innerHTML = window.hzPracticeUI?.questionIcon?.() || '<svg class="hz-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.55 2.55 0 014.9.95c0 1.8-2.6 2.05-2.6 3.75"/><path d="M12 17.15h.01"/></svg>';
   fab.onclick = () => openToneDrawIntro({ firstRun: false });
   host.appendChild(fab);
 }

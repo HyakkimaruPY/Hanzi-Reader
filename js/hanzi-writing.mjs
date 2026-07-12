@@ -18,7 +18,7 @@
 'use strict';
 
 import { HANZI_SCORING_CONFIG, weightedHanziScore } from './hanzi-scoring-config.mjs';
-import { showPracticeHelp, showPracticeSummary } from './practice-ui.mjs';
+import { practiceQuestionIcon, showPracticeHelp, showPracticeSummary } from './practice-ui.mjs';
 
 /* ======================= análise geométrica (pura) ======================= */
 /* Portado do reconhecedor manual (manualSearchCore.mjs) para reutilizar a
@@ -518,8 +518,8 @@ function initHanziWritingUI() {
           <button type="button" class="hzwr-back hzw2-back" aria-label="${esc(t('finishPractice'))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
           <div class="hzw2-title"><h2>${esc(t('title'))}</h2><p>${esc(t('sub'))}</p></div>
           <div class="hzw2-head-right">
-            <button type="button" class="hzw2-help" aria-label="${esc(t('helpBtn'))}">?</button>
             <div class="hzw2-session"><strong data-done>0</strong><span data-avg>—</span></div>
+            <button type="button" class="hzw2-help" aria-label="${esc(t('helpBtn'))}">${practiceQuestionIcon()}</button>
           </div>
         </header>
         <div class="hzw2-search">
@@ -767,7 +767,7 @@ function initHanziWritingUI() {
         {title:titles[4],detail:`${steps[5]} ${steps[7]}`},
         {title:titles[5],detail:steps[6]}
       ];
-      showPracticeHelp({firstRun,kicker:t('helpBtn'),title:t('introTitle'),summary:t('introLead'),topics,startLabel:t('start'),closeLabel:t('gotIt'),onStart:()=>prefSet(INTRO_KEY,'1')});
+      showPracticeHelp({firstRun,kicker:t('helpBtn'),title:t('introTitle'),summary:t('introLead'),topics,startLabel:t('start'),closeLabel:t('gotIt'),onStart:()=>prefSet(INTRO_KEY,'1'),onClose:reason=>{if(firstRun&&reason!=='start')window.hzBackToHub?.();}});
     }
 
     /* ---------- eventos ---------- */

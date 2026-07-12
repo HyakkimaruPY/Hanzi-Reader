@@ -521,3 +521,52 @@ html.hz-reader-scrolling #rtext *,html.hz-reader-scrolling #rscroll *{animation-
 .hzwr-search{display:flex;gap:8px;margin:10px 0}.hzwr-search input{min-width:0;flex:1;background:#15120f;border:1px solid var(--vr-line);border-radius:12px;padding:12px 14px;color:var(--vr-ink);font-size:22px;font-family:var(--rf)}
 .hzwr-workspace{display:grid;grid-template-columns:minmax(180px,.42fr) minmax(280px,1fr);gap:14px;align-items:start}.hzwr-reference,.hzwr-board{border:1px solid var(--vr-line);border-radius:18px;background:rgba(18,16,13,.88);padding:12px}.hzwr-gif{aspect-ratio:1;border-radius:14px;overflow:hidden;background:#fff}.hzwr-gif img{width:100%;height:100%;object-fit:contain;display:block}.hzwr-steps-toggle,.hzwr-finish,.hzwr-help-btn{border:1px solid var(--vr-line-strong);background:rgba(var(--ac-rgb),.08);color:var(--ac);border-radius:12px;font-weight:800}.hzwr-steps-toggle{width:100%;padding:10px;margin-top:9px}.hzwr-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px;max-height:290px;overflow:auto;contain:layout paint}.hzwr-steps img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:8px}.hzwr-ref-empty{min-height:180px;display:grid;place-items:center;text-align:center;color:var(--vr-muted);padding:18px}.hzwr-finish{width:100%;padding:12px;margin-top:12px}.hzwr-help-btn{width:40px;height:40px}.hzwr-help{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;padding:18px;background:rgba(0,0,0,.72);opacity:0;transition:opacity .16s}.hzwr-help.open{opacity:1}.hzwr-help section{position:relative;width:min(560px,100%);background:#17130f;border:1px solid var(--vr-line-strong);border-radius:20px;padding:22px;color:var(--vr-ink)}.hzwr-help-x{position:absolute;right:12px;top:10px;border:0;background:none;color:var(--vr-muted);font-size:28px}.hzwr-help p{color:var(--vr-muted);line-height:1.6}.hzwr-help-metrics{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}.hzwr-help-metrics span{border:1px solid var(--vr-line);border-radius:999px;padding:6px 9px;font-size:12px}.hz-language-options{display:grid;gap:4px;padding:6px 12px 12px}.hz-language-options button{padding:11px 12px;text-align:left;border:1px solid var(--vr-line);border-radius:11px;background:#151310;color:var(--vr-ink)}
 @media(max-width:720px){.hzwr-workspace{grid-template-columns:1fr}.hzwr-reference{order:0}.hzwr-board{order:1}.hzwr-steps{grid-template-columns:repeat(4,minmax(0,1fr));max-height:180px}}
+
+/* ===== Correção cirúrgica de composição no Chrome Android =====
+   Overlays fechados deixam de manter uma superfície preta invisível. A
+   transição de abertura/fechamento é preservada por visibility com atraso. */
+.mo{
+  visibility:hidden;
+  transition-property:opacity,visibility;
+  transition-duration:.25s,0s;
+  transition-delay:0s,.25s;
+}
+.mo.open{visibility:visible;transition-delay:0s,0s}
+.hz51-overlay,.hzwr-help{
+  visibility:hidden;
+  pointer-events:none;
+  transition-property:opacity,visibility;
+  transition-duration:.16s,0s;
+  transition-delay:0s,.16s;
+}
+.hz51-overlay.open,.hzwr-help.open{
+  visibility:visible;
+  pointer-events:auto;
+  transition-delay:0s,0s;
+}
+html.hz-android-compositor-safe .screen.active{isolation:auto}
+html.hz-android-compositor-safe .bnav,
+html.hz-android-compositor-safe #reader-ctrl,
+html.hz-android-compositor-safe .mini-dock-btn,
+html.hz-android-compositor-safe #mini-dock,
+html.hz-android-compositor-safe .mo,
+html.hz-android-compositor-safe .hz51-overlay-back,
+html.hz-android-compositor-safe .hzph-backdrop{
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+html.hz-android-compositor-safe #ss .sc,
+html.hz-android-compositor-safe #style-scroll{
+  content-visibility:visible!important;
+  contain:layout style!important;
+  will-change:auto!important;
+}
+html.hz-android-compositor-safe #ss .sg,
+html.hz-android-compositor-safe #style-scroll>.style-row,
+html.hz-android-compositor-safe #style-scroll>.h41-acc,
+html.hz-android-compositor-safe #style-scroll>.hzle-settings-block,
+html.hz-android-compositor-safe .lexi-steps-block{
+  content-visibility:visible!important;
+  contain:layout style!important;
+  will-change:auto!important;
+}

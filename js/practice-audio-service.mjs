@@ -4,6 +4,7 @@
 const META_KEY = 'hzPracticeAudioMeta.v1';
 const MAX_META = 48;
 const MAX_BUFFERS = 8;
+const NETWORK_TIMEOUT_MS = 12000;
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
 export function analyzePcmBuffer(buffer) {
@@ -63,6 +64,8 @@ class PracticeAudioService {
     this.pausedAt = 0;
     this.lastMetrics = null;
     this.pendingReject = null;
+    this.activeScope = '';
+    this.disposed = false;
   }
   loadMeta() {
     try {
@@ -74,6 +77,10 @@ class PracticeAudioService {
     const rows = [...this.meta.entries()].sort((a, b) => (b[1].used || 0) - (a[1].used || 0)).slice(0, MAX_META);
     this.meta = new Map(rows);
     try { sessionStorage.setItem(META_KEY, JSON.stringify(rows)); } catch {}
+  }
+  notifyActive(active, scope = this.activeScope || 'practice') {
+    this.activeScope = active ? scope : '';
+    try { window.dispatchEvent(new CustomEvent('hz:practice-audio-state', { detail: { active: Boolean(active), scope } })); } catch {}
   }
   audioContext() {
     if (!this.context) {
@@ -110,6 +117,7 @@ class PracticeAudioService {
     const set = this.controllers.get(scope) || new Set();
     set.add(controller); this.controllers.set(scope, set);
     const started = performance.now();
+    const timeout = setTimeout(() => controller.abort(new DOMException('timeout de rede', 'TimeoutError')), NETWORK_TIMEOUT_MS);
     try {
       const response = await fetch(url, { mode: 'cors', cache: 'force-cache', signal: controller.signal });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -119,6 +127,7 @@ class PracticeAudioService {
       this.meta.set(url, metrics); this.saveMeta(); this.touchBuffer(url, buffer);
       return { url, buffer, metrics };
     } finally {
+      clearTimeout(timeout);
       set.delete(controller);
       if (!set.size) this.controllers.delete(scope);
     }
@@ -137,6 +146,7 @@ class PracticeAudioService {
     if (this.mediaUrl) { try { URL.revokeObjectURL(this.mediaUrl); } catch {} this.mediaUrl = ''; }
     this.media = null;
     if (reject) { try { reject(new DOMException(reason, 'AbortError')); } catch {} }
+    this.notifyActive(false);
     this.lastMetrics = { ...(this.lastMetrics || {}), stopped: reason };
   }
   cancelScope(scope = 'practice') {
@@ -171,11 +181,13 @@ class PracticeAudioService {
         gainNode.gain.setValueAtTime(clamp(Number(gain) || 1, .5, 3.2), context.currentTime);
         source.connect(gainNode); gainNode.connect(this.compressor);
         this.source = source;
+        this.notifyActive(true, scope);
         const started = performance.now();
         source.onended = () => {
           if (token !== this.generation) return;
           this.source = null;
           this.pendingReject = null;
+          this.notifyActive(false, scope);
           this.lastMetrics = { ...(metrics || {}), gain: gainNode.gain.value, startLatencyMs: Math.round(performance.now() - started - buffer.duration * 1000), scope };
           resolve(true);
         };
@@ -199,6 +211,7 @@ class PracticeAudioService {
     const token = ++this.generation;
     const audio = new Audio();
     this.media = audio; audio.preload = 'auto'; audio.src = url; audio.volume = 1;
+    this.notifyActive(true, scope);
     try { window.curAudio = audio; } catch {}
     return new Promise((resolve, reject) => {
       this.pendingReject = reject;
@@ -208,6 +221,8 @@ class PracticeAudioService {
         settled = true; clearTimeout(timer);
         this.pendingReject = null;
         audio.onended = audio.onerror = null;
+        audio.removeEventListener('canplay', start);
+        this.notifyActive(false, scope);
         error ? reject(error) : resolve(true);
       };
       const timer = setTimeout(() => cleanup(new Error('timeout de áudio')), 20000);
@@ -275,10 +290,24 @@ class PracticeAudioService {
       speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(String(text || ''));
       utterance.lang = 'zh-CN'; utterance.rate = Number(options.rate) || .92;
-      utterance.onend = () => resolve(true);
-      utterance.onerror = event => reject(event.error || new Error('Falha na síntese'));
+      const scope = options.scope || 'browser-tts';
+      this.notifyActive(true, scope);
+      utterance.onend = () => { this.notifyActive(false, scope); resolve(true); };
+      utterance.onerror = event => { this.notifyActive(false, scope); reject(event.error || new Error('Falha na síntese')); };
       speechSynthesis.speak(utterance);
     });
+  }
+  async dispose() {
+    if (this.disposed) return;
+    this.disposed = true;
+    this.cancel();
+    this.controllers.clear();
+    this.buffers.clear();
+    this.blobs.clear();
+    try { this.compressor?.disconnect(); } catch {}
+    try { await this.context?.close?.(); } catch {}
+    this.context = null; this.compressor = null; this.source = null; this.media = null;
+    this.queue = Promise.resolve();
   }
   prepareToneGameDocument(html) {
     if (!html || html.includes('hzPracticeAudio.playBestNative')) return html;
@@ -293,4 +322,5 @@ export const practiceAudioService = new PracticeAudioService();
 if (typeof window !== 'undefined') {
   window.hzPracticeAudio = practiceAudioService;
   window.hzPrepareToneGameDoc = html => practiceAudioService.prepareToneGameDocument(html);
+  window.addEventListener('pagehide', () => { void practiceAudioService.dispose(); }, { once: true });
 }

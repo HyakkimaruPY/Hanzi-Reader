@@ -1,6 +1,8 @@
 /* Camada de desempenho progressiva: sem dependências e sem alterar regras de negócio. */
 const root=document.documentElement;
+const METRIC_RETENTION=120;
 const metrics={bootAt:performance.now(),screens:[],longTasks:0,longTaskTime:0};
+const retain=(list,value,limit=METRIC_RETENTION)=>{list.push(value);if(list.length>limit)list.splice(0,list.length-limit);};
 function lowPowerHint(){
   const cores=Number(navigator.hardwareConcurrency)||8;
   const memory=Number(navigator.deviceMemory)||8;
@@ -9,6 +11,11 @@ function lowPowerHint(){
 }
 root.classList.toggle('hz-low-power',lowPowerHint());
 root.classList.toggle('hz-reduced-motion',matchMedia('(prefers-reduced-motion: reduce)').matches);
+// Chrome/Chromium no Android pode manter superfícies de blur/contain antigas
+// até a próxima interação. A classe usa a mesma aparência opaca, mas evita
+// essas camadas de composição apenas nesse ambiente.
+const androidChromium=/Android/i.test(navigator.userAgent||'')&&/(?:Chrome|Chromium|EdgA)\//i.test(navigator.userAgent||'');
+root.classList.toggle('hz-android-compositor-safe',androidChromium);
 
 function syncScreenState(id){
   const activeId=id||document.querySelector('.screen.active')?.id||'';
@@ -24,7 +31,7 @@ window.addEventListener('hz:screen-change',event=>{
   // Estado funcional e de acessibilidade muda no mesmo frame da aba; antes ele
   // aguardava um rAF e deixava a tela nova visualmente ativa com estado antigo.
   syncScreenState(event.detail?.id);
-  requestAnimationFrame(()=>metrics.screens.push({id:event.detail?.id||'',ms:Number((performance.now()-started).toFixed(2)),at:Date.now()}));
+  requestAnimationFrame(()=>retain(metrics.screens,{id:event.detail?.id||'',ms:Number((performance.now()-started).toFixed(2)),at:Date.now()}));
 },{passive:true});
 
 
@@ -40,10 +47,11 @@ document.addEventListener('scroll',event=>{
 // A aba oculta não mantém efeitos decorativos correndo. O áudio não é afetado.
 document.addEventListener('visibilitychange',()=>root.classList.toggle('hz-page-hidden',document.hidden),{passive:true});
 
+let longTaskObserver=null;
 if('PerformanceObserver' in window){
   try{
-    const observer=new PerformanceObserver(list=>{for(const entry of list.getEntries()){metrics.longTasks++;metrics.longTaskTime+=entry.duration;}});
-    observer.observe({type:'longtask',buffered:true});
+    longTaskObserver=new PerformanceObserver(list=>{for(const entry of list.getEntries()){metrics.longTasks++;metrics.longTaskTime+=entry.duration;}});
+    longTaskObserver.observe({type:'longtask',buffered:true});
   }catch{}
 }
 window.hzPerformance={
@@ -51,6 +59,11 @@ window.hzPerformance={
   mark(name){performance.mark(`hz:${name}`);},
   measure(name,start,end){try{return performance.measure(`hz:${name}`,`hz:${start}`,`hz:${end}`).duration;}catch{return null;}}
 };
+window.addEventListener('pagehide',()=>{
+  if(readerScrollFrame)cancelAnimationFrame(readerScrollFrame);
+  clearTimeout(readerScrollEnd);
+  try{longTaskObserver?.disconnect();}catch{}
+},{once:true});
 
 function boot(){syncScreenState();root.classList.add('hz-performance-ready');}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
@@ -61,6 +74,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 /* Ciclo de vida leve e idempotente para telas que dependem do primeiro layout visível. */
 const root=document.documentElement;
 const screenStarts=new Map();
+const SCREEN_SAMPLE_RETENTION=40;
 const metrics={screens:{},visibleEvents:0,duplicatePracticeRootsRemoved:0,bootAt:performance.now()};
 let readyFrame=0;
 
@@ -77,7 +91,7 @@ function syncVisibleScreen(id){
   if(id==='sp')removeDuplicatePracticeRoots();
   document.dispatchEvent(new CustomEvent('hz:screen-ready',{bubbles:true,detail:{id}}));
   metrics.visibleEvents++;
-  const started=screenStarts.get(id);if(started!=null){const ms=performance.now()-started;(metrics.screens[id]??=[]).push(Number(ms.toFixed(2)));screenStarts.delete(id);}
+  const started=screenStarts.get(id);if(started!=null){const ms=performance.now()-started;const samples=(metrics.screens[id]??=[]);samples.push(Number(ms.toFixed(2)));if(samples.length>SCREEN_SAMPLE_RETENTION)samples.splice(0,samples.length-SCREEN_SAMPLE_RETENTION);screenStarts.delete(id);}
 }
 document.addEventListener('hz:screen-change',event=>{
   const id=event.detail?.id;if(!id)return;screenStarts.set(id,performance.now());
@@ -92,6 +106,10 @@ document.addEventListener('hz:reader-first-paint',event=>{
   document.dispatchEvent(new CustomEvent('hz:reader-mounted',{bubbles:true,detail:{source:'reader-first-paint',token:event.detail?.token}}));
 },{passive:true});
 document.addEventListener('hz:practice-activity-change',removeDuplicatePracticeRoots,{passive:true});
+window.addEventListener('pagehide',()=>{
+  if(readyFrame)cancelAnimationFrame(readyFrame);
+  screenStarts.clear();
+},{once:true});
 
 function boot(){
   root.classList.add('hz-render-stable');

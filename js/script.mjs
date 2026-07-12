@@ -170,12 +170,26 @@ function b642buf(b){const s=atob(b),u=new Uint8Array(s.length);for(let i=0;i<s.l
 function timeAgo(ts){if(!ts)return'Nunca lido';const m=Math.floor((Date.now()-ts)/60000);if(m<1)return'agora';if(m<60)return m+'m atrás';const h=Math.floor(m/60);if(h<24)return h+'h atrás';return Math.floor(h/24)+'d atrás';}
 function lvlC(l){const n=+l.replace('HSK','');return n<=2?'l12':n<=4?'l34':'l56';}
 
-function initDB(){return new Promise((res,rej)=>{const r=indexedDB.open(DB,DBV);r.onupgradeneeded=e=>{const d=e.target.result;if(!d.objectStoreNames.contains(STB))d.createObjectStore(STB,{keyPath:'id'});if(!d.objectStoreNames.contains(STW))d.createObjectStore(STW,{keyPath:'id'});};r.onsuccess=e=>{db=e.target.result;res();};r.onerror=()=>rej(r.error);});}
-const dbtx=(st,m,fn)=>new Promise((res,rej)=>{const t=db.transaction(st,m),s=t.objectStore(st),r=fn(s);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});
-const dbAll=st=>dbtx(st,'readonly',s=>s.getAll());
-const dbPut=(st,v)=>dbtx(st,'readwrite',s=>s.put(v));
-const dbDel=(st,id)=>dbtx(st,'readwrite',s=>s.delete(id));
-const dbClr=st=>dbtx(st,'readwrite',s=>s.clear());
+const DB_MEMORY=new Map([[STB,new Map()],[STW,new Map()]]);
+function dbMemoryStore(st){if(!DB_MEMORY.has(st))DB_MEMORY.set(st,new Map());return DB_MEMORY.get(st);}
+function initDB(){return new Promise(res=>{
+  try{
+    if(!('indexedDB' in window))return res(false);
+    const r=indexedDB.open(DB,DBV);
+    r.onupgradeneeded=e=>{const d=e.target.result;if(!d.objectStoreNames.contains(STB))d.createObjectStore(STB,{keyPath:'id'});if(!d.objectStoreNames.contains(STW))d.createObjectStore(STW,{keyPath:'id'});};
+    r.onsuccess=e=>{db=e.target.result;db.onversionchange=()=>{try{db.close();}catch{}db=null;};res(true);};
+    r.onerror=r.onblocked=()=>{db=null;res(false);};
+  }catch{db=null;res(false);}
+});}
+const dbtx=(st,m,fn)=>new Promise((res,rej)=>{
+  if(!db)return rej(new DOMException('IndexedDB indisponível','InvalidStateError'));
+  try{const t=db.transaction(st,m),s=t.objectStore(st),r=fn(s);t.oncomplete=()=>res(r&&'result' in r?r.result:true);t.onerror=t.onabort=()=>rej(t.error||r?.error);}
+  catch(error){rej(error);}
+});
+const dbAll=async st=>{try{return await dbtx(st,'readonly',s=>s.getAll());}catch{return [...dbMemoryStore(st).values()];}};
+const dbPut=async(st,v)=>{try{return await dbtx(st,'readwrite',s=>s.put(v));}catch{const id=v?.id??String(Date.now())+Math.random().toString(36).slice(2);dbMemoryStore(st).set(id,{...v,id});return id;}};
+const dbDel=async(st,id)=>{try{return await dbtx(st,'readwrite',s=>s.delete(id));}catch{dbMemoryStore(st).delete(id);return true;}};
+const dbClr=async st=>{try{return await dbtx(st,'readwrite',s=>s.clear());}catch{dbMemoryStore(st).clear();return true;}};
 
 function buildNav(el,active){el.innerHTML=TABS.map(t=>`<button class="ni${t===active?' on':''}" data-tab="${t}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">${TSVG[t]}</svg>${TLBL[t]}</button>`).join('');}
 function renderDiscover(){document.getElementById('dc').innerHTML=DISC.map(s=>`<div class="dcard" onclick="window.open('${s.url}','_blank')"><div class="dico" style="background:${s.c}">${s.ic}</div><div class="dinfo"><div class="dname">${esc(s.n)}</div><div class="ddesc">${esc(s.d)}</div><div class="dlevels">${s.lv.map(l=>`<span class="dlvl ${lvlC(l)}">${l}</span>`).join('')}</div></div></div>`).join('');}
@@ -1105,17 +1119,66 @@ function v55IsBadSentenceTranslation(value){
   return false;
 }
 function v55SentenceCjkLength(value){return [...String(value||'')].filter(ch=>/[\u3400-\u9fff\uf900-\ufaff]/.test(ch)).length;}
-async function v55TranslateSentenceToPt(text){
-  text=String(text||'').trim();if(!text)return'';
-  try{const ctl=typeof AbortController!=='undefined'?new AbortController():null;const timer=ctl?setTimeout(()=>ctl.abort(),6000):0;try{const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=zh-CN&tl=pt&dt=t&q='+encodeURIComponent(text);const r=await fetch(url,{cache:'no-store',signal:ctl?.signal});if(!r.ok)return'';const d=await r.json();return String((d?.[0]||[]).map(x=>x?.[0]||'').join('')).trim();}finally{if(timer)clearTimeout(timer);}}catch{return'';}
+const V55_SENTENCE_TRANSLATION_CACHE=new Map();
+function v55SentenceTargetLanguage(){
+  let value='';
+  try{value=String(window.hzLang?.()||'').toLowerCase();}catch{}
+  if(!value){try{value=String(document.documentElement.lang||navigator.language||'').toLowerCase();}catch{}}
+  if(value.startsWith('pt'))return{ui:'pt',tatoeba:'por',google:'pt-BR',memory:'pt-BR'};
+  if(value.startsWith('es'))return{ui:'es',tatoeba:'spa',google:'es',memory:'es'};
+  return{ui:'en',tatoeba:'eng',google:'en',memory:'en'};
 }
+function v55TranslationLangMatches(value,target){
+  const lang=String(value||'').toLowerCase();
+  const expected=String(target||v55SentenceTargetLanguage().tatoeba).toLowerCase();
+  if(!lang)return false;
+  if(expected==='por')return lang==='por'||lang==='pt'||lang.startsWith('pt-');
+  if(expected==='spa')return lang==='spa'||lang==='es'||lang.startsWith('es-');
+  return lang==='eng'||lang==='en'||lang.startsWith('en-');
+}
+function v55RememberTranslation(key,value){
+  V55_SENTENCE_TRANSLATION_CACHE.delete(key);
+  V55_SENTENCE_TRANSLATION_CACHE.set(key,value);
+  while(V55_SENTENCE_TRANSLATION_CACHE.size>180)V55_SENTENCE_TRANSLATION_CACHE.delete(V55_SENTENCE_TRANSLATION_CACHE.keys().next().value);
+  return value;
+}
+async function v55TranslateSentenceToUiLanguage(text){
+  text=String(text||'').trim();if(!text)return'';
+  const target=v55SentenceTargetLanguage();
+  const key=target.ui+'|'+text;
+  if(V55_SENTENCE_TRANSLATION_CACHE.has(key))return await V55_SENTENCE_TRANSLATION_CACHE.get(key);
+  const task=(async()=>{
+    const fetchWithTimeout=async(url,timeout=6500)=>{
+      const ctl=typeof AbortController!=='undefined'?new AbortController():null;
+      const timer=ctl?setTimeout(()=>ctl.abort(),timeout):0;
+      try{return await fetch(url,{cache:'no-store',signal:ctl?.signal,headers:{Accept:'application/json'}});}finally{if(timer)clearTimeout(timer);}
+    };
+    try{
+      const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=zh-CN&tl='+encodeURIComponent(target.google)+'&dt=t&q='+encodeURIComponent(text);
+      const r=await fetchWithTimeout(url);
+      if(r.ok){const d=await r.json();const translated=String((d?.[0]||[]).map(x=>x?.[0]||'').join('')).trim();if(translated&&!v55IsBadSentenceTranslation(translated))return translated;}
+    }catch{}
+    try{
+      const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(text)+'&langpair=zh-CN|'+encodeURIComponent(target.memory);
+      const r=await fetchWithTimeout(url,7000);
+      if(r.ok){const d=await r.json();const translated=String(d?.responseData?.translatedText||'').trim();if(translated&&!v55IsBadSentenceTranslation(translated))return translated;}
+    }catch{}
+    return'';
+  })();
+  v55RememberTranslation(key,task);
+  const result=await task;
+  if(result)v55RememberTranslation(key,result);else V55_SENTENCE_TRANSLATION_CACHE.delete(key);
+  return result;
+}
+// Alias mantido para módulos legados; o destino agora acompanha o idioma da interface.
+async function v55TranslateSentenceToPt(text){return v55TranslateSentenceToUiLanguage(text);}
 async function lookupTatoebaExamples(word,limit=6){
   try{word=v40ToSimplified(word);}catch{}
   word=String(word||'').trim();
   if(!word)return[];
   const safeLimit=Math.max(1,Math.min(24,Number.parseInt(limit,10)||6));
+  const target=v55SentenceTargetLanguage();
   const flat=value=>Array.isArray(value)?value.flat(Infinity):[];
-  const translationRank=entry=>entry?.lang==='por'?0:entry?.lang==='eng'?1:2;
   const fetchJson=async url=>{
     const ctl=typeof AbortController!=='undefined'?new AbortController():null;
     const timer=ctl?setTimeout(()=>ctl.abort(),8500):0;
@@ -1128,22 +1191,21 @@ async function lookupTatoebaExamples(word,limit=6){
     return input.map(row=>{
       const rawTranslations=flat(row?.translations);
       const translations=rawTranslations.map(t=>typeof t==='string'?{text:t,lang:''}:t)
-        .filter(t=>t&&t.text&&!t.is_unapproved)
-        .sort((a,b)=>translationRank(a)-translationRank(b))
+        .filter(t=>t&&t.text&&!t.is_unapproved&&v55TranslationLangMatches(t.lang,target.tatoeba))
         .map(t=>String(t.text||'').trim()).filter(t=>!v55IsBadSentenceTranslation(t));
-      return{text:v40ToSimplified(row?.text||row?.sentence||''),translations:[...new Set(translations)].slice(0,3),id:row?.id||null,src:'Tatoeba'};
+      return{text:v40ToSimplified(row?.text||row?.sentence||''),translations:[...new Set(translations)].slice(0,3),translationLang:target.tatoeba,id:row?.id||null,src:'Tatoeba'};
     }).filter(e=>e.text&&e.text.includes(word));
   };
 
   const sources=[];
-  sources.push(`/api/tatoeba?q=${encodeURIComponent(word)}&limit=${safeLimit}`);
+  sources.push(`/api/tatoeba?q=${encodeURIComponent(word)}&limit=${safeLimit}&to=${encodeURIComponent(target.tatoeba)}`);
   const v1=new URLSearchParams();
   v1.set('lang','cmn');v1.set('q',word);v1.set('showtrans','all');v1.set('is_unapproved','no');v1.set('sort','relevance');v1.set('limit',String(safeLimit));
   sources.push(`https://api.tatoeba.org/v1/sentences?${v1.toString()}`);
   // Compatibilidade com o fluxo que funcionava nas versões antigas. Ele só é
   // consultado quando as rotas v1 não entregam frases utilizáveis.
   const v0=new URLSearchParams();
-  v0.set('from','cmn');v0.set('query',word);v0.set('trans_to','eng');v0.set('sort','relevance');v0.set('orphans','no');v0.set('word_count_max','28');
+  v0.set('from','cmn');v0.set('query',word);v0.set('trans_to',target.tatoeba);v0.set('sort','relevance');v0.set('orphans','no');v0.set('word_count_max','28');
   sources.push(`https://tatoeba.org/en/api_v0/search?${v0.toString()}`);
 
   const collected=[];const seen=new Set();
@@ -1190,7 +1252,9 @@ async function lookupTatoebaExamples(word,limit=6){
             if(v55IsBadSentenceTranslation(candidate))continue;
             if(/[A-Za-zÀ-ÿ]/.test(candidate)&&!/[\u3400-\u9fff]{2,}/.test(candidate)){tr=candidate;break;}
           }
-          rows.push({text:zh,translations:tr?[tr]:[],id:null,src:url.includes('jukuu')?'Jukuu':'Youdao'});
+          // O idioma extraído por scraping não é confiável. A tradução é
+          // refeita abaixo para o idioma atual da interface.
+          rows.push({text:zh,translations:[],translationLang:'',id:null,src:url.includes('jukuu')?'Jukuu':'Youdao'});
         }
         addRows(rows);
       }catch{}
@@ -1198,7 +1262,11 @@ async function lookupTatoebaExamples(word,limit=6){
     }
   }
   const ordered=collected.sort((a,b)=>v55SentenceCjkLength(a.text)-v55SentenceCjkLength(b.text)||a.text.length-b.text.length).slice(0,safeLimit);
-  await Promise.all(ordered.map(async row=>{row.translations=(row.translations||[]).filter(t=>!v55IsBadSentenceTranslation(t));if(!row.translations.length){const pt=await v55TranslateSentenceToPt(row.text);if(pt&&!v55IsBadSentenceTranslation(pt))row.translations=[pt];}}));
+  await Promise.all(ordered.map(async row=>{
+    row.translations=v55TranslationLangMatches(row.translationLang,target.tatoeba)?(row.translations||[]).filter(t=>!v55IsBadSentenceTranslation(t)):[];
+    if(!row.translations.length){const translated=await v55TranslateSentenceToUiLanguage(row.text);if(translated&&!v55IsBadSentenceTranslation(translated))row.translations=[translated];}
+    row.translationLang=target.tatoeba;
+  }));
   return ordered;
 }
 // Defesa contra ideogramas tradicionais que a tabela de conversão ainda não
@@ -2683,23 +2751,60 @@ function ensurePinyinLib(){
   if(HZ_PINYIN_LIB_PROMISE)return HZ_PINYIN_LIB_PROMISE;
   HZ_PINYIN_LIB_STATE='loading';
   HZ_PINYIN_LIB_PROMISE=(async()=>{
-    try{
-      return installPinyinModule(await import('https://cdn.jsdelivr.net/npm/pinyin-pro@3/+esm'));
-    }catch(firstError){
-      try{
-        return installPinyinModule(await import('https://unpkg.com/pinyin-pro@3/+esm'));
-      }catch(secondError){
-        HZ_PINYIN_LIB_STATE='failed';
-        // Falha externa é esperada offline; o leitor segue com Intl.Segmenter e DB local.
-        document.dispatchEvent(new Event('pinyin-settled'));
-        return false;
-      }
+    const sources=[
+      new URL('vendor/pinyin-pro.mjs',document.baseURI).href,
+      'https://cdn.jsdelivr.net/npm/pinyin-pro@3/+esm',
+      'https://unpkg.com/pinyin-pro@3/+esm'
+    ];
+    for(const source of sources){
+      try{return installPinyinModule(await import(source));}catch{}
     }
+    HZ_PINYIN_LIB_STATE='failed';
+    document.dispatchEvent(new Event('pinyin-settled'));
+    return false;
   })();
   return HZ_PINYIN_LIB_PROMISE;
 }
+function hzRefreshReaderPinyin(){
+  const root=document.getElementById('rtext');
+  if(!root||!window.pinyinFn)return;
+  root.querySelectorAll('.wunit[data-tid]').forEach(el=>{
+    const tok=readerTokens[Number.parseInt(el.dataset.tid,10)];if(!tok)return;
+    const base=getWordPY(tok.word);const tone=applyToneSandhi(tok.word,base);
+    tok.py=tone.py||base;tok.originalPy=tone.oldPy||base;tok.naturalPy=tone.py||base;tok.toneInfo=tone;
+    const info=computeWordPyString(tok.word,tok.naturalPy||tok.py);
+    const chars=el.querySelectorAll('.hzch');
+    chars.forEach((node,index)=>{const py=info.parts[index]||'';if(py)node.dataset.py=py;else node.removeAttribute('data-py');});
+    el.classList.toggle('pyu',Boolean(info.unc));
+  });
+  applyPinyin();
+}
+function hzPinyinText(value){
+  const chinese=String(value||'').match(/[\u3400-\u9fff\uf900-\ufaff]+/g)?.join('')||'';
+  return chinese?getWordPY(chinese):'';
+}
+function hzRefreshVisiblePinyin(){
+  if(!window.pinyinFn)return;
+  hzRefreshReaderPinyin();
+  const update=(rootSelector,zhSelector,pySelector)=>{
+    document.querySelectorAll(rootSelector).forEach(card=>{
+      const zh=card.querySelector(zhSelector),target=card.querySelector(pySelector);if(!zh||!target)return;
+      const py=hzPinyinText(zh.textContent);if(!py)return;
+      const node=target.querySelector('b')||target;node.textContent=py;
+    });
+  };
+  update('.sent-card','.sent-zh','.sent-py');
+  update('.tip-ex-card','.tip-ex-zh','.tip-ex-py');
+  update('.lexi-acc-detail','.lexi-acc-zh','.lexi-acc-py');
+  update('.wcard','.ww','.wpy');
+  const tipWord=document.getElementById('tip-wd'),tipPy=document.getElementById('tip-py');
+  if(tipWord&&tipPy){const py=hzPinyinText(tipWord.textContent);if(py)tipPy.textContent=py;}
+}
+document.addEventListener('pinyin-ready',()=>requestAnimationFrame(()=>requestAnimationFrame(hzRefreshVisiblePinyin)),{passive:true});
+document.addEventListener('hz:screen-visible',()=>{if(window.pinyinFn)requestAnimationFrame(hzRefreshVisiblePinyin);},{passive:true});
 window.hzEnsurePinyinLib=ensurePinyinLib;
 window.hzPinyinLibState=()=>HZ_PINYIN_LIB_STATE;
+window.hzRefreshVisiblePinyin=hzRefreshVisiblePinyin;
 
 
 /* ===== v29-script ===== */
@@ -8210,9 +8315,10 @@ function hzLang(){
   // Detecção automática do navegador: usada somente enquanto o usuário não
   // escolheu manualmente um idioma nas Configurações.
   const nav=(navigator.language||'pt').toLowerCase();
-  if(nav.startsWith('en'))return 'en';
+  if(nav.startsWith('pt'))return 'pt';
   if(nav.startsWith('es'))return 'es';
-  return 'pt'; // idioma-base do app: navegadores sem tradução caem em português
+  if(nav.startsWith('en'))return 'en';
+  return 'en'; // idiomas não suportados usam inglês como fallback previsível
 }
 function T(k){return (HZ_I18N[hzLang()]||HZ_I18N.en)[k]||HZ_I18N.en[k]||k;}
 window.hzT=T;window.hzLang=hzLang;
@@ -9585,16 +9691,17 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
   async function h52Tatoeba(q){
     const n=h52ToSimpSync(h52Cjk(q)||q).trim();
+    const target=v55SentenceTargetLanguage();
     const found=[];
     const seen=new Set();
     if(!n)return found;
-    const push=async(text,translations,src)=>{
+    const push=async(text,translations,src,translationLang='')=>{
       const zh=await h52SimplifySentenceAsync(text||'');
       if(!zh||!h52Contains(zh,n)||seen.has(zh))return;
       seen.add(zh);
-      let trs=(Array.isArray(translations)?translations:[translations]).filter(t=>!v55IsBadSentenceTranslation(t));
-      if(!trs.length){const pt=await v55TranslateSentenceToPt(zh);if(pt&&!v55IsBadSentenceTranslation(pt))trs=[pt];}
-      found.push({text:zh,translations:trs,src:src||'Tatoeba'});
+      let trs=v55TranslationLangMatches(translationLang,target.tatoeba)?(Array.isArray(translations)?translations:[translations]).filter(t=>!v55IsBadSentenceTranslation(t)):[];
+      if(!trs.length){const translated=await v55TranslateSentenceToUiLanguage(zh);if(translated&&!v55IsBadSentenceTranslation(translated))trs=[translated];}
+      found.push({text:zh,translations:trs,translationLang:target.tatoeba,src:src||'Tatoeba'});
     };
 
     // A busca central usa a ponte same-origin em Vercel e só recorre à API
@@ -9602,11 +9709,15 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     // ela redireciona em alguns navegadores móveis e falha ao ler o JSON.
     const jobs=[];
     if(typeof lookupTatoebaExamples==='function')jobs.push(Promise.resolve().then(()=>lookupTatoebaExamples(n,18)));
-    if(typeof h42DictData==='function')jobs.push(Promise.resolve().then(()=>h42DictData(n)).then(data=>(data?.sents||[]).map(s=>({text:s.zh,translations:[s.pt||s.en].filter(Boolean),src:s.src||'Sogou'}))));
+    if(typeof h42DictData==='function')jobs.push(Promise.resolve().then(()=>h42DictData(n)).then(data=>(data?.sents||[]).map(s=>{
+      const value=target.tatoeba==='por'?s.pt:target.tatoeba==='eng'?s.en:s.es;
+      return{text:s.zh,translations:value?[value]:[],translationLang:value?target.tatoeba:'',src:s.src||'Sogou'};
+    })));
     const settled=await Promise.allSettled(jobs);
     for(const item of settled){
-      if(item.status!=='fulfilled')continue;
-      for(const row of item.value||[])await push(row.text||row.zh,row.translations||(row.pt?[row.pt]:(row.en?[row.en]:[])),row.src||'Banco de frases');
+      if(item.status!=='fulfilled'||found.length>=22)continue;
+      const rows=(item.value||[]).slice(0,Math.max(0,22-found.length));
+      await Promise.all(rows.map(row=>push(row.text||row.zh,row.translations||[],row.src||'Banco de frases',row.translationLang||'')));
     }
     return found.sort((a,b)=>v55SentenceCjkLength(a.text)-v55SentenceCjkLength(b.text)||a.text.length-b.text.length).slice(0,22);
   }
@@ -9636,20 +9747,25 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     if(!out)return;
     const viewToken=h56BeginDictView('sents',q,out);
     if(!q){out.innerHTML='<div class="dict-empty">Pesquise uma palavra ou ideograma.</div>';return;}
+    const target=v55SentenceTargetLanguage();
     const map=new Map();
     const push=async s=>{
       const raw=s.text||s.zh||'';
       if(!raw)return;
       const text=await h52SimplifySentenceAsync(raw);
       if(!text||!h52Contains(text,q)||map.has(text))return;
-      const rawTr=s.translations||(s.tr?[s.tr]:(s.en?[s.en]:(s.pt?[s.pt]:[])));
-      let trs=(Array.isArray(rawTr)?rawTr:[rawTr]).filter(t=>!v55IsBadSentenceTranslation(t));
-      if(!trs.length){const pt=await v55TranslateSentenceToPt(text);if(pt&&!v55IsBadSentenceTranslation(pt))trs=[pt];}
-      map.set(text,{text,translations:trs,src:s.src||'Banco de frases'});
+      let rawTr=s.translations||[];let translationLang=s.translationLang||'';
+      if(target.tatoeba==='por'&&s.pt){rawTr=[s.pt];translationLang='por';}
+      else if(target.tatoeba==='eng'&&s.en){rawTr=[s.en];translationLang='eng';}
+      else if(target.tatoeba==='spa'&&s.es){rawTr=[s.es];translationLang='spa';}
+      else if(!Array.isArray(rawTr)&&rawTr)rawTr=[rawTr];
+      let trs=v55TranslationLangMatches(translationLang,target.tatoeba)?(Array.isArray(rawTr)?rawTr:[rawTr]).filter(t=>!v55IsBadSentenceTranslation(t)):[];
+      if(!trs.length){const translated=await v55TranslateSentenceToUiLanguage(text);if(translated&&!v55IsBadSentenceTranslation(translated))trs=[translated];}
+      map.set(text,{text,translations:trs,translationLang:target.tatoeba,src:s.src||'Banco de frases'});
     };
 
     try{if(typeof V34_SENTENCES!=='undefined')for(const row of V34_SENTENCES)await push(row);}catch{}
-    try{if(typeof V29_LOCAL_SENTENCES!=='undefined')for(const row of V29_LOCAL_SENTENCES)await push({text:row.zh,translations:row.tr?[row.tr]:[],src:'Local'});}catch{}
+    try{if(typeof V29_LOCAL_SENTENCES!=='undefined')for(const row of V29_LOCAL_SENTENCES)await push({text:row.zh,translations:row.tr?[row.tr]:[],translationLang:'por',src:'Local'});}catch{}
     if(!h56DictViewCurrent(out,viewToken,'sents',q))return;
     const initial=[...map.values()].slice(0,22);
     if(initial.length)h52PaintDictSentences(q,out,initial);
@@ -10114,8 +10230,22 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     }catch{}
   }
 
+  function h52RefreshSentenceLanguage(){
+    const screen=document.getElementById('sx');
+    const out=document.getElementById('dict-results');
+    const query=(document.getElementById('dict-q')?.value||'').trim();
+    if(!screen?.classList.contains('active')||!out||!query)return;
+    let activeTab='';
+    try{activeTab=v29DictTab||'';}catch{}
+    if(activeTab!=='sents'&&!document.querySelector('[data-dict-tab="sents"].active'))return;
+    h52RenderDictSentences(query,out).catch(()=>{});
+  }
   function h52Boot(){
     h52Patch();
+    if(!document.documentElement.dataset.h52LangListener){
+      document.documentElement.dataset.h52LangListener='1';
+      document.addEventListener('hz:lang-change',h52RefreshSentenceLanguage,{passive:true});
+    }
     hzScheduleIdle(()=>h52EnsureTradSimp().then(()=>{h52Patch();return h52MigrateStoredLibrary();}),2800);
   }
   // Instala os renderizadores finais durante a própria avaliação do módulo. O

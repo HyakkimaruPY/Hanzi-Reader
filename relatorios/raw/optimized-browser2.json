@@ -1,0 +1,934 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "bootMs": 2345.65,
+  "initial": {
+    "screens": [
+      {
+        "id": "sl",
+        "active": true
+      },
+      {
+        "id": "sw",
+        "active": false
+      },
+      {
+        "id": "sd",
+        "active": false
+      },
+      {
+        "id": "ss",
+        "active": false
+      },
+      {
+        "id": "spf",
+        "active": false
+      },
+      {
+        "id": "sp",
+        "active": false
+      },
+      {
+        "id": "sx",
+        "active": false
+      },
+      {
+        "id": "sr",
+        "active": false
+      }
+    ],
+    "nav": [
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      },
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      },
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      },
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      }
+    ],
+    "nodes": 3374,
+    "active": "sl",
+    "perf": {
+      "bootAt": 899.0999999998603,
+      "screens": [],
+      "longTasks": 5,
+      "longTaskTime": 622,
+      "domNodes": 3374,
+      "heap": 11900000,
+      "lowPower": false
+    },
+    "render": {
+      "screens": {},
+      "visibleEvents": 1,
+      "duplicatePracticeRootsRemoved": 0,
+      "bootAt": 899.8999999999069,
+      "screenAverages": {},
+      "domNodes": 3374,
+      "activePractice": "",
+      "music": {
+        "currentId": null,
+        "minimized": false,
+        "playing": false,
+        "position": 0,
+        "volume": 0
+      }
+    },
+    "listeners": {
+      "added": 275,
+      "removed": 5,
+      "active": 270,
+      "byType": {
+        "DOMContentLoaded": 21,
+        "pageshow": 1,
+        "error": 1,
+        "visibilitychange": 4,
+        "selectionchange": 2,
+        "pointerup": 2,
+        "touchend": 3,
+        "keyup": 1,
+        "touchstart": 6,
+        "pointerdown": 5,
+        "mousedown": 2,
+        "click": 127,
+        "keydown": 18,
+        "change": 16,
+        "hz:app-shell-mounted": 3,
+        "resize": 1,
+        "beforeunload": 1,
+        "wheel": 1,
+        "scroll": 4,
+        "play": 1,
+        "pause": 1,
+        "ended": 2,
+        "hz:screen-change": 6,
+        "hz:screen-visible": 4,
+        "hz:practice-activity-change": 4,
+        "popstate": 1,
+        "storage": 1,
+        "pagehide": 5,
+        "hz:reader-mounted": 2,
+        "input": 8,
+        "hz:lang-change": 3,
+        "hz:reader-first-paint": 1,
+        "hz:practice-audio-state": 1,
+        "hz:screen-ready": 1,
+        "focus": 1,
+        "__playwright_global_listeners_check__": 1,
+        "mousemove": 1,
+        "touchcancel": 1,
+        "mouseup": 1,
+        "auxclick": 1,
+        "dblclick": 1,
+        "contextmenu": 2,
+        "timeupdate": 1,
+        "loadedmetadata": 0,
+        "canplay": 0,
+        "canplaythrough": 0,
+        "progress": 0
+      }
+    },
+    "timers": {
+      "timeouts": 5,
+      "intervals": 2
+    },
+    "observers": {
+      "mutation": 11,
+      "resize": 0,
+      "intersection": 0
+    }
+  },
+  "stress": {
+    "ids": [
+      "sl",
+      "sw",
+      "sx",
+      "sd",
+      "sp",
+      "spf",
+      "ss"
+    ],
+    "before": {
+      "listeners": 270,
+      "timeouts": 5,
+      "intervals": 2,
+      "nodes": 3374,
+      "heap": 11900000
+    },
+    "after": {
+      "listeners": 318,
+      "timeouts": 2,
+      "intervals": 2,
+      "nodes": 3485,
+      "heap": 11900000,
+      "active": "ss",
+      "stacks": [
+        [
+          "click at enhanceSelect (https://hanzi.local/js/visual-refresh.js:79:8)",
+          5
+        ],
+        [
+          "click at enhanceSelect (https://hanzi.local/js/visual-refresh.js:85:11)",
+          5
+        ],
+        [
+          "keydown at enhanceSelect (https://hanzi.local/js/visual-refresh.js:107:9)",
+          5
+        ],
+        [
+          "change at enhanceSelect (https://hanzi.local/js/visual-refresh.js:108:10)",
+          5
+        ],
+        [
+          "click at installPracticeHub (https://hanzi.local/js/learning-engine.mjs:303:102)",
+          1
+        ],
+        [
+          "click at installPracticeHub (https://hanzi.local/js/learning-engine.mjs:305:83)",
+          1
+        ],
+        [
+          "click at installPracticeHub (https://hanzi.local/js/learning-engine.mjs:307:8)",
+          1
+        ],
+        [
+          "keydown at installPracticeHub (https://hanzi.local/js/learning-engine.mjs:308:8)",
+          1
+        ],
+        [
+          "keydown at patchProfileAvatar (https://hanzi.local/js/learning-engine.mjs:539:71)",
+          1
+        ],
+        [
+          "click at installCard (https://hanzi.local/js/practice-engine.mjs:421:30)",
+          1
+        ],
+        [
+          "hz:screen-ready at setupUI (https://hanzi.local/js/manualSearch.mjs:206:12)",
+          1
+        ],
+        [
+          "orientationchange at setupUI (https://hanzi.local/js/manualSearch.mjs:1306:10)",
+          1
+        ],
+        [
+          "pointerdown at setupUI (https://hanzi.local/js/manualSearch.mjs:1342:10)",
+          1
+        ],
+        [
+          "pointermove at setupUI (https://hanzi.local/js/manualSearch.mjs:1343:10)",
+          1
+        ],
+        [
+          "pointerup at setupUI (https://hanzi.local/js/manualSearch.mjs:1344:10)",
+          1
+        ],
+        [
+          "pointercancel at setupUI (https://hanzi.local/js/manualSearch.mjs:1345:10)",
+          1
+        ],
+        [
+          "touchstart at setupUI (https://hanzi.local/js/manualSearch.mjs:1346:10)",
+          1
+        ],
+        [
+          "touchmove at setupUI (https://hanzi.local/js/manualSearch.mjs:1347:10)",
+          1
+        ],
+        [
+          "touchend at setupUI (https://hanzi.local/js/manualSearch.mjs:1348:10)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1351:11)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1354:10)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1357:12)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1360:11)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1363:12)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1366:14)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1379:13)",
+          1
+        ],
+        [
+          "input at setupUI (https://hanzi.local/js/manualSearch.mjs:1385:17)",
+          1
+        ],
+        [
+          "pointerdown at setupUI (https://hanzi.local/js/manualSearch.mjs:1403:17)",
+          1
+        ],
+        [
+          "keydown at setupUI (https://hanzi.local/js/manualSearch.mjs:1404:17)",
+          1
+        ],
+        [
+          "click at setupUI (https://hanzi.local/js/manualSearch.mjs:1431:17)",
+          1
+        ]
+      ]
+    }
+  },
+  "practice": {
+    "cards": [
+      {
+        "id": "hzp-writing",
+        "text": "Hanzi writingCoordination and visual memory"
+      },
+      {
+        "id": "hzp-game",
+        "text": "Identify the tone\n\nNatural audio · recognition"
+      },
+      {
+        "id": "hzp-tone-sequence",
+        "text": "Tone sequence\n\nRebuild the order of the tones you heard"
+      },
+      {
+        "id": "hzp-minimal-pairs",
+        "text": "Tone minimal pairs\n\nCompare very similar pronunciations"
+      },
+      {
+        "id": "hzp-music",
+        "text": "Music · GuzhengListen to traditional Chinese strings"
+      }
+    ],
+    "tabs": [
+      {
+        "key": "production",
+        "text": "Writing",
+        "selected": "false"
+      },
+      {
+        "key": "listening",
+        "text": "Tones",
+        "selected": "true"
+      },
+      {
+        "key": "leisure",
+        "text": "Leisure",
+        "selected": "false"
+      }
+    ],
+    "roots": 0
+  },
+  "final": {
+    "listeners": 318,
+    "timeouts": 2,
+    "intervals": 2,
+    "nodes": 3485,
+    "heap": 11900000,
+    "perf": {
+      "bootAt": 899.0999999998603,
+      "screens": [
+        {
+          "id": "sw",
+          "ms": 4,
+          "at": 1783882292425
+        },
+        {
+          "id": "sx",
+          "ms": 31.8,
+          "at": 1783882292494
+        },
+        {
+          "id": "sd",
+          "ms": 1.4,
+          "at": 1783882292517
+        },
+        {
+          "id": "sp",
+          "ms": 1.4,
+          "at": 1783882292613
+        },
+        {
+          "id": "spf",
+          "ms": 21.9,
+          "at": 1783882292676
+        },
+        {
+          "id": "ss",
+          "ms": 7,
+          "at": 1783882292719
+        },
+        {
+          "id": "sl",
+          "ms": 1.6,
+          "at": 1783882292757
+        },
+        {
+          "id": "sw",
+          "ms": 24.3,
+          "at": 1783882292823
+        },
+        {
+          "id": "sx",
+          "ms": 18.2,
+          "at": 1783882292858
+        },
+        {
+          "id": "sd",
+          "ms": 7.2,
+          "at": 1783882292890
+        },
+        {
+          "id": "sp",
+          "ms": 1.1,
+          "at": 1783882292939
+        },
+        {
+          "id": "spf",
+          "ms": 14.5,
+          "at": 1783882292992
+        },
+        {
+          "id": "ss",
+          "ms": 20,
+          "at": 1783882293038
+        },
+        {
+          "id": "sl",
+          "ms": 19.2,
+          "at": 1783882293081
+        },
+        {
+          "id": "sw",
+          "ms": 13.3,
+          "at": 1783882293115
+        },
+        {
+          "id": "sx",
+          "ms": 4.6,
+          "at": 1783882293146
+        },
+        {
+          "id": "sd",
+          "ms": 5.5,
+          "at": 1783882293190
+        },
+        {
+          "id": "sp",
+          "ms": 1.5,
+          "at": 1783882293235
+        },
+        {
+          "id": "spf",
+          "ms": 17.8,
+          "at": 1783882293292
+        },
+        {
+          "id": "ss",
+          "ms": 26.8,
+          "at": 1783882293343
+        },
+        {
+          "id": "sl",
+          "ms": 12.9,
+          "at": 1783882293381
+        },
+        {
+          "id": "sw",
+          "ms": 32,
+          "at": 1783882293446
+        },
+        {
+          "id": "sx",
+          "ms": 29.4,
+          "at": 1783882293487
+        },
+        {
+          "id": "sd",
+          "ms": 24.2,
+          "at": 1783882293523
+        },
+        {
+          "id": "sp",
+          "ms": 0.8,
+          "at": 1783882293558
+        },
+        {
+          "id": "spf",
+          "ms": 25.1,
+          "at": 1783882293625
+        },
+        {
+          "id": "ss",
+          "ms": 12.8,
+          "at": 1783882293654
+        },
+        {
+          "id": "sl",
+          "ms": 30.6,
+          "at": 1783882293715
+        },
+        {
+          "id": "sw",
+          "ms": 25.1,
+          "at": 1783882293750
+        },
+        {
+          "id": "sx",
+          "ms": 16.6,
+          "at": 1783882293783
+        },
+        {
+          "id": "sd",
+          "ms": 7.6,
+          "at": 1783882293816
+        },
+        {
+          "id": "sp",
+          "ms": 26.6,
+          "at": 1783882293876
+        },
+        {
+          "id": "spf",
+          "ms": 23.5,
+          "at": 1783882293915
+        },
+        {
+          "id": "ss",
+          "ms": 33.4,
+          "at": 1783882293965
+        },
+        {
+          "id": "sl",
+          "ms": 36.1,
+          "at": 1783882294012
+        },
+        {
+          "id": "sw",
+          "ms": 30,
+          "at": 1783882294048
+        },
+        {
+          "id": "sx",
+          "ms": 25.4,
+          "at": 1783882294085
+        },
+        {
+          "id": "sd",
+          "ms": 21.5,
+          "at": 1783882294124
+        },
+        {
+          "id": "sp",
+          "ms": 1.5,
+          "at": 1783882294161
+        },
+        {
+          "id": "spf",
+          "ms": 23.7,
+          "at": 1783882294226
+        },
+        {
+          "id": "ss",
+          "ms": 35.4,
+          "at": 1783882294286
+        },
+        {
+          "id": "sl",
+          "ms": 0.9,
+          "at": 1783882294295
+        },
+        {
+          "id": "sw",
+          "ms": 30.4,
+          "at": 1783882294368
+        },
+        {
+          "id": "sx",
+          "ms": 22.4,
+          "at": 1783882294402
+        },
+        {
+          "id": "sd",
+          "ms": 17.6,
+          "at": 1783882294440
+        },
+        {
+          "id": "sp",
+          "ms": 1.7,
+          "at": 1783882294493
+        },
+        {
+          "id": "spf",
+          "ms": 27.5,
+          "at": 1783882294565
+        },
+        {
+          "id": "ss",
+          "ms": 6.4,
+          "at": 1783882294588
+        },
+        {
+          "id": "sl",
+          "ms": 27.4,
+          "at": 1783882294655
+        },
+        {
+          "id": "sw",
+          "ms": 20.9,
+          "at": 1783882294691
+        },
+        {
+          "id": "sx",
+          "ms": 18.9,
+          "at": 1783882294729
+        },
+        {
+          "id": "sd",
+          "ms": 12.5,
+          "at": 1783882294767
+        },
+        {
+          "id": "sp",
+          "ms": 0.9,
+          "at": 1783882294827
+        },
+        {
+          "id": "spf",
+          "ms": 18.9,
+          "at": 1783882294893
+        },
+        {
+          "id": "ss",
+          "ms": 27.6,
+          "at": 1783882294946
+        },
+        {
+          "id": "sl",
+          "ms": 28.6,
+          "at": 1783882294994
+        },
+        {
+          "id": "sw",
+          "ms": 26.7,
+          "at": 1783882295033
+        },
+        {
+          "id": "sx",
+          "ms": 21.7,
+          "at": 1783882295069
+        },
+        {
+          "id": "sd",
+          "ms": 17.4,
+          "at": 1783882295108
+        },
+        {
+          "id": "sp",
+          "ms": 1,
+          "at": 1783882295169
+        },
+        {
+          "id": "spf",
+          "ms": 29.1,
+          "at": 1783882295239
+        },
+        {
+          "id": "ss",
+          "ms": 11.7,
+          "at": 1783882295264
+        },
+        {
+          "id": "sl",
+          "ms": 1,
+          "at": 1783882295303
+        },
+        {
+          "id": "sw",
+          "ms": 26.4,
+          "at": 1783882295371
+        },
+        {
+          "id": "sx",
+          "ms": 22.2,
+          "at": 1783882295412
+        },
+        {
+          "id": "sd",
+          "ms": 21,
+          "at": 1783882295452
+        },
+        {
+          "id": "sp",
+          "ms": 0.8,
+          "at": 1783882295481
+        },
+        {
+          "id": "spf",
+          "ms": 35.6,
+          "at": 1783882295557
+        },
+        {
+          "id": "ss",
+          "ms": 8.4,
+          "at": 1783882295575
+        },
+        {
+          "id": "sl",
+          "ms": 1.2,
+          "at": 1783882295611
+        },
+        {
+          "id": "sw",
+          "ms": 37.2,
+          "at": 1783882295688
+        },
+        {
+          "id": "sx",
+          "ms": 28.8,
+          "at": 1783882295721
+        },
+        {
+          "id": "sd",
+          "ms": 12.7,
+          "at": 1783882295805
+        },
+        {
+          "id": "sp",
+          "ms": 0.8,
+          "at": 1783882295838
+        },
+        {
+          "id": "spf",
+          "ms": 21.4,
+          "at": 1783882295908
+        },
+        {
+          "id": "ss",
+          "ms": 12.7,
+          "at": 1783882295944
+        },
+        {
+          "id": "sl",
+          "ms": 0.8,
+          "at": 1783882295984
+        },
+        {
+          "id": "sw",
+          "ms": 28.7,
+          "at": 1783882296056
+        },
+        {
+          "id": "sx",
+          "ms": 24.2,
+          "at": 1783882296096
+        },
+        {
+          "id": "sd",
+          "ms": 18.5,
+          "at": 1783882296139
+        },
+        {
+          "id": "sp",
+          "ms": 0.9,
+          "at": 1783882296179
+        },
+        {
+          "id": "spf",
+          "ms": 29.9,
+          "at": 1783882296252
+        },
+        {
+          "id": "ss",
+          "ms": 45.7,
+          "at": 1783882296310
+        },
+        {
+          "id": "sp",
+          "ms": 1.1,
+          "at": 1783882296927
+        }
+      ],
+      "longTasks": 9,
+      "longTaskTime": 858,
+      "domNodes": 3485,
+      "heap": 11900000,
+      "lowPower": false
+    },
+    "render": {
+      "screens": {
+        "sw": [
+          39.6
+        ],
+        "sp": [
+          28.6,
+          37,
+          49.6
+        ],
+        "sx": [
+          80
+        ],
+        "ss": [
+          60
+        ]
+      },
+      "visibleEvents": 8,
+      "duplicatePracticeRootsRemoved": 0,
+      "bootAt": 899.8999999999069,
+      "screenAverages": {
+        "sw": 39.6,
+        "sp": 38.4,
+        "sx": 80,
+        "ss": 60
+      },
+      "domNodes": 3485,
+      "activePractice": "",
+      "music": {
+        "currentId": null,
+        "minimized": false,
+        "playing": false,
+        "position": 0,
+        "volume": 0
+      }
+    }
+  },
+  "errors": [
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED"
+  ],
+  "blockedRequests": [
+    "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;500&display=swap",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp"
+  ]
+}

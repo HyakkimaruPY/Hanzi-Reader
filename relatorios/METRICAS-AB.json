@@ -1,0 +1,107 @@
+{
+  "metricas": {
+    "metodologia": "Uma execução comparável em Chromium headless 390x844, com rede externa bloqueada e o mesmo roteiro de 12 ciclos pelas telas primárias.",
+    "baseline": {
+      "boot_ms": 2352.5,
+      "listeners_iniciais": 328,
+      "listeners_finais": 428,
+      "crescimento_listeners": 100,
+      "nos_iniciais": 3370,
+      "nos_finais": 3468,
+      "erros_nao_tratados": 2,
+      "long_tasks": 7,
+      "long_task_ms": 818
+    },
+    "otimizada": {
+      "boot_ms": 2345.65,
+      "listeners_iniciais": 270,
+      "listeners_finais": 318,
+      "crescimento_listeners": 48,
+      "nos_iniciais": 3374,
+      "nos_finais": 3485,
+      "erros_nao_tratados": 0,
+      "long_tasks": 9,
+      "long_task_ms": 858
+    },
+    "variacao_percentual": {
+      "boot_ms": -0.3,
+      "listeners_iniciais": -17.7,
+      "listeners_finais": -25.7,
+      "crescimento_listeners": -52.0,
+      "nos_iniciais": 0.1,
+      "nos_finais": 0.5
+    }
+  },
+  "responsividade": [
+    {
+      "active": "tone-minimal-pairs",
+      "rootCount": 1,
+      "options": 2,
+      "documentOverflow": false,
+      "cardOverflow": false,
+      "gameScrollable": true,
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "errors": []
+    },
+    {
+      "active": "tone-minimal-pairs",
+      "rootCount": 1,
+      "options": 2,
+      "documentOverflow": false,
+      "cardOverflow": false,
+      "gameScrollable": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "active": "tone-minimal-pairs",
+      "rootCount": 1,
+      "options": 2,
+      "documentOverflow": false,
+      "cardOverflow": false,
+      "gameScrollable": true,
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "errors": []
+    },
+    {
+      "active": "tone-minimal-pairs",
+      "rootCount": 1,
+      "options": 2,
+      "documentOverflow": false,
+      "cardOverflow": false,
+      "gameScrollable": true,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "errors": []
+    }
+  ],
+  "npm_audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 1,
+      "dev": 0,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 0
+    }
+  }
+}

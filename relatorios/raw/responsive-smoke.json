@@ -1,0 +1,54 @@
+[
+  {
+    "active": "tone-minimal-pairs",
+    "rootCount": 1,
+    "options": 2,
+    "documentOverflow": false,
+    "cardOverflow": false,
+    "gameScrollable": true,
+    "viewport": {
+      "width": 320,
+      "height": 700
+    },
+    "errors": []
+  },
+  {
+    "active": "tone-minimal-pairs",
+    "rootCount": 1,
+    "options": 2,
+    "documentOverflow": false,
+    "cardOverflow": false,
+    "gameScrollable": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": []
+  },
+  {
+    "active": "tone-minimal-pairs",
+    "rootCount": 1,
+    "options": 2,
+    "documentOverflow": false,
+    "cardOverflow": false,
+    "gameScrollable": true,
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "errors": []
+  },
+  {
+    "active": "tone-minimal-pairs",
+    "rootCount": 1,
+    "options": 2,
+    "documentOverflow": false,
+    "cardOverflow": false,
+    "gameScrollable": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": []
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "pinyin": {
+    "state": "ready",
+    "fn": "nǐ hǎo",
+    "attrs": [
+      "ní",
+      "hǎo",
+      "fàng",
+      "xīn"
+    ],
+    "generated": [
+      "\"ní\"",
+      "\"hǎo\"",
+      "\"fàng\"",
+      "\"xīn\""
+    ],
+    "visible": true
+  },
+  "translations": {
+    "pt": {
+      "target": {
+        "ui": "pt",
+        "tatoeba": "por",
+        "google": "pt-BR",
+        "memory": "pt-BR"
+      },
+      "translation": "Pode ficar tranquilo.",
+      "lang": "por"
+    },
+    "en": {
+      "target": {
+        "ui": "en",
+        "tatoeba": "eng",
+        "google": "en",
+        "memory": "en"
+      },
+      "translation": "You can rest assured.",
+      "lang": "eng"
+    },
+    "es": {
+      "target": {
+        "ui": "es",
+        "tatoeba": "spa",
+        "google": "es",
+        "memory": "es"
+      },
+      "translation": "Puedes estar tranquilo.",
+      "lang": "spa"
+    }
+  },
+  "visual": {
+    "androidClass": true,
+    "before": "hidden",
+    "opened": "visible",
+    "contentVisibility": "visible"
+  },
+  "apiCalls": [
+    {
+      "target": "por",
+      "url": "https://hanzi.local/api/tatoeba?q=%E6%94%BE%E5%BF%83&limit=2&to=por"
+    },
+    {
+      "target": "eng",
+      "url": "https://hanzi.local/api/tatoeba?q=%E6%94%BE%E5%BF%83&limit=2&to=eng"
+    },
+    {
+      "target": "spa",
+      "url": "https://hanzi.local/api/tatoeba?q=%E6%94%BE%E5%BF%83&limit=2&to=spa"
+    }
+  ],
+  "errors": [
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED"
+  ]
+}

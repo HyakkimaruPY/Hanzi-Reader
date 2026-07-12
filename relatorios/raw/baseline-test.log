@@ -1,0 +1,198 @@
+
+> hanzi-reader-local-source-tts-api@1.3.0 test
+> npm run check:syntax && npm run validate && npm run test:learning && npm run test:scoring && npm run test:audio && npm run test:ui && npm run test:refinement && npm run test:stability && npm run test:api
+
+
+> hanzi-reader-local-source-tts-api@1.3.0 check:syntax
+> node --check js/script.mjs && node --check js/source-adapter.mjs && node --check js/voice-bridge.mjs && node --check js/manualSearch.mjs && node --check js/manualSearchCore.mjs && node --check js/visual-refresh.js && node --check js/learning-core.mjs && node --check js/learning-engine.mjs && node --check js/hanzi-writing.mjs && node --check js/hanzi-scoring-config.mjs && node --check js/practice-ui.mjs && node --check js/practice-audio-service.mjs && node --check js/ui-lifecycle.mjs && node --check js/music-player.mjs && node --check js/performance-engine.mjs && node --check api/tts-edge.js && node --check api/tatoeba.js
+
+
+> hanzi-reader-local-source-tts-api@1.3.0 validate
+> node scripts/validate-project.mjs && node scripts/validate-db.mjs && node scripts/validate-trad-simp-db.mjs
+
+✓ camada de identidade visual carregada por último
+✓ sequência diária persistente usa o fuso de Brasília
+✓ selects nativos possuem camada customizada sincronizada
+✓ módulo local de prática de escrita presente
+✓ novo SVG vetorial aplicado ao splash e favicon
+✓ motor de aprendizagem e sua camada visual estão carregados
+✓ sequência diária usa pilha centralizada responsiva
+✓ foto do perfil controla o estado visual da câmera
+✓ Música integrada à categoria Lazer, sem item isolado no rodapé
+✓ Sequência tonal reutiliza camada central de áudio
+✓ camada central de áudio possui fila, seleção e cancelamento
+✓ leitura contínua usa segmentação linguística e pré-buffer
+✓ progresso adaptativo e revisão espaçada presentes
+✓ Open Graph e Twitter Cards configurados
+✓ modal central de Música e controles próprios presentes
+✓ boot visual bloqueia o scaffold legado
+✓ sinal de aplicação pronta presente
+✓ PDF.js é carregado apenas sob demanda
+✓ pinyin externo é carregado sob demanda com orçamento curto
+✓ cliente TTS aponta para /api/tts-edge
+✓ frases usam ponte same-origin e API Tatoeba v1 sem filtro restritivo
+✓ source adapter sem observer global de DOM
+✓ troca para Fontes é protegida contra conteúdo legado
+✓ manifesto de sources possui cache de requisição concorrente
+✓ pré-carregamento do jogo de tons está limitado ao desafio atual
+✓ 20 referências locais do HTML existem
+✓ 120 fontes locais referenciam arquivos existentes
+✓ arquivos obrigatórios verificados
+
+Projeto estruturalmente válido.
+✓ db: 21131 entradas HSK e 416 padrões gramaticais
+✓ trad-simp: 20949 frases e 4219 caracteres
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:learning
+> node scripts/test-learning-core.mjs
+
+✓ learning-core: segmentação, adaptação e revisão espaçada
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:scoring
+> node scripts/test-hanzi-scoring.mjs
+
+{
+  "veryClose": {
+    "score": 98,
+    "parts": {
+      "order": 100,
+      "count": 100,
+      "direction": 95,
+      "shape": 100,
+      "position": 100,
+      "proportion": 89
+    },
+    "recognized": true
+  },
+  "partial": {
+    "score": 49,
+    "parts": {
+      "order": 50,
+      "count": 50,
+      "direction": 80,
+      "shape": 79,
+      "position": 36,
+      "proportion": 27
+    },
+    "recognized": false
+  },
+  "wrongOrder": {
+    "score": 56,
+    "parts": {
+      "order": 0,
+      "count": 100,
+      "direction": 72,
+      "shape": 80,
+      "position": 100,
+      "proportion": 89
+    },
+    "recognized": false
+  },
+  "wrongCount": {
+    "score": 71,
+    "parts": {
+      "order": 67,
+      "count": 67,
+      "direction": 82,
+      "shape": 87,
+      "position": 100,
+      "proportion": 73
+    },
+    "recognized": true
+  },
+  "veryFar": {
+    "score": 21,
+    "parts": {
+      "order": 11,
+      "count": 50,
+      "direction": 11,
+      "shape": 56,
+      "position": 23,
+      "proportion": 30
+    },
+    "recognized": false
+  }
+}
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:audio
+> node scripts/test-practice-audio.mjs
+
+{
+  "quiet": {
+    "rms": 0.011741816568150643,
+    "peak": 0.017999999225139618,
+    "gatedRms": 0.011741816568150643,
+    "noiseFloor": 0.009066842625477406,
+    "snrDb": 2.2455842764023597,
+    "usefulRatio": 0,
+    "clipRatio": 0,
+    "score": 0.0035507253302087547,
+    "gain": 3.2
+  },
+  "clear": {
+    "rms": 0.11741816575325387,
+    "peak": 0.18000000715255737,
+    "gatedRms": 0.11741816575325387,
+    "noiseFloor": 0.09066842621442428,
+    "snrDb": 2.2455842855752475,
+    "usefulRatio": 0,
+    "clipRatio": 0,
+    "score": 0.03550725332378397,
+    "gain": 0.894
+  },
+  "clipped": {
+    "rms": 0.6453328845489386,
+    "peak": 1,
+    "gatedRms": 0.6453328845489386,
+    "noiseFloor": 0.5186618317321084,
+    "snrDb": 1.897990134906644,
+    "usefulRatio": 0,
+    "clipRatio": 0.05266666666666667,
+    "score": 0.10733176535817945,
+    "gain": 0.72
+  }
+}
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:ui
+> node scripts/test-ui-refinement.mjs
+
+✓ ui-refinement: Lazer, Guzheng, player, perfil, leitor e metadados sociais
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:refinement
+> node scripts/test-refinement-v52.mjs
+
+Refinement v5.2 checks: OK
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:stability
+> node scripts/test-stability.mjs
+
+Render and lifecycle stability checks: OK
+
+> hanzi-reader-local-source-tts-api@1.3.0 test:api
+> node scripts/test-tts-api.cjs && node scripts/test-tatoeba-api.cjs
+
+✓ API TTS: health, CORS e validação de entrada aprovados
+✓ API de frases: consulta v1, normalização, CORS e validação aprovados
+	Command being timed: "npm test"
+	User time (seconds): 2.65
+	System time (seconds): 1.19
+	Percent of CPU this job got: 111%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 145440
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 0
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

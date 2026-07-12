@@ -34,16 +34,16 @@ function flatten(value) {
   return Array.isArray(value) ? value.flat(Infinity) : [];
 }
 
-function translationRank(entry) {
-  return entry?.lang === 'por' ? 0 : entry?.lang === 'eng' ? 1 : 2;
+function targetLanguage(value) {
+  const lang = String(value || '').toLowerCase();
+  return lang === 'por' || lang === 'spa' || lang === 'eng' ? lang : 'eng';
 }
 
-function normalizeRows(payload) {
+function normalizeRows(payload, target) {
   const input = Array.isArray(payload?.data) ? payload.data : [];
   return input.map(row => {
     const translations = flatten(row?.translations)
-      .filter(entry => entry && entry.text && !entry.is_unapproved)
-      .sort((a, b) => translationRank(a) - translationRank(b));
+      .filter(entry => entry && entry.text && !entry.is_unapproved && String(entry.lang || '').toLowerCase() === target);
     const unique = new Set();
     return {
       id: row?.id ?? null,
@@ -97,10 +97,11 @@ module.exports = async function handler(req, res) {
   const query = cleanQuery(readQuery(req, 'q'));
   if (!query) return json(res, 400, { ok: false, error: 'Informe um termo para a busca.' });
   const limit = toLimit(readQuery(req, 'limit'));
+  const target = targetLanguage(readQuery(req, 'to'));
   try {
     const payload = await requestUpstream(query, limit);
     res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=900');
-    return json(res, 200, { ok: true, data: normalizeRows(payload) });
+    return json(res, 200, { ok: true, target, data: normalizeRows(payload, target) });
   } catch (error) {
     return json(res, error.status || 502, { ok: false, data: [], error: 'A fonte de frases está indisponível no momento.' });
   }

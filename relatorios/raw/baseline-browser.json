@@ -1,0 +1,805 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "bootMs": 2352.5,
+  "initial": {
+    "screens": [
+      {
+        "id": "sl",
+        "active": true
+      },
+      {
+        "id": "sw",
+        "active": false
+      },
+      {
+        "id": "sd",
+        "active": false
+      },
+      {
+        "id": "ss",
+        "active": false
+      },
+      {
+        "id": "spf",
+        "active": false
+      },
+      {
+        "id": "sp",
+        "active": false
+      },
+      {
+        "id": "sx",
+        "active": false
+      },
+      {
+        "id": "sr",
+        "active": false
+      }
+    ],
+    "nav": [
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      },
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      },
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      },
+      {
+        "text": "Leitura",
+        "tab": "sl",
+        "onclick": ""
+      },
+      {
+        "text": "Flash Cards",
+        "tab": "sw",
+        "onclick": ""
+      },
+      {
+        "text": "Dicionário",
+        "tab": "sx",
+        "onclick": ""
+      },
+      {
+        "text": "Prática",
+        "tab": "practice",
+        "onclick": ""
+      },
+      {
+        "text": "Meu Perfil",
+        "tab": "profile",
+        "onclick": ""
+      }
+    ],
+    "nodes": 3370,
+    "active": "sl",
+    "perf": {
+      "bootAt": 688.5,
+      "screens": [],
+      "longTasks": 5,
+      "longTaskTime": 706,
+      "domNodes": 3370,
+      "heap": 10000000,
+      "lowPower": false
+    },
+    "render": {
+      "screens": {},
+      "visibleEvents": 1,
+      "duplicatePracticeRootsRemoved": 0,
+      "bootAt": 688.8000000000466,
+      "screenAverages": {},
+      "domNodes": 3370,
+      "activePractice": "",
+      "music": {
+        "currentId": null,
+        "minimized": false,
+        "playing": false,
+        "position": 0,
+        "volume": 0
+      }
+    },
+    "listeners": {
+      "added": 333,
+      "removed": 5,
+      "active": 328,
+      "byType": {
+        "DOMContentLoaded": 21,
+        "pageshow": 1,
+        "error": 1,
+        "visibilitychange": 4,
+        "selectionchange": 2,
+        "pointerup": 2,
+        "touchend": 3,
+        "keyup": 1,
+        "touchstart": 6,
+        "pointerdown": 5,
+        "mousedown": 2,
+        "click": 185,
+        "keydown": 25,
+        "change": 16,
+        "hz:app-shell-mounted": 3,
+        "resize": 1,
+        "beforeunload": 1,
+        "wheel": 1,
+        "scroll": 4,
+        "play": 1,
+        "pause": 1,
+        "ended": 2,
+        "hz:screen-change": 6,
+        "hz:screen-visible": 4,
+        "hz:practice-activity-change": 4,
+        "popstate": 1,
+        "storage": 1,
+        "hz:reader-mounted": 2,
+        "input": 8,
+        "hz:lang-change": 2,
+        "hz:reader-first-paint": 1,
+        "hz:screen-ready": 1,
+        "focus": 1,
+        "__playwright_global_listeners_check__": 1,
+        "mousemove": 1,
+        "touchcancel": 1,
+        "mouseup": 1,
+        "auxclick": 1,
+        "dblclick": 1,
+        "contextmenu": 2,
+        "timeupdate": 1,
+        "loadedmetadata": 0,
+        "canplay": 0,
+        "canplaythrough": 0,
+        "progress": 0
+      }
+    },
+    "timers": {
+      "timeouts": 5,
+      "intervals": 2
+    },
+    "observers": {
+      "mutation": 10,
+      "resize": 0,
+      "intersection": 0
+    }
+  },
+  "stress": {
+    "ids": [
+      "sl",
+      "sw",
+      "sx",
+      "sd",
+      "sp",
+      "spf",
+      "ss"
+    ],
+    "before": {
+      "listeners": 328,
+      "timeouts": 5,
+      "intervals": 2,
+      "nodes": 3370,
+      "heap": 10000000
+    },
+    "after": {
+      "listeners": 428,
+      "timeouts": 2,
+      "intervals": 2,
+      "nodes": 3468,
+      "heap": 10000000,
+      "active": "ss"
+    }
+  },
+  "practice": {
+    "cards": [
+      {
+        "id": "hzp-writing",
+        "text": "Hanzi writingCoordination and visual memory"
+      },
+      {
+        "id": "hzp-game",
+        "text": "Identify the tone\n\nNatural audio · recognition"
+      },
+      {
+        "id": "hzp-tone-sequence",
+        "text": "Tone sequence\n\nRebuild the order of the tones you heard"
+      },
+      {
+        "id": "hzp-music",
+        "text": "Music · GuzhengListen to traditional Chinese strings"
+      }
+    ],
+    "tabs": [
+      {
+        "key": "production",
+        "text": "Writing",
+        "selected": "false"
+      },
+      {
+        "key": "listening",
+        "text": "Tones",
+        "selected": "true"
+      },
+      {
+        "key": "leisure",
+        "text": "Leisure",
+        "selected": "false"
+      }
+    ],
+    "roots": 0
+  },
+  "final": {
+    "listeners": 428,
+    "timeouts": 2,
+    "intervals": 2,
+    "nodes": 3468,
+    "heap": 10000000,
+    "perf": {
+      "bootAt": 688.5,
+      "screens": [
+        {
+          "id": "sw",
+          "ms": 2.2,
+          "at": 1783881429419
+        },
+        {
+          "id": "sx",
+          "ms": 4.4,
+          "at": 1783881429461
+        },
+        {
+          "id": "sd",
+          "ms": 13.4,
+          "at": 1783881429511
+        },
+        {
+          "id": "sp",
+          "ms": 0.8,
+          "at": 1783881429583
+        },
+        {
+          "id": "spf",
+          "ms": 25.4,
+          "at": 1783881429649
+        },
+        {
+          "id": "ss",
+          "ms": 14.1,
+          "at": 1783881429695
+        },
+        {
+          "id": "sl",
+          "ms": 0.9,
+          "at": 1783881429728
+        },
+        {
+          "id": "sw",
+          "ms": 29.2,
+          "at": 1783881429797
+        },
+        {
+          "id": "sx",
+          "ms": 20.3,
+          "at": 1783881429829
+        },
+        {
+          "id": "sd",
+          "ms": 14.6,
+          "at": 1783881429864
+        },
+        {
+          "id": "sp",
+          "ms": 0.8,
+          "at": 1783881429919
+        },
+        {
+          "id": "spf",
+          "ms": 15.8,
+          "at": 1783881429975
+        },
+        {
+          "id": "ss",
+          "ms": 21.3,
+          "at": 1783881430021
+        },
+        {
+          "id": "sl",
+          "ms": 23.5,
+          "at": 1783881430064
+        },
+        {
+          "id": "sw",
+          "ms": 19.4,
+          "at": 1783881430099
+        },
+        {
+          "id": "sx",
+          "ms": 11.1,
+          "at": 1783881430131
+        },
+        {
+          "id": "sd",
+          "ms": 3.6,
+          "at": 1783881430164
+        },
+        {
+          "id": "sp",
+          "ms": 0.9,
+          "at": 1783881430207
+        },
+        {
+          "id": "spf",
+          "ms": 14.1,
+          "at": 1783881430260
+        },
+        {
+          "id": "ss",
+          "ms": 16.5,
+          "at": 1783881430301
+        },
+        {
+          "id": "sl",
+          "ms": 14.6,
+          "at": 1783881430341
+        },
+        {
+          "id": "sw",
+          "ms": 8.4,
+          "at": 1783881430375
+        },
+        {
+          "id": "sx",
+          "ms": 1.7,
+          "at": 1783881430409
+        },
+        {
+          "id": "sd",
+          "ms": 10.4,
+          "at": 1783881430458
+        },
+        {
+          "id": "sp",
+          "ms": 0.5,
+          "at": 1783881430497
+        },
+        {
+          "id": "spf",
+          "ms": 16.6,
+          "at": 1783881430554
+        },
+        {
+          "id": "ss",
+          "ms": 21.5,
+          "at": 1783881430597
+        },
+        {
+          "id": "sl",
+          "ms": 17.2,
+          "at": 1783881430635
+        },
+        {
+          "id": "sw",
+          "ms": 9.7,
+          "at": 1783881430667
+        },
+        {
+          "id": "sx",
+          "ms": 10.5,
+          "at": 1783881430707
+        },
+        {
+          "id": "sd",
+          "ms": 2,
+          "at": 1783881430740
+        },
+        {
+          "id": "sp",
+          "ms": 0.6,
+          "at": 1783881430789
+        },
+        {
+          "id": "spf",
+          "ms": 9.8,
+          "at": 1783881430848
+        },
+        {
+          "id": "ss",
+          "ms": 18.4,
+          "at": 1783881430896
+        },
+        {
+          "id": "sl",
+          "ms": 15,
+          "at": 1783881430933
+        },
+        {
+          "id": "sw",
+          "ms": 9.8,
+          "at": 1783881430967
+        },
+        {
+          "id": "sx",
+          "ms": 2.5,
+          "at": 1783881430999
+        },
+        {
+          "id": "sd",
+          "ms": 19.3,
+          "at": 1783881431056
+        },
+        {
+          "id": "sp",
+          "ms": 0.9,
+          "at": 1783881431085
+        },
+        {
+          "id": "spf",
+          "ms": 20.7,
+          "at": 1783881431146
+        },
+        {
+          "id": "ss",
+          "ms": 22.5,
+          "at": 1783881431189
+        },
+        {
+          "id": "sl",
+          "ms": 19.8,
+          "at": 1783881431228
+        },
+        {
+          "id": "sw",
+          "ms": 13.6,
+          "at": 1783881431261
+        },
+        {
+          "id": "sx",
+          "ms": 5.3,
+          "at": 1783881431293
+        },
+        {
+          "id": "sd",
+          "ms": 12.9,
+          "at": 1783881431341
+        },
+        {
+          "id": "sp",
+          "ms": 28.1,
+          "at": 1783881431396
+        },
+        {
+          "id": "spf",
+          "ms": 25.3,
+          "at": 1783881431434
+        },
+        {
+          "id": "ss",
+          "ms": 28.6,
+          "at": 1783881431477
+        },
+        {
+          "id": "sl",
+          "ms": 26.3,
+          "at": 1783881431515
+        },
+        {
+          "id": "sw",
+          "ms": 18.8,
+          "at": 1783881431547
+        },
+        {
+          "id": "sx",
+          "ms": 13.3,
+          "at": 1783881431581
+        },
+        {
+          "id": "sd",
+          "ms": 5.4,
+          "at": 1783881431614
+        },
+        {
+          "id": "sp",
+          "ms": 23.9,
+          "at": 1783881431673
+        },
+        {
+          "id": "spf",
+          "ms": 25,
+          "at": 1783881431714
+        },
+        {
+          "id": "ss",
+          "ms": 32.4,
+          "at": 1783881431760
+        },
+        {
+          "id": "sl",
+          "ms": 31.4,
+          "at": 1783881431801
+        },
+        {
+          "id": "sw",
+          "ms": 23.3,
+          "at": 1783881431833
+        },
+        {
+          "id": "sx",
+          "ms": 15.6,
+          "at": 1783881431865
+        },
+        {
+          "id": "sd",
+          "ms": 7.3,
+          "at": 1783881431896
+        },
+        {
+          "id": "sp",
+          "ms": 21.3,
+          "at": 1783881431951
+        },
+        {
+          "id": "spf",
+          "ms": 18.6,
+          "at": 1783881431988
+        },
+        {
+          "id": "ss",
+          "ms": 18.9,
+          "at": 1783881432029
+        },
+        {
+          "id": "sl",
+          "ms": 17.2,
+          "at": 1783881432069
+        },
+        {
+          "id": "sw",
+          "ms": 6.9,
+          "at": 1783881432102
+        },
+        {
+          "id": "sx",
+          "ms": 0.9,
+          "at": 1783881432135
+        },
+        {
+          "id": "sd",
+          "ms": 1.9,
+          "at": 1783881432192
+        },
+        {
+          "id": "sp",
+          "ms": 25.9,
+          "at": 1783881432256
+        },
+        {
+          "id": "spf",
+          "ms": 15.8,
+          "at": 1783881432285
+        },
+        {
+          "id": "ss",
+          "ms": 9.3,
+          "at": 1783881432317
+        },
+        {
+          "id": "sl",
+          "ms": 24.5,
+          "at": 1783881432375
+        },
+        {
+          "id": "sw",
+          "ms": 18.7,
+          "at": 1783881432410
+        },
+        {
+          "id": "sx",
+          "ms": 14.6,
+          "at": 1783881432445
+        },
+        {
+          "id": "sd",
+          "ms": 7.7,
+          "at": 1783881432479
+        },
+        {
+          "id": "sp",
+          "ms": 0.8,
+          "at": 1783881432561
+        },
+        {
+          "id": "spf",
+          "ms": 7.7,
+          "at": 1783881432608
+        },
+        {
+          "id": "ss",
+          "ms": 27.3,
+          "at": 1783881432668
+        },
+        {
+          "id": "sl",
+          "ms": 25.8,
+          "at": 1783881432708
+        },
+        {
+          "id": "sw",
+          "ms": 18.7,
+          "at": 1783881432741
+        },
+        {
+          "id": "sx",
+          "ms": 12.6,
+          "at": 1783881432776
+        },
+        {
+          "id": "sd",
+          "ms": 4.5,
+          "at": 1783881432809
+        },
+        {
+          "id": "sp",
+          "ms": 18.7,
+          "at": 1783881432863
+        },
+        {
+          "id": "spf",
+          "ms": 16,
+          "at": 1783881432900
+        },
+        {
+          "id": "ss",
+          "ms": 20,
+          "at": 1783881432943
+        },
+        {
+          "id": "sp",
+          "ms": 0.7,
+          "at": 1783881433572
+        }
+      ],
+      "longTasks": 7,
+      "longTaskTime": 818,
+      "domNodes": 3468,
+      "heap": 10000000,
+      "lowPower": false
+    },
+    "render": {
+      "screens": {
+        "sd": [
+          31.8,
+          77.8
+        ],
+        "sx": [
+          53
+        ],
+        "ss": [
+          68
+        ],
+        "sp": [
+          35.9
+        ]
+      },
+      "visibleEvents": 7,
+      "duplicatePracticeRootsRemoved": 0,
+      "bootAt": 688.8000000000466,
+      "screenAverages": {
+        "sd": 54.8,
+        "sx": 53,
+        "ss": 68,
+        "sp": 35.9
+      },
+      "domNodes": 3468,
+      "activePractice": "",
+      "music": {
+        "currentId": null,
+        "minimized": false,
+        "playing": false,
+        "position": 0,
+        "volume": 0
+      }
+    }
+  },
+  "errors": [
+    "console:Failed to load resource: net::ERR_FAILED",
+    "Failed to execute 'open' on 'IDBFactory': access to the Indexed Database API is denied in this context.",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "Cannot read properties of null (reading 'transaction')",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED",
+    "console:Failed to load resource: net::ERR_FAILED"
+  ],
+  "blockedRequests": [
+    "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;500&display=swap",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp",
+    "https://i.ibb.co/hJ8yxk58/mobile.webp"
+  ]
+}

@@ -57,19 +57,34 @@ function makeMemoryDb() {
     async delete(store, key) { table(store).delete(key); return true; },
     async add(store, value) { const t = table(store); const id = (t.size + 1) + ':' + Date.now(); t.set(id, { ...value, id }); return id; },
     async all(store, limit = 500) { return [...table(store).values()].slice(-limit); },
-    async count(store) { return table(store).size; }
+    async count(store) { return table(store).size; },
+    async putMany(store, rows = []) { for (const row of rows) table(store).set(row.key, row.value); return true; },
+    async deleteOldest(store, count = 1) { const t = table(store); let removed = 0; for (const key of t.keys()) { if (removed >= count) break; t.delete(key); removed++; } return removed; }
   };
 }
 
 /* ---------------- ContentDatabase (IndexedDB) ---------------- */
 const DB_NAME = 'hanzi-reader-store';
-const DB_VERSION = 1;
-const STORES = { kv: 'kv', sessions: 'sessions', dict: 'dictCache' };
+const DB_VERSION = 2;
+const STORES = { kv: 'kv', sessions: 'sessions', dict: 'dictCache', content: 'content', practice: 'practice', metadata: 'metadata' };
+const IDB_OPEN_TIMEOUT = 4000;
+const SESSION_RETENTION = 800;
 
 function openIdb() {
   return new Promise((resolve) => {
     let settled = false;
-    const done = v => { if (!settled) { settled = true; resolve(v); } };
+    let timer = 0;
+    const done = value => {
+      if (settled) {
+        // Se o timeout já liberou o boot e o banco abriu depois, feche a conexão
+        // tardia para não manter um handle órfão bloqueando upgrades futuros.
+        try { value?.close?.(); } catch {}
+        return;
+      }
+      settled = true;
+      clearTimeout(timer);
+      resolve(value);
+    };
     try {
       if (!('indexedDB' in window)) return done(null);
       const req = indexedDB.open(DB_NAME, DB_VERSION);
@@ -77,16 +92,23 @@ function openIdb() {
         const db = req.result;
         if (!db.objectStoreNames.contains(STORES.kv)) db.createObjectStore(STORES.kv);
         if (!db.objectStoreNames.contains(STORES.sessions)) {
-          const s = db.createObjectStore(STORES.sessions, { keyPath: 'id', autoIncrement: true });
-          s.createIndex('byType', 'type');
-          s.createIndex('byAt', 'at');
+          const sessionStore = db.createObjectStore(STORES.sessions, { keyPath: 'id', autoIncrement: true });
+          sessionStore.createIndex('byType', 'type');
+          sessionStore.createIndex('byAt', 'at');
         }
         if (!db.objectStoreNames.contains(STORES.dict)) db.createObjectStore(STORES.dict);
+        if (!db.objectStoreNames.contains(STORES.content)) db.createObjectStore(STORES.content);
+        if (!db.objectStoreNames.contains(STORES.practice)) db.createObjectStore(STORES.practice);
+        if (!db.objectStoreNames.contains(STORES.metadata)) db.createObjectStore(STORES.metadata);
       };
-      req.onsuccess = () => done(req.result);
+      req.onsuccess = () => {
+        const db = req.result;
+        db.onversionchange = () => { try { db.close(); } catch {} };
+        done(db);
+      };
       req.onerror = () => done(null);
       req.onblocked = () => done(null);
-      setTimeout(() => done(null), 4000); // nunca trave o boot esperando IDB
+      timer = setTimeout(() => done(null), IDB_OPEN_TIMEOUT); // nunca trave o boot esperando IDB
     } catch { done(null); }
   });
 }
@@ -121,7 +143,32 @@ function idbWrap(idb) {
         cur.onerror = () => resolve(out);
       } catch { resolve([]); }
     }),
-    count: (store) => tx(store, 'readonly', os => os.count()).catch(() => 0)
+    count: (store) => tx(store, 'readonly', os => os.count()).catch(() => 0),
+    putMany: (store, rows = []) => new Promise(resolve => {
+      if (!Array.isArray(rows) || !rows.length) return resolve(true);
+      try {
+        const transaction = idb.transaction(store, 'readwrite');
+        const objectStore = transaction.objectStore(store);
+        for (const row of rows) objectStore.put(row.value, row.key);
+        transaction.oncomplete = () => resolve(true);
+        transaction.onerror = transaction.onabort = () => resolve(false);
+      } catch { resolve(false); }
+    }),
+    deleteOldest: (store, count = 1) => new Promise(resolve => {
+      if (count <= 0) return resolve(0);
+      let removed = 0;
+      try {
+        const transaction = idb.transaction(store, 'readwrite');
+        const cursor = transaction.objectStore(store).openCursor();
+        cursor.onsuccess = () => {
+          const row = cursor.result;
+          if (!row || removed >= count) return;
+          row.delete(); removed++; row.continue();
+        };
+        transaction.oncomplete = () => resolve(removed);
+        transaction.onerror = transaction.onabort = () => resolve(removed);
+      } catch { resolve(removed); }
+    })
   };
 }
 
@@ -217,7 +264,12 @@ const ready = (async () => {
 async function saveSession(type, payload) {
   const { db } = await ready;
   const record = { type: String(type || 'generic'), at: Date.now(), ...payload };
-  try { return await db.add(STORES.sessions, record); } catch { return null; }
+  try {
+    const id = await db.add(STORES.sessions, record);
+    const count = await db.count(STORES.sessions);
+    if (count > SESSION_RETENTION) void db.deleteOldest(STORES.sessions, count - SESSION_RETENTION);
+    return id;
+  } catch { return null; }
 }
 async function listSessions(type, limit = 60) {
   const { db } = await ready;
@@ -248,6 +300,20 @@ async function kvGet(key) {
   return migrated;
 }
 async function kvPut(key, value) { const { db } = await ready; return db.put(STORES.kv, key, value); }
+async function storeGet(store, key, legacyKey = '') {
+  const { db } = await ready;
+  const value = await db.get(store, key);
+  if (value != null || !legacyKey) return value;
+  return kvGet(legacyKey);
+}
+async function storePut(store, key, value) { const { db } = await ready; return db.put(store, key, value); }
+async function storeDelete(store, key, legacyKey = '') {
+  const { db } = await ready;
+  const deleted = await db.delete(store, key);
+  if (legacyKey) await db.delete(STORES.kv, legacyKey);
+  return deleted;
+}
+async function storePutMany(store, rows = []) { const { db } = await ready; return db.putMany(store, rows); }
 
 /*
  * Leitura compatível: se um módulo antigo pedir uma chave migrada do
@@ -262,6 +328,23 @@ async function legacyRead(key) {
   return db.get(STORES.kv, 'ls:' + key);
 }
 
+const ContentRepository = Object.freeze({
+  get: key => storeGet(STORES.content, key, `content:${key}`),
+  put: (key, value) => storePut(STORES.content, key, value),
+  delete: key => storeDelete(STORES.content, key, `content:${key}`),
+  putMany: rows => storePutMany(STORES.content, rows)
+});
+const DictionaryCache = Object.freeze({ get: dictGet, put: dictPut });
+const PracticeRepository = Object.freeze({
+  saveSession,
+  listSessions,
+  getProgress: key => storeGet(STORES.practice, key, `practice:${key}`),
+  saveProgress: (key, value) => storePut(STORES.practice, key, value),
+  deleteProgress: key => storeDelete(STORES.practice, key, `practice:${key}`)
+});
+const StorageMigration = Object.freeze({ run: async () => (await ready).report, rememberDictionarySearch });
+const StorageFallback = Object.freeze({ createMemoryDatabase: makeMemoryDb });
+
 window.hzStore = {
   prefs: PreferencesStore,
   ready,
@@ -270,7 +353,10 @@ window.hzStore = {
   kvGet, kvPut,
   legacyRead,
   rememberDictionarySearch,
+  repositories: { ContentRepository, DictionaryCache, PracticeRepository },
+  migration: StorageMigration,
+  fallback: StorageFallback,
   async status() { const { db, report } = await ready; return { mode: db.memory ? 'memory-fallback' : 'indexeddb', migrated: report.migrated.length }; }
 };
 
-export { PreferencesStore, saveSession, listSessions, dictGet, dictPut, kvGet, kvPut, legacyRead, rememberDictionarySearch };
+export { PreferencesStore, ContentRepository, DictionaryCache, PracticeRepository, StorageMigration, StorageFallback, saveSession, listSessions, dictGet, dictPut, kvGet, kvPut, legacyRead, rememberDictionarySearch };

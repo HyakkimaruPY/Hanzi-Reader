@@ -35,7 +35,7 @@ function watchSettingsModals() {
     let wasOpen = modal.classList.contains('open');
     const observer = new MutationObserver(() => {
       const open = modal.classList.contains('open');
-      if (wasOpen && !open && SETTINGS_MODAL_IDS.has(modal.id)) resetTemporarySettings(modal);
+      if (wasOpen && !open && SETTINGS_MODAL_IDS.has(modal.id)) { resetTemporarySettings(modal); root.classList.remove('hz-settings-scrolling'); }
       if (!wasOpen && open) {
         modal.querySelector('.mscroll,#style-scroll')?.scrollTo({ top: 0, behavior: 'instant' });
         document.dispatchEvent(new CustomEvent('hz:modal-mounted', { detail: { id: modal.id } }));
@@ -49,16 +49,57 @@ function watchSettingsModals() {
 function bindSmoothScroller(scroller) {
   if (!scroller || scroller.dataset.hzSmoothBound) return;
   scroller.dataset.hzSmoothBound = '1';
-  let frame = 0, endTimer = 0;
-  scroller.addEventListener('scroll', () => {
-    if (!frame) frame = requestAnimationFrame(() => { frame = 0; root.classList.add('hz-settings-scrolling'); });
+  let endTimer = 0;
+  const activate = () => {
+    root.classList.add('hz-settings-scrolling');
     clearTimeout(endTimer);
-    endTimer = setTimeout(() => root.classList.remove('hz-settings-scrolling'), 110);
-  }, { passive: true });
+    endTimer = setTimeout(() => root.classList.remove('hz-settings-scrolling'), 170);
+  };
+  const deactivate = () => { clearTimeout(endTimer); root.classList.remove('hz-settings-scrolling'); };
+  // pointerdown/touchstart/wheel acontecem antes do primeiro frame de scroll:
+  // efeitos caros já ficam suspensos quando o conteúdo começa a se mover.
+  ['pointerdown', 'touchstart', 'wheel', 'scroll'].forEach(type => scroller.addEventListener(type, activate, { passive: true }));
+  if ('onscrollend' in scroller) scroller.addEventListener('scrollend', deactivate, { passive: true });
 }
 function bindSettingsScrollers() {
   bindSmoothScroller(document.querySelector('#ss .sc'));
   bindSmoothScroller(document.getElementById('style-scroll'));
+}
+
+let settingsWarmHandle = 0;
+function prewarmReaderSettings() {
+  const scroller = document.getElementById('style-scroll');
+  if (!scroller || settingsWarmHandle) return;
+  const run = () => {
+    settingsWarmHandle = 0;
+    if (!scroller.isConnected) return;
+    // Mede fora da interação do usuário e guarda uma altura intrínseca real
+    // para os blocos que usam content-visibility. Isso evita trabalho de
+    // layout no primeiro abrir e saltos ao rolar rapidamente.
+    root.classList.add('hz-settings-prewarming');
+    try {
+      for (const block of scroller.children) {
+        if (!(block instanceof HTMLElement)) continue;
+        const height = Math.ceil(block.getBoundingClientRect().height);
+        if (height > 0) block.style.setProperty('--hz-settings-block-size', `${height}px`);
+      }
+      void scroller.scrollHeight;
+      scroller.dataset.hzPrewarmed = '1';
+    } finally {
+      root.classList.remove('hz-settings-prewarming');
+    }
+  };
+  if ('requestIdleCallback' in window) settingsWarmHandle = requestIdleCallback(run, { timeout: 700 });
+  else settingsWarmHandle = setTimeout(run, 80);
+}
+function watchReaderSettingsContent() {
+  const scroller = document.getElementById('style-scroll');
+  if (!scroller || scroller.dataset.hzWarmObserved) return;
+  scroller.dataset.hzWarmObserved = '1';
+  const observer = new MutationObserver(() => prewarmReaderSettings());
+  observer.observe(scroller, { childList: true, subtree: true });
+  window.addEventListener('pagehide', () => observer.disconnect(), { once: true });
+  prewarmReaderSettings();
 }
 
 document.addEventListener('hz:screen-change', event => {
@@ -79,7 +120,7 @@ const valueObserver = new MutationObserver(records => {
 });
 
 function boot() {
-  watchSettingsModals(); bindSettingsScrollers(); fitNumericIndicators();
+  watchSettingsModals(); bindSettingsScrollers(); watchReaderSettingsContent(); fitNumericIndicators();
   valueObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
   root.classList.add('hz-lifecycle-ready');
 }

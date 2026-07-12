@@ -73,8 +73,13 @@ function enhanceSelect(select){
   Array.from(select.options).forEach((opt,i)=>{
     const b=document.createElement('button');b.type='button';b.className='hz-select-option';b.setAttribute('role','option');
     b.textContent=opt.textContent;b.disabled=opt.disabled;b.dataset.index=String(i);
-    b.addEventListener('click',e=>{e.stopPropagation();chooseOption(select,i);});
     list.appendChild(b);
+  });
+  // Delegação: um único listener por seletor, mesmo quando há dezenas de opções.
+  list.addEventListener('click',e=>{
+    const option=e.target.closest('.hz-select-option');
+    if(!option||!list.contains(option))return;
+    e.stopPropagation();chooseOption(select,Number(option.dataset.index));
   });
   select.parentNode.insertBefore(shell,select);shell.append(trigger,select,list);select.classList.add('hz-native-select');
   trigger.addEventListener('click',e=>{
@@ -98,7 +103,8 @@ function enhanceSelect(select){
       e.preventDefault();chooseOption(select,Number(document.activeElement.dataset.index));
     }
   };
-  shell.addEventListener('keydown',keyHandler);list.addEventListener('keydown',keyHandler);
+  // O evento do menu já propaga para o shell; registrar nos dois executava a ação duas vezes.
+  shell.addEventListener('keydown',keyHandler);
   select.addEventListener('change',()=>{
     setTimeout(()=>{
       if(select.id==='hz-lang-sel'){

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const read=file=>fs.readFileSync(new URL('../'+file,import.meta.url),'utf8');
+const index=read('index.html'), engine=read('js/practice-engine.mjs'), storage=read('js/storage-layer.mjs'), perf=read('js/performance-engine.mjs'), visual=read('js/visual-refresh.js'), main=read('js/script.mjs');
+for(const file of ['css/practice-engine.css','js/practice-engine.mjs','js/audio-coordination.mjs','js/navigation-controller.mjs']) assert.match(index,new RegExp(file.replaceAll('.','\\.')));
+assert.match(engine,/class PracticeSessionController/);assert.match(engine,/class PracticeActivityRegistry/);assert.match(engine,/tone-minimal-pairs/);
+assert.match(storage,/SESSION_RETENTION\s*=\s*800/);assert.match(storage,/ContentRepository/);assert.match(storage,/PracticeRepository/);
+assert.match(perf,/METRIC_RETENTION\s*=\s*120/);assert.match(perf,/SCREEN_SAMPLE_RETENTION\s*=\s*40/);
+assert.equal((visual.match(/shell\.addEventListener\('keydown',keyHandler\)/g)||[]).length,1);
+assert.equal((visual.match(/list\.addEventListener\('keydown',keyHandler\)/g)||[]).length,0);
+assert.match(main,/DB_MEMORY=new Map/);assert.match(main,/IndexedDB indisponível/);
+console.log('Architecture and retention checks: OK');
