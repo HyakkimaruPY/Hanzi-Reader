@@ -1,0 +1,566 @@
+{
+  "generatedAt": "2026-07-11",
+  "method": "Chromium headless with local resources inlined; 9,600-code-point synthetic Chinese reader stress text; mobile baseline/current plus desktop current. External requests stubbed.",
+  "comparison": {
+    "firstPaintImprovementPercent": 86.1,
+    "initialDomNodeReductionPercent": 92.5,
+    "selectionLatencyImprovementPercent": 94.6,
+    "maxLongTaskReductionPercent": 52.7
+  },
+  "cases": [
+    {
+      "label": "baseline-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "bootMs": 2033.1,
+      "ready": true,
+      "reader": {
+        "firstPaintMs": 1131.9,
+        "prepareCompleteMs": 1459.9,
+        "initial": {
+          "nodes": 20336,
+          "textChars": 9600,
+          "rawChars": 747,
+          "virtualSlots": 0,
+          "mounted": 0
+        },
+        "afterPrepare": {
+          "nodes": 20336,
+          "textChars": 9600,
+          "rawChars": 747,
+          "virtualSlots": 0,
+          "mounted": 0
+        },
+        "scrollSamples": [
+          {
+            "ratio": 0,
+            "scrollTop": 0,
+            "max": 98895,
+            "painted": true,
+            "sample": "持",
+            "chunkState": null,
+            "mounted": 0,
+            "nodes": 20336
+          },
+          {
+            "ratio": 0.25,
+            "scrollTop": 24724,
+            "max": 98895,
+            "painted": true,
+            "sample": "持续",
+            "chunkState": null,
+            "mounted": 0,
+            "nodes": 20336
+          },
+          {
+            "ratio": 0.5,
+            "scrollTop": 49448,
+            "max": 98895,
+            "painted": true,
+            "sample": "符",
+            "chunkState": null,
+            "mounted": 0,
+            "nodes": 20336
+          },
+          {
+            "ratio": 0.75,
+            "scrollTop": 74171,
+            "max": 98895,
+            "painted": true,
+            "sample": "是否",
+            "chunkState": null,
+            "mounted": 0,
+            "nodes": 20336
+          },
+          {
+            "ratio": 1,
+            "scrollTop": 98895,
+            "max": 98895,
+            "painted": true,
+            "sample": "持",
+            "chunkState": null,
+            "mounted": 0,
+            "nodes": 20336
+          }
+        ],
+        "allScrollSamplesPainted": true,
+        "selectionResponseMs": 208.4,
+        "selectionRawMatches": true,
+        "selectionSample": {
+          "ok": true,
+          "dom": "持续",
+          "raw": "持续",
+          "start": 6153,
+          "ci": "711"
+        },
+        "mutationsWhileSelectionActive": 0,
+        "readerLongTasks": [
+          {
+            "start": 2196.7999999998137,
+            "duration": 69
+          },
+          {
+            "start": 2266.2000000001863,
+            "duration": 113
+          },
+          {
+            "start": 2400.7000000001863,
+            "duration": 149
+          },
+          {
+            "start": 2550.2999999998137,
+            "duration": 198
+          },
+          {
+            "start": 2753.399999999907,
+            "duration": 106
+          },
+          {
+            "start": 2860.2999999998137,
+            "duration": 225
+          },
+          {
+            "start": 3146.2000000001863,
+            "duration": 140
+          },
+          {
+            "start": 4079.600000000093,
+            "duration": 268
+          },
+          {
+            "start": 4361.100000000093,
+            "duration": 205
+          },
+          {
+            "start": 4566.299999999814,
+            "duration": 300
+          },
+          {
+            "start": 4875.899999999907,
+            "duration": 215
+          },
+          {
+            "start": 5092,
+            "duration": 283
+          },
+          {
+            "start": 5388.100000000093,
+            "duration": 228
+          },
+          {
+            "start": 5619.200000000186,
+            "duration": 283
+          },
+          {
+            "start": 5911.700000000186,
+            "duration": 230
+          }
+        ],
+        "maxReaderLongTaskMs": 300
+      },
+      "navigation": [
+        {
+          "sid": "sl",
+          "count": 1,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sw",
+          "count": 1,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "ss",
+          "count": 1,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sd",
+          "count": 1,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sl",
+          "count": 1,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sw",
+          "count": 1,
+          "nodes": 0,
+          "active": true
+        }
+      ],
+      "lateNavigationMutationCount": 6,
+      "runtimeErrors": [
+        "promise:SecurityError: Failed to execute 'open' on 'IDBFactory': access to the Indexed Database API is denied in this context.",
+        "ReferenceError: T is not defined"
+      ],
+      "pageErrors": [
+        "Failed to execute 'open' on 'IDBFactory': access to the Indexed Database API is denied in this context.",
+        "T is not defined"
+      ],
+      "consoleWarnings": [
+        "warning: [h52] library treatment skipped: TypeError: Cannot read properties of null (reading 'transaction')\n    at <anonymous>:174:58\n    at new Promise (<anonymous>)\n    at dbtx (<anonymous>:174:23)\n    at dbAll (<anonymous>:175:17)\n    at h52MigrateStoredLibrary (<anonymous>:9268:23)",
+        "warning: v3.8 boot ReferenceError: v37Svg is not defined\n    at <anonymous>:4232:932\n    at Array.map (<anonymous>)\n    at <anonymous>:4232:326\n    at Array.map (<anonymous>)\n    at v38RenderDiscover (<anonymous>:4232:163)\n    at <anonymous>:3936:59"
+      ]
+    },
+    {
+      "label": "updated-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "bootMs": 2076.9,
+      "ready": true,
+      "reader": {
+        "firstPaintMs": 157.1,
+        "prepareCompleteMs": 839.6,
+        "initial": {
+          "nodes": 1528,
+          "textChars": 708,
+          "rawChars": 9600,
+          "virtualSlots": 40,
+          "mounted": 3
+        },
+        "afterPrepare": {
+          "nodes": 1528,
+          "textChars": 708,
+          "rawChars": 9600,
+          "virtualSlots": 40,
+          "mounted": 3
+        },
+        "scrollSamples": [
+          {
+            "ratio": 0,
+            "scrollTop": 0,
+            "max": 81156,
+            "painted": true,
+            "sample": "持",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 3,
+            "nodes": 1528
+          },
+          {
+            "ratio": 0.25,
+            "scrollTop": 21678,
+            "max": 83472,
+            "painted": true,
+            "sample": "我们",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 5,
+            "nodes": 2520
+          },
+          {
+            "ratio": 0.5,
+            "scrollTop": 42662,
+            "max": 85788,
+            "painted": true,
+            "sample": "。",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 5,
+            "nodes": 2520
+          },
+          {
+            "ratio": 0.75,
+            "scrollTop": 65267,
+            "max": 88103,
+            "painted": true,
+            "sample": "我们",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 5,
+            "nodes": 2520
+          },
+          {
+            "ratio": 1,
+            "scrollTop": 89492,
+            "max": 89493,
+            "painted": true,
+            "sample": "持",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 3,
+            "nodes": 1528
+          }
+        ],
+        "allScrollSamplesPainted": true,
+        "selectionResponseMs": 11.3,
+        "selectionRawMatches": true,
+        "selectionSample": {
+          "ok": true,
+          "dom": "持续",
+          "raw": "持续",
+          "start": 4347.100000000093,
+          "ci": "9552"
+        },
+        "mutationsWhileSelectionActive": 0,
+        "readerLongTasks": [
+          {
+            "start": 2271,
+            "duration": 142
+          },
+          {
+            "start": 3529.3000000002794,
+            "duration": 83
+          },
+          {
+            "start": 3612.9000000003725,
+            "duration": 64
+          },
+          {
+            "start": 3677.4000000003725,
+            "duration": 65
+          },
+          {
+            "start": 3758.100000000093,
+            "duration": 73
+          },
+          {
+            "start": 3831.9000000003725,
+            "duration": 61
+          },
+          {
+            "start": 3893.9000000003725,
+            "duration": 60
+          },
+          {
+            "start": 3965.3000000002794,
+            "duration": 79
+          },
+          {
+            "start": 4184.600000000093,
+            "duration": 53
+          }
+        ],
+        "maxReaderLongTaskMs": 142
+      },
+      "navigation": [
+        {
+          "sid": "sl",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sw",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "ss",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sd",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sl",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sw",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        }
+      ],
+      "lateNavigationMutationCount": 0,
+      "runtimeErrors": [],
+      "pageErrors": [],
+      "consoleWarnings": []
+    },
+    {
+      "label": "updated-desktop",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "bootMs": 2037.2,
+      "ready": true,
+      "reader": {
+        "firstPaintMs": 153.1,
+        "prepareCompleteMs": 823.3,
+        "initial": {
+          "nodes": 1032,
+          "textChars": 472,
+          "rawChars": 9600,
+          "virtualSlots": 40,
+          "mounted": 2
+        },
+        "afterPrepare": {
+          "nodes": 1528,
+          "textChars": 708,
+          "rawChars": 9600,
+          "virtualSlots": 40,
+          "mounted": 3
+        },
+        "scrollSamples": [
+          {
+            "ratio": 0,
+            "scrollTop": 0,
+            "max": 33928,
+            "painted": true,
+            "sample": "，",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 3,
+            "nodes": 1528
+          },
+          {
+            "ratio": 0.25,
+            "scrollTop": 9298,
+            "max": 35967,
+            "painted": true,
+            "sample": "较",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 5,
+            "nodes": 2520
+          },
+          {
+            "ratio": 0.5,
+            "scrollTop": 19208,
+            "max": 38006,
+            "painted": true,
+            "sample": "较",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 5,
+            "nodes": 2520
+          },
+          {
+            "ratio": 0.75,
+            "scrollTop": 29321,
+            "max": 40046,
+            "painted": true,
+            "sample": "。",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 5,
+            "nodes": 2520
+          },
+          {
+            "ratio": 1,
+            "scrollTop": 41269,
+            "max": 41269,
+            "painted": true,
+            "sample": "，",
+            "chunkState": "hz-reader-virtual-chunk is-mounted",
+            "mounted": 3,
+            "nodes": 1528
+          }
+        ],
+        "allScrollSamplesPainted": true,
+        "selectionResponseMs": 10.1,
+        "selectionRawMatches": true,
+        "selectionSample": {
+          "ok": true,
+          "dom": "较",
+          "raw": "较",
+          "start": 4341,
+          "ci": "9505"
+        },
+        "mutationsWhileSelectionActive": 0,
+        "readerLongTasks": [
+          {
+            "start": 2194.8000000002794,
+            "duration": 139
+          },
+          {
+            "start": 3436.600000000093,
+            "duration": 84
+          },
+          {
+            "start": 3521.2000000001863,
+            "duration": 58
+          },
+          {
+            "start": 3612.399999999907,
+            "duration": 57
+          },
+          {
+            "start": 3703.7000000001863,
+            "duration": 58
+          },
+          {
+            "start": 3762.7000000001863,
+            "duration": 62
+          },
+          {
+            "start": 3850.600000000093,
+            "duration": 56
+          },
+          {
+            "start": 3934.899999999907,
+            "duration": 60
+          },
+          {
+            "start": 3996,
+            "duration": 62
+          },
+          {
+            "start": 4180.800000000279,
+            "duration": 60
+          },
+          {
+            "start": 4263.399999999907,
+            "duration": 54
+          }
+        ],
+        "maxReaderLongTaskMs": 139
+      },
+      "navigation": [
+        {
+          "sid": "sl",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sw",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "ss",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sd",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sl",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        },
+        {
+          "sid": "sw",
+          "count": 0,
+          "nodes": 0,
+          "active": true
+        }
+      ],
+      "lateNavigationMutationCount": 0,
+      "runtimeErrors": [],
+      "pageErrors": [],
+      "consoleWarnings": []
+    }
+  ]
+}
