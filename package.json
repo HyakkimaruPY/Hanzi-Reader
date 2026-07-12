@@ -1,0 +1,22 @@
+{
+  "name": "hanzi-reader-local-source-tts-api",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Hanzi Reader com leitor virtual estável, prática de tons e escrita de Hanzi, persistência unificada e interface trilíngue.",
+  "scripts": {
+    "check:syntax": "node --check js/script.mjs && node --check js/source-adapter.mjs && node --check js/voice-bridge.mjs && node --check js/manualSearch.mjs && node --check js/manualSearchCore.mjs && node --check js/visual-refresh.js && node --check js/learning-core.mjs && node --check js/learning-engine.mjs && node --check js/music-player.mjs && node --check js/performance-engine.mjs && node --check api/tts-edge.js",
+    "validate": "node scripts/validate-project.mjs && node scripts/validate-db.mjs && node scripts/validate-trad-simp-db.mjs",
+    "test:api": "node scripts/test-tts-api.cjs",
+    "test": "npm run check:syntax && npm run validate && npm run test:learning && npm run test:ui && npm run test:stability && npm run test:api",
+    "test:learning": "node scripts/test-learning-core.mjs",
+    "test:ui": "node scripts/test-ui-refinement.mjs",
+    "test:stability": "node scripts/test-stability.mjs"
+  },
+  "keywords": [
+    "hanzi",
+    "chinese",
+    "reader",
+    "pwa"
+  ],
+  "license": "SEE LICENSE IN LICENSE"
+}
