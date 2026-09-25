@@ -6,6 +6,9 @@
     },
     "api/sogou.js": {
       "maxDuration": 15
+    },
+    "api/clip-relay.js": {
+      "maxDuration": 60
     }
   },
   "headers": [
