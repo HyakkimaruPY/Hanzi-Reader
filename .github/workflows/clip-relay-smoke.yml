@@ -1,0 +1,33 @@
+name: Clip relay smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'api/clip-relay.js'
+      - 'vercel.json'
+      - '.github/workflows/clip-relay-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          endpoint="https://hanzi-reader.vercel.app/api/clip-relay"
+          for attempt in $(seq 1 18); do
+            body="$(curl -fsS --max-time 10 "$endpoint" || true)"
+            if printf '%s' "$body" | grep -q '"service":"hanzi-reader-clip-relay-v1"'; then
+              printf '%s\n' "$body"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Clip relay did not become healthy in time." >&2
+          exit 1
